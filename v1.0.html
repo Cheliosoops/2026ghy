@@ -1,0 +1,8045 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+  <link rel="icon" href="./img/logo.png" />
+  <!-- <link rel="stylesheet" href="./fonts/font.css" /> -->
+
+  <link rel="stylesheet" href="./css/bootstrap.min.css" />
+  <link rel="stylesheet" href="./css/main.css" />
+  <link rel="stylesheet" href="./css/jq22.css" />
+  <title>深圳河湾水环境模拟平台</title>
+  <style>
+    .BMap_scaleTxt {
+      color: #fff !important;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="main" id="appIndex">
+    <div class="header">
+      <img style="width: 100px;height: auto;margin-right: 20px;" src="img/logo.png" alt="" />
+      <img style="width: 1000px;height: auto;" src="img/lzxfdsjpt.png" alt="深圳河湾水环境模拟平台" />
+      <div class="dateBox">
+        <span id="time">{{ year }}-{{ month }}-{{ date }}&nbsp;&nbsp; {{ hour }}:{{
+          minute
+          }}:{{ second }}&nbsp;&nbsp; {{ strDate }}
+      </div>
+    </div>
+    <div class="content">
+
+      <div class="leftBox col-md-2">
+        <div class="pingfen">
+          <div>
+            <div class="pfTitle">
+              <img src="img/aqpf.png" alt="" />
+              <span class="titleText">水质评分</span>
+            </div>
+            <div class="pfcontent">
+              <div class="leftBox">
+                <img src="img/shuizhipingfen.png" alt="" />
+                <span>超标率36.7%</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="paimin">
+          <div>
+            <div class="pfTitle" style="margin-bottom: 30px;">
+              <img style="margin-right: 10px;" src="img/jzaqpf.png" alt="" />
+              <span class="titleText">监测点关键污染物</span>
+            </div>
+            <div id="FontScroll">
+              <ul>
+                <li>
+                  <a href="#">
+                    <span class="leftSpan">李松蓢 </span>
+                    <span>总磷</span>
+                  </a>
+                </li>
+
+                <li>
+                  <a href="#">
+                    <span class="leftSpan">燕川（左） </span>
+                    <span>总磷</span>
+                  </a>
+                </li>
+
+                <li>
+                  <a href="#">
+                    <span class="leftSpan">燕川（右） </span>
+                    <span>总磷</span>
+                  </a>
+                </li>
+
+                <li>
+                  <a href="#">
+                    <span class="leftSpan">燕川 </span>
+                    <span>总磷</span>
+                  </a>
+                </li>
+
+                <li>
+                  <a href="#">
+                    <span class="leftSpan">洋涌大桥（左） </span>
+                    <span>总磷</span>
+                  </a>
+                </li>
+
+                <li>
+                  <a href="#">
+                    <span class="leftSpan">洋涌大桥（右） </span>
+                    <span>总磷</span>
+                  </a>
+                </li>
+
+                <li>
+                  <a href="#">
+                    <span class="leftSpan">洋涌大桥 </span>
+                    <span>总磷</span>
+                  </a>
+                </li>
+
+                <li>
+                  <a href="#">
+                    <span class="leftSpan">新和大道（左） </span>
+                    <span>氨氮</span>
+                  </a>
+                </li>
+
+                <li>
+                  <a href="#">
+                    <span class="leftSpan">新和大道（右） </span>
+                    <span>氨氮</span>
+                  </a>
+                </li>
+
+                <li>
+                  <a href="#">
+                    <span class="leftSpan">新和大道 </span>
+                    <span>氨氮</span>
+                  </a>
+                </li>
+
+                <li>
+                  <a href="#">
+                    <span class="leftSpan">共和村（左） </span>
+                    <span>氨氮</span>
+                  </a>
+                </li>
+
+                <li>
+                  <a href="#">
+                    <span class="leftSpan">共和村（右） </span>
+                    <span>氨氮</span>
+                  </a>
+                </li>
+
+                <li>
+                  <a href="#">
+                    <span class="leftSpan">共和村 </span>
+                    <span>氨氮</span>
+                  </a>
+                </li>
+
+                <li>
+                  <a href="#">
+                    <span class="leftSpan">石岩河Y38排口 </span>
+                    <span>氨氮</span>
+                  </a>
+                </li>
+
+                <li>
+                  <a href="#">
+                    <span class="leftSpan">上屋河水闸前 </span>
+                    <span>化学需氧量</span>
+                  </a>
+                </li>
+
+                <li>
+                  <a href="#">
+                    <span class="leftSpan">龙眼山水河口 </span>
+                    <span>化学需氧量</span>
+                  </a>
+                </li>
+
+                <li>
+                  <a href="#">
+                    <span class="leftSpan">运牛坑水入库口 </span>
+                    <span>化学需氧量</span>
+                  </a>
+                </li>
+
+                <li>
+                  <a href="#">
+                    <span class="leftSpan">玉田河河口 </span>
+                    <span>化学需氧量</span>
+                  </a>
+                </li>
+
+                <li>
+                  <a href="#">
+                    <span class="leftSpan">河口 </span>
+                    <span>化学需氧量</span>
+                  </a>
+                </li>
+
+                <li>
+                  <a href="#">
+                    <span class="leftSpan">华润水泥 </span>
+                    <span>化学需氧量</span>
+                  </a>
+                </li>
+
+                <li>
+                  <a href="#">
+                    <span class="leftSpan">国林光学 </span>
+                    <span>总磷</span>
+                  </a>
+                </li>
+
+                <li>
+                  <a href="#">
+                    <span class="leftSpan">河口 </span>
+                    <span>化学需氧量</span>
+                  </a>
+                </li>
+
+                <li>
+                  <a href="#">
+                    <span class="leftSpan">大凼水河口 </span>
+                    <span>化学需氧量</span>
+                  </a>
+                </li>
+
+                <li>
+                  <a href="#">
+                    <span class="leftSpan">荔园路2桥 </span>
+                    <span>化学需氧量</span>
+                  </a>
+                </li>
+
+                <li>
+                  <a href="#">
+                    <span class="leftSpan">楼村水河口 </span>
+                    <span>化学需氧量</span>
+                  </a>
+                </li>
+
+                <li>
+                  <a href="#">
+                    <span class="leftSpan">荔园路1桥 </span>
+                    <span>总磷</span>
+                  </a>
+                </li>
+
+                <li>
+                  <a href="#">
+                    <span class="leftSpan">光侨路 </span>
+                    <span>总磷</span>
+                  </a>
+                </li>
+
+                <li>
+                  <a href="#">
+                    <span class="leftSpan">新陂头水河口 </span>
+                    <span>总磷</span>
+                  </a>
+                </li>
+
+                <li>
+                  <a href="#">
+                    <span class="leftSpan">河口 </span>
+                    <span>化学需氧量</span>
+                  </a>
+                </li>
+
+                <li>
+                  <a href="#">
+                    <span class="leftSpan">河口 </span>
+                    <span>总磷</span>
+                  </a>
+                </li>
+
+                <li>
+                  <a href="#">
+                    <span class="leftSpan">河口 </span>
+                    <span>总磷</span>
+                  </a>
+                </li>
+
+                <li>
+                  <a href="#">
+                    <span class="leftSpan">深莞交界1# </span>
+                    <span>化学需氧量</span>
+                  </a>
+                </li>
+
+                <li>
+                  <a href="#">
+                    <span class="leftSpan">喜德盛 </span>
+                    <span>总磷</span>
+                  </a>
+                </li>
+
+                <li>
+                  <a href="#">
+                    <span class="leftSpan">新陂头水北支河口 </span>
+                    <span>总磷</span>
+                  </a>
+                </li>
+
+                <li>
+                  <a href="#">
+                    <span class="leftSpan">深莞交界（大冚渠） </span>
+                    <span>总磷</span>
+                  </a>
+                </li>
+
+                <li>
+                  <a href="#">
+                    <span class="leftSpan">白沙坑水河口 </span>
+                    <span>化学需氧量</span>
+                  </a>
+                </li>
+
+                <li>
+                  <a href="#">
+                    <span class="leftSpan">排涝泵站 </span>
+                    <span>总磷</span>
+                  </a>
+                </li>
+
+                <li>
+                  <a href="#">
+                    <span class="leftSpan">广深铁路桥 </span>
+                    <span>化学需氧量</span>
+                  </a>
+                </li>
+
+                <li>
+                  <a href="#">
+                    <span class="leftSpan">罗田水河口 </span>
+                    <span>化学需氧量</span>
+                  </a>
+                </li>
+
+                <li>
+                  <a href="#">
+                    <span class="leftSpan">水闸上游 </span>
+                    <span>总磷</span>
+                  </a>
+                </li>
+
+                <li>
+                  <a href="#">
+                    <span class="leftSpan">水闸上游 </span>
+                    <span>总磷</span>
+                  </a>
+                </li>
+
+                <li>
+                  <a href="#">
+                    <span class="leftSpan">马田排洪渠闸前 </span>
+                    <span>化学需氧量</span>
+                  </a>
+                </li>
+
+                <li>
+                  <a href="#">
+                    <span class="leftSpan">茅洲河引水渠闸前 </span>
+                    <span>氨氮</span>
+                  </a>
+                </li>
+
+                <li>
+                  <a href="#">
+                    <span class="leftSpan">燕山小学1桥 </span>
+                    <span>氨氮</span>
+                  </a>
+                </li>
+
+                <li>
+                  <a href="#">
+                    <span class="leftSpan">燕山小学2桥 </span>
+                    <span>化学需氧量</span>
+                  </a>
+                </li>
+
+                <li>
+                  <a href="#">
+                    <span class="leftSpan">水闸前 </span>
+                    <span>氨氮</span>
+                  </a>
+                </li>
+
+                <li>
+                  <a href="#">
+                    <span class="leftSpan">沙井河水闸前（左） </span>
+                    <span>氨氮</span>
+                  </a>
+                </li>
+
+                <li>
+                  <a href="#">
+                    <span class="leftSpan">沙井河水闸前（右） </span>
+                    <span>氨氮</span>
+                  </a>
+                </li>
+
+                <li>
+                  <a href="#">
+                    <span class="leftSpan">沙井河水闸前 </span>
+                    <span>氨氮</span>
+                  </a>
+                </li>
+
+                <li>
+                  <a href="#">
+                    <span class="leftSpan">沙井机动车检测站 </span>
+                    <span>溶解氧</span>
+                  </a>
+                </li>
+
+                <li>
+                  <a href="#">
+                    <span class="leftSpan">东方七支渠水闸前 </span>
+                    <span>溶解氧</span>
+                  </a>
+                </li>
+
+                <li>
+                  <a href="#">
+                    <span class="leftSpan">步涌大洋田泵站 </span>
+                    <span>总磷</span>
+                  </a>
+                </li>
+
+                <li>
+                  <a href="#">
+                    <span class="leftSpan">佳领域工贸大厦 </span>
+                    <span>总磷</span>
+                  </a>
+                </li>
+
+                <li>
+                  <a href="#">
+                    <span class="leftSpan">水闸前 </span>
+                    <span>氨氮</span>
+                  </a>
+                </li>
+
+                <li>
+                  <a href="#">
+                    <span class="leftSpan">排涝闸 </span>
+                    <span>氨氮</span>
+                  </a>
+                </li>
+
+                <li>
+                  <a href="#">
+                    <span class="leftSpan">排涝河水闸前 </span>
+                    <span>氨氮</span>
+                  </a>
+                </li>
+
+                <li>
+                  <a href="#">
+                    <span class="leftSpan">新桥河新桥公园 </span>
+                    <span>化学需氧量</span>
+                  </a>
+                </li>
+
+                <li>
+                  <a href="#">
+                    <span class="leftSpan">新沙路 </span>
+                    <span>总磷</span>
+                  </a>
+                </li>
+
+                <li>
+                  <a href="#">
+                    <span class="leftSpan">北环二桥 </span>
+                    <span>溶解氧</span>
+                  </a>
+                </li>
+
+                <li>
+                  <a href="#">
+                    <span class="leftSpan">河口 </span>
+                    <span>总磷</span>
+                  </a>
+                </li>
+
+                <li>
+                  <a href="#">
+                    <span class="leftSpan">沙井中学 </span>
+                    <span>总磷</span>
+                  </a>
+                </li>
+
+                <li>
+                  <a href="#">
+                    <span class="leftSpan">衙边涌水闸前 </span>
+                    <span>氨氮</span>
+                  </a>
+                </li>
+
+                <li>
+                  <a href="#">
+                    <span class="leftSpan">鹏兴天桥 </span>
+                    <span>总磷</span>
+                  </a>
+                </li>
+
+                <li>
+                  <a href="#">
+                    <span class="leftSpan">罗湖桥 </span>
+                    <span>总磷</span>
+                  </a>
+                </li>
+
+                <li>
+                  <a href="#">
+                    <span class="leftSpan">渔民村 </span>
+                    <span>氨氮</span>
+                  </a>
+                </li>
+
+                <li>
+                  <a href="#">
+                    <span class="leftSpan">福田口岸 </span>
+                    <span>溶解氧</span>
+                  </a>
+                </li>
+
+                <li>
+                  <a href="#">
+                    <span class="leftSpan">桃花路 </span>
+                    <span>溶解氧</span>
+                  </a>
+                </li>
+
+                <li>
+                  <a href="#">
+                    <span class="leftSpan">深圳河河口（左） </span>
+                    <span>氨氮</span>
+                  </a>
+                </li>
+
+                <li>
+                  <a href="#">
+                    <span class="leftSpan">深圳河河口（中） </span>
+                    <span>氨氮</span>
+                  </a>
+                </li>
+
+                <li>
+                  <a href="#">
+                    <span class="leftSpan">深圳河河口（右） </span>
+                    <span>氨氮</span>
+                  </a>
+                </li>
+
+                <li>
+                  <a href="#">
+                    <span class="leftSpan">深圳河河口 </span>
+                    <span>氨氮</span>
+                  </a>
+                </li>
+
+                <li>
+                  <a href="#">
+                    <span class="leftSpan">福田河河口 </span>
+                    <span>溶解氧</span>
+                  </a>
+                </li>
+
+                <li>
+                  <a href="#">
+                    <span class="leftSpan">红岭箱涵口 </span>
+                    <span>氨氮</span>
+                  </a>
+                </li>
+
+                <li>
+                  <a href="#">
+                    <span class="leftSpan">龙华环保所 </span>
+                    <span>氨氮</span>
+                  </a>
+                </li>
+
+                <li>
+                  <a href="#">
+                    <span class="leftSpan">松元下小桥 </span>
+                    <span>氨氮</span>
+                  </a>
+                </li>
+
+                <li>
+                  <a href="#">
+                    <span class="leftSpan">樟坑径河口 </span>
+                    <span>氨氮</span>
+                  </a>
+                </li>
+
+                <li>
+                  <a href="#">
+                    <span class="leftSpan">高尔夫球场水闸前 </span>
+                    <span>总磷</span>
+                  </a>
+                </li>
+
+                <li>
+                  <a href="#">
+                    <span class="leftSpan">溢流口 </span>
+                    <span>氨氮</span>
+                  </a>
+                </li>
+
+                <li>
+                  <a href="#">
+                    <span class="leftSpan">养鸡场 </span>
+                    <span>总磷</span>
+                  </a>
+                </li>
+
+                <li>
+                  <a href="#">
+                    <span class="leftSpan">岭南大道 </span>
+                    <span>总磷</span>
+                  </a>
+                </li>
+
+                <li>
+                  <a href="#">
+                    <span class="leftSpan">深莞交界 </span>
+                    <span>氨氮</span>
+                  </a>
+                </li>
+
+                <li>
+                  <a href="#">
+                    <span class="leftSpan">龙园公园 </span>
+                    <span>氨氮</span>
+                  </a>
+                </li>
+
+                <li>
+                  <a href="#">
+                    <span class="leftSpan">鲤鱼坝 </span>
+                    <span>溶解氧</span>
+                  </a>
+                </li>
+
+                <li>
+                  <a href="#">
+                    <span class="leftSpan">丁山河汇入口上游 </span>
+                    <span>氨氮</span>
+                  </a>
+                </li>
+
+                <li>
+                  <a href="#">
+                    <span class="leftSpan">水背 </span>
+                    <span>氨氮</span>
+                  </a>
+                </li>
+
+                <li>
+                  <a href="#">
+                    <span class="leftSpan">吓陂（左河道） </span>
+                    <span>氨氮</span>
+                  </a>
+                </li>
+
+                <li>
+                  <a href="#">
+                    <span class="leftSpan">吓陂（右河道） </span>
+                    <span>化学需氧量</span>
+                  </a>
+                </li>
+
+                <li>
+                  <a href="#">
+                    <span class="leftSpan">吓陂 </span>
+                    <span>化学需氧量</span>
+                  </a>
+                </li>
+
+                <li>
+                  <a href="#">
+                    <span class="leftSpan">吓陂-溢流口 </span>
+                    <span>氨氮</span>
+                  </a>
+                </li>
+
+                <li>
+                  <a href="#">
+                    <span class="leftSpan">惠龙交界处左岸 </span>
+                    <span>氨氮</span>
+                  </a>
+                </li>
+
+                <li>
+                  <a href="#">
+                    <span class="leftSpan">惠龙交界处右岸 </span>
+                    <span>氨氮</span>
+                  </a>
+                </li>
+
+                <li>
+                  <a href="#">
+                    <span class="leftSpan">惠龙交界处 </span>
+                    <span>氨氮</span>
+                  </a>
+                </li>
+
+                <li>
+                  <a href="#">
+                    <span class="leftSpan">田脚水河口下游干流约180米处 </span>
+                    <span>氨氮</span>
+                  </a>
+                </li>
+
+                <li>
+                  <a href="#">
+                    <span class="leftSpan">西湖村（左岸） </span>
+                    <span>氨氮</span>
+                  </a>
+                </li>
+
+                <li>
+                  <a href="#">
+                    <span class="leftSpan">西湖村（右岸） </span>
+                    <span>化学需氧量</span>
+                  </a>
+                </li>
+
+                <li>
+                  <a href="#">
+                    <span class="leftSpan">西湖村 </span>
+                    <span>氨氮</span>
+                  </a>
+                </li>
+
+                <li>
+                  <a href="#">
+                    <span class="leftSpan">恒利工业大厦 </span>
+                    <span>化学需氧量</span>
+                  </a>
+                </li>
+
+                <li>
+                  <a href="#">
+                    <span class="leftSpan">河口 </span>
+                    <span>氨氮</span>
+                  </a>
+                </li>
+
+                <li>
+                  <a href="#">
+                    <span class="leftSpan">同乐菜场 </span>
+                    <span>化学需氧量</span>
+                  </a>
+                </li>
+
+                <li>
+                  <a href="#">
+                    <span class="leftSpan">吓坑一路 </span>
+                    <span>总磷</span>
+                  </a>
+                </li>
+
+                <li>
+                  <a href="#">
+                    <span class="leftSpan">优胜美地 </span>
+                    <span>总磷</span>
+                  </a>
+                </li>
+
+                <li>
+                  <a href="#">
+                    <span class="leftSpan">浪背街道 </span>
+                    <span>总磷</span>
+                  </a>
+                </li>
+
+                <li>
+                  <a href="#">
+                    <span class="leftSpan">丁山河河口 </span>
+                    <span>溶解氧</span>
+                  </a>
+                </li>
+
+                <li>
+                  <a href="#">
+                    <span class="leftSpan">白石塘水河口 </span>
+                    <span>溶解氧</span>
+                  </a>
+                </li>
+
+                <li>
+                  <a href="#">
+                    <span class="leftSpan">黄竹坑水河口 </span>
+                    <span>氨氮</span>
+                  </a>
+                </li>
+
+                <li>
+                  <a href="#">
+                    <span class="leftSpan">黄沙河（杶梓河）深惠交界处 </span>
+                    <span>氨氮</span>
+                  </a>
+                </li>
+
+                <li>
+                  <a href="#">
+                    <span class="leftSpan">黄沙河河口 </span>
+                    <span>氨氮</span>
+                  </a>
+                </li>
+
+                <li>
+                  <a href="#">
+                    <span class="leftSpan">深惠交界处 </span>
+                    <span>氨氮</span>
+                  </a>
+                </li>
+
+                <li>
+                  <a href="#">
+                    <span class="leftSpan">马蹄沥河口 </span>
+                    <span>氨氮</span>
+                  </a>
+                </li>
+
+                <li>
+                  <a href="#">
+                    <span class="leftSpan">红花岭 </span>
+                    <span>化学需氧量</span>
+                  </a>
+                </li>
+
+                <li>
+                  <a href="#">
+                    <span class="leftSpan">河口 </span>
+                    <span>化学需氧量</span>
+                  </a>
+                </li>
+
+                <li>
+                  <a href="#">
+                    <span class="leftSpan">新洲河河口 </span>
+                    <span>氨氮</span>
+                  </a>
+                </li>
+
+                <li>
+                  <a href="#">
+                    <span class="leftSpan">凤塘河河口闸前 </span>
+                    <span>溶解氧</span>
+                  </a>
+                </li>
+
+                <li>
+                  <a href="#">
+                    <span class="leftSpan">德丰围涌水闸前 </span>
+                    <span>氨氮</span>
+                  </a>
+                </li>
+
+                <li>
+                  <a href="#">
+                    <span class="leftSpan">石围涌泵站 </span>
+                    <span>氨氮</span>
+                  </a>
+                </li>
+
+                <li>
+                  <a href="#">
+                    <span class="leftSpan">锦程路桥西侧 </span>
+                    <span>化学需氧量</span>
+                  </a>
+                </li>
+
+                <li>
+                  <a href="#">
+                    <span class="leftSpan">入海口水闸 </span>
+                    <span>化学需氧量</span>
+                  </a>
+                </li>
+
+                <li>
+                  <a href="#">
+                    <span class="leftSpan">沙涌排涝闸门 </span>
+                    <span>化学需氧量</span>
+                  </a>
+                </li>
+
+                <li>
+                  <a href="#">
+                    <span class="leftSpan">排涝闸门 </span>
+                    <span>氨氮</span>
+                  </a>
+                </li>
+
+                <li>
+                  <a href="#">
+                    <span class="leftSpan">展城桥 </span>
+                    <span>氨氮</span>
+                  </a>
+                </li>
+
+                <li>
+                  <a href="#">
+                    <span class="leftSpan">和二涌水闸前 </span>
+                    <span>总磷</span>
+                  </a>
+                </li>
+
+                <li>
+                  <a href="#">
+                    <span class="leftSpan">沙福路 </span>
+                    <span>化学需氧量</span>
+                  </a>
+                </li>
+
+                <li>
+                  <a href="#">
+                    <span class="leftSpan">蚝二佳仕台科技园 </span>
+                    <span>氨氮</span>
+                  </a>
+                </li>
+
+                <li>
+                  <a href="#">
+                    <span class="leftSpan">和秀西路与福园二路交汇处 </span>
+                    <span>氨氮</span>
+                  </a>
+                </li>
+
+                <li>
+                  <a href="#">
+                    <span class="leftSpan">坳颈涌入海口水闸前 </span>
+                    <span>总磷</span>
+                  </a>
+                </li>
+
+                <li>
+                  <a href="#">
+                    <span class="leftSpan">灶下涌水闸前 </span>
+                    <span>氨氮</span>
+                  </a>
+                </li>
+
+                <li>
+                  <a href="#">
+                    <span class="leftSpan">虾山涌水闸前 </span>
+                    <span>氨氮</span>
+                  </a>
+                </li>
+
+                <li>
+                  <a href="#">
+                    <span class="leftSpan">孖庙涌水闸前 </span>
+                    <span>氨氮</span>
+                  </a>
+                </li>
+
+                <li>
+                  <a href="#">
+                    <span class="leftSpan">永和路桥（右） </span>
+                    <span>氨氮</span>
+                  </a>
+                </li>
+
+                <li>
+                  <a href="#">
+                    <span class="leftSpan">永和路桥 </span>
+                    <span>氨氮</span>
+                  </a>
+                </li>
+
+                <li>
+                  <a href="#">
+                    <span class="leftSpan">水闸前 </span>
+                    <span>氨氮</span>
+                  </a>
+                </li>
+
+                <li>
+                  <a href="#">
+                    <span class="leftSpan">宝源路桥 </span>
+                    <span>氨氮</span>
+                  </a>
+                </li>
+
+                <li>
+                  <a href="#">
+                    <span class="leftSpan">金达花园 </span>
+                    <span>氨氮</span>
+                  </a>
+                </li>
+
+                <li>
+                  <a href="#">
+                    <span class="leftSpan">新涌水闸前 </span>
+                    <span>化学需氧量</span>
+                  </a>
+                </li>
+
+                <li>
+                  <a href="#">
+                    <span class="leftSpan">九围河水闸前 </span>
+                    <span>总磷</span>
+                  </a>
+                </li>
+
+                <li>
+                  <a href="#">
+                    <span class="leftSpan">黄麻布河入库口 </span>
+                    <span>化学需氧量</span>
+                  </a>
+                </li>
+
+                <li>
+                  <a href="#">
+                    <span class="leftSpan">入库口 </span>
+                    <span>氨氮</span>
+                  </a>
+                </li>
+
+                <li>
+                  <a href="#">
+                    <span class="leftSpan">水闸前 </span>
+                    <span>总磷</span>
+                  </a>
+                </li>
+
+                <li>
+                  <a href="#">
+                    <span class="leftSpan">依购美 </span>
+                    <span>总磷</span>
+                  </a>
+                </li>
+
+                <li>
+                  <a href="#">
+                    <span class="leftSpan">入库口 </span>
+                    <span>总磷</span>
+                  </a>
+                </li>
+
+                <li>
+                  <a href="#">
+                    <span class="leftSpan">入库口 </span>
+                    <span>化学需氧量</span>
+                  </a>
+                </li>
+
+                <li>
+                  <a href="#">
+                    <span class="leftSpan">入库口 </span>
+                    <span>氨氮</span>
+                  </a>
+                </li>
+
+                <li>
+                  <a href="#">
+                    <span class="leftSpan">牛成村水暗涵出口 </span>
+                    <span>化学需氧量</span>
+                  </a>
+                </li>
+
+                <li>
+                  <a href="#">
+                    <span class="leftSpan">河口 </span>
+                    <span>总磷</span>
+                  </a>
+                </li>
+
+                <li>
+                  <a href="#">
+                    <span class="leftSpan">共乐涌水闸前 </span>
+                    <span>化学需氧量</span>
+                  </a>
+                </li>
+
+                <li>
+                  <a href="#">
+                    <span class="leftSpan">南城桥 </span>
+                    <span>总磷</span>
+                  </a>
+                </li>
+
+                <li>
+                  <a href="#">
+                    <span class="leftSpan">新水闸 </span>
+                    <span>氨氮</span>
+                  </a>
+                </li>
+
+                <li>
+                  <a href="#">
+                    <span class="leftSpan">西乡公园 </span>
+                    <span>总磷</span>
+                  </a>
+                </li>
+
+                <li>
+                  <a href="#">
+                    <span class="leftSpan">咸水涌兴业路 </span>
+                    <span>氨氮</span>
+                  </a>
+                </li>
+
+                <li>
+                  <a href="#">
+                    <span class="leftSpan">长丰工业园 </span>
+                    <span>总磷</span>
+                  </a>
+                </li>
+
+                <li>
+                  <a href="#">
+                    <span class="leftSpan">新圳河河口 </span>
+                    <span>化学需氧量</span>
+                  </a>
+                </li>
+
+                <li>
+                  <a href="#">
+                    <span class="leftSpan">河口 </span>
+                    <span>氨氮</span>
+                  </a>
+                </li>
+
+                <li>
+                  <a href="#">
+                    <span class="leftSpan">临海大道路口 </span>
+                    <span>化学需氧量</span>
+                  </a>
+                </li>
+
+                <li>
+                  <a href="#">
+                    <span class="leftSpan">大碓涌河口 </span>
+                    <span>化学需氧量</span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="top10">
+          <div>
+            <div class="pfTitle" style="margin-bottom: 30px;">
+              <img style="margin-right: 10px;" src="img/aqyh.png" alt="" />
+              <span class="titleText">监测点综合污染指数TOP10</span>
+            </div>
+            <img style="display: block;margin: auto;width: 80%;height: 75%;" src="img/aqyhtop100.png" alt="" />
+          </div>
+        </div>
+      </div>
+      <div class="middleBox col-md-8">
+        <div class="baiduMap">
+
+          <div id="container"></div>
+        </div>
+        <div class="tongjiList">
+          <div>
+            <div class="col-md-3" style="margin: 0 15px; position: relative;">
+              <!-- 固定 "流域达标率" 的位置 -->
+              <div style="justify-content: center; position: relative; top: 10px;" class="pfTitle">
+                <img style="margin-right: 10px;" src="img/xfjs.png" alt="" />
+                <span class="titleText">流域达标率</span>
+              </div>
+
+              <!-- 图片容器，填满并居中 -->
+              <div
+                style="width: 100%; height: 180px; margin-top: 0; display: flex; justify-content: center; align-items: center; overflow: hidden;">
+                <img style="max-width: 100%; max-height: 100%; object-fit: contain;" src="img/dabiaolv.png" alt="" />
+              </div>
+            </div>
+            <div class="comLine"></div>
+            <div class="col-md-3" style="margin: 0 15px; position: relative;">
+              <!-- 固定 "河口溶解氧监测" 的位置 -->
+              <div style="justify-content: center; position: relative; top: 18px;" class="pfTitle">
+                <img style="margin-right: 10px;" src="img/ldbj.png" alt="" />
+                <span class="titleText">河口溶解氧监测</span>
+              </div>
+              <span style="position: absolute; top: 85px; left: 50%; transform: translateX(-50%);" class="smdate">{{
+                year }}/{{ month }}</span>
+              <div id="echartsldbj" style="width: 100%; height: 170px; margin-top: 5px; margin-bottom: 25px;"></div>
+            </div>
+            <div class="comLine"></div>
+            <div class="col-md-3" style="margin: 0 15px;position: relative;">
+              <div style="justify-content: center;position: relative; top: 18px;" class="pfTitle">
+                <img style="margin-right: 10px;" src="img/jgbj.png" alt="" />
+                <span class="titleText">河口水质监测</span>
+              </div>
+              <span style="position: absolute; top: 85px; left: 50%; transform: translateX(-50%);" class="smdate">{{
+                year }}/{{ month }}</span>
+              <div id="echartsjgbj" style="width:100%;height:170px; margin-top: 5px; margin-bottom: 25px;"></div>
+            </div>
+            <div class="comLine"></div>
+            <div class="col-md-3" style="margin: 0 15px;position: relative;">
+              <div style="justify-content: center;position: relative; top: 18px;" class="pfTitle">
+                <img style="margin-right: 10px;" src="img/rcxj.png" alt="" />
+                <span class="titleText">河口溶解氧预测效果</span>
+              </div>
+              <span style="position: absolute; top: 85px; left: 50%; transform: translateX(-50%);" class="smdate">{{
+                year }}/{{ month }}</span>
+              <div id="echartsrcxj" style="width:100%;height:170px; margin-top: 5px; margin-bottom: 25px;"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="rightBox col-md-2">
+        <div class="weihutj">
+          <div>
+            <div style="margin-left: 27px;" class="pfTitle">
+              <img style="margin-right: 10px;" src="img/whtj.png" alt="" />
+              <span class="titleText">预测评价</span>
+            </div>
+            <div class="pfcontent flexrow">
+              <div style="width: 120px;" class="leftBox flexcolom">
+                <div class="sbwx">
+                  <span class="sbxanim animText">69</span>
+                  <span class="smtext sbwxtext">河口水质</span>
+                </div>
+                <span style="margin-top: 20px;" class="smtext">决定系数</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="tongjibox">
+          <div style="text-align: center; padding: 20px;">
+            <h3 style="margin-bottom: 20px;">监测点水质信息</h3>
+            <p>点击水质监测点以显示相关信息</p>
+          </div>
+        </div>
+        <div class="zhifatj">
+          <div class="flexcolom">
+            <!-- 监测点现场 -->
+            <div class="pfTitle" style="position: relative; top: 22px;">
+              <img style="margin-right: 10px;" src="img/zfjg.png" alt="" />
+              <span class="titleText">监测点现场</span>
+            </div>
+            <!-- 视频容器 -->
+            <div class="video-container"
+              style="width: 100%; height: 150px; margin-top: 10px; overflow: hidden; position: relative; display: flex; justify-content: center; align-items: center;">
+              <video style="width: 100%; height: 180%; object-fit: cover;" src="img/river.mp4" controls autoplay loop
+                muted>
+                您的浏览器不支持视频播放。
+              </video>
+            </div>
+
+            <!-- 图表容器 -->
+            <div id="echartszfjgtj" style="width: 100%; height: 10px; padding: 0 12px; margin-top: 10px;"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/jquery.min.js"></script>
+  <script src="js/vue.min.js"></script>
+  <script src="js/echarts.min.js"></script>
+  <script src="js/walden.js"></script>
+  <script src="js/roma.js"></script>
+  <script src="js/jquery.countUp.js"></script>
+  <script type="text/javascript" src="https://api.map.baidu.com/api?v=3.0&ak=h4OnZpxRLGCf0xs47cQuOmEHfbSAwykT"></script>
+  <script src="js/fontscroll.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/echart.js"></script>
+  <script type="text/javascript">
+    var markerArr = [
+      {
+        basin: "茅洲河流域",
+        name: "田心水河口",
+        point: "113.933053,22.6805",
+        details: {
+          化学需氧量: "/",
+          氨氮: "/",
+          总磷: "/",
+          氟化物: "/",
+          总氮: "/",
+          水质类别: "/"
+        }
+      },
+      {
+        basin: "茅洲河流域",
+        name: "上排水河口",
+        point: "113.928348,22.682843",
+        details: {
+          化学需氧量: "/",
+          氨氮: "/",
+          总磷: "/",
+          氟化物: "/",
+          总氮: "/",
+          水质类别: "/"
+        }
+      },
+      {
+        basin: "茅洲河流域",
+        name: "王家庄河青年路",
+        point: "113.918355,22.677379",
+        details: {
+          化学需氧量: "/",
+          氨氮: "/",
+          总磷: "/",
+          氟化物: "/",
+          总氮: "/",
+          水质类别: "/"
+        }
+      },
+      {
+        basin: "茅洲河流域",
+        name: "河口",
+        point: "113.916724,22.680458",
+        details: {
+          化学需氧量: "/",
+          氨氮: "/",
+          总磷: "/",
+          氟化物: "/",
+          总氮: "/",
+          水质类别: "/"
+        }
+      },
+      {
+        basin: "茅洲河流域",
+        name: "白坑窝水入库口",
+        point: "113.908236,22.709457",
+        details: {
+          化学需氧量: "/",
+          氨氮: "/",
+          总磷: "/",
+          氟化物: "/",
+          总氮: "/",
+          水质类别: "/"
+        }
+      },
+      {
+        basin: "深圳河流域",
+        name: "文锦渡",
+        point: "114.125589,22.539633",
+        details: {
+          化学需氧量: "/",
+          氨氮: "/",
+          总磷: "/",
+          氟化物: "/",
+          总氮: "/",
+          水质类别: "/"
+        }
+      },
+      {
+        basin: "深圳河流域",
+        name: "长岭沟河口",
+        point: "114.181877,22.555707",
+        details: {
+          化学需氧量: "/",
+          氨氮: "/",
+          总磷: "/",
+          氟化物: "/",
+          总氮: "/",
+          水质类别: "/"
+        }
+      },
+      {
+        basin: "深圳河流域",
+        name: "禾叫垄沟河口",
+        point: "114.176502,22.560304",
+        details: {
+          化学需氧量: "/",
+          氨氮: "/",
+          总磷: "/",
+          氟化物: "/",
+          总氮: "/",
+          水质类别: "/"
+        }
+      },
+      {
+        basin: "深圳河流域",
+        name: "河口",
+        point: "114.171095,22.560183",
+        details: {
+          化学需氧量: "/",
+          氨氮: "/",
+          总磷: "/",
+          氟化物: "/",
+          总氮: "/",
+          水质类别: "/"
+        }
+      },
+      {
+        basin: "深圳河流域",
+        name: "千年坑河口",
+        point: "114.156715552,22.5565191097",
+        details: {
+          化学需氧量: "/",
+          氨氮: "/",
+          总磷: "/",
+          氟化物: "/",
+          总氮: "/",
+          水质类别: "/"
+        }
+      },
+      {
+        basin: "深圳河流域",
+        name: "沙湾泵站",
+        point: "114.160003,22.611782",
+        details: {
+          化学需氧量: "/",
+          氨氮: "/",
+          总磷: "/",
+          氟化物: "/",
+          总氮: "/",
+          水质类别: "/"
+        }
+      },
+      {
+        basin: "深圳河流域",
+        name: "深圳水库闸前",
+        point: "114.162417,22.607578",
+        details: {
+          化学需氧量: "/",
+          氨氮: "/",
+          总磷: "/",
+          氟化物: "/",
+          总氮: "/",
+          水质类别: "/"
+        }
+      },
+      {
+        basin: "深圳河流域",
+        name: "高速路桥",
+        point: "114.164573,22.634187",
+        details: {
+          化学需氧量: "/",
+          氨氮: "/",
+          总磷: "/",
+          氟化物: "/",
+          总氮: "/",
+          水质类别: "/"
+        }
+      },
+      {
+        basin: "深圳河流域",
+        name: "正坑水入库口",
+        point: "114.170454,22.605145",
+        details: {
+          化学需氧量: "/",
+          氨氮: "/",
+          总磷: "/",
+          氟化物: "/",
+          总氮: "/",
+          水质类别: "/"
+        }
+      },
+      {
+        basin: "深圳河流域",
+        name: "赤水洞水河口",
+        point: "114.186002,22.593274",
+        details: {
+          化学需氧量: "/",
+          氨氮: "/",
+          总磷: "/",
+          氟化物: "/",
+          总氮: "/",
+          水质类别: "/"
+        }
+      },
+      {
+        basin: "深圳河流域",
+        name: "新田仔水河口",
+        point: "114.17338,22.602915",
+        details: {
+          化学需氧量: "/",
+          氨氮: "/",
+          总磷: "/",
+          氟化物: "/",
+          总氮: "/",
+          水质类别: "/"
+        }
+      },
+      {
+        basin: "深圳河流域",
+        name: "深惠路桥左侧暗涵",
+        point: "114.114007,22.585485",
+        details: {
+          化学需氧量: "/",
+          氨氮: "/",
+          总磷: "/",
+          氟化物: "/",
+          总氮: "/",
+          水质类别: "/"
+        }
+      },
+      {
+        basin: "深圳河流域",
+        name: "华意旅馆",
+        point: "114.114460695,22.6113874946",
+        details: {
+          化学需氧量: "/",
+          氨氮: "/",
+          总磷: "/",
+          氟化物: "/",
+          总氮: "/",
+          水质类别: "/"
+        }
+      },
+      {
+        basin: "深圳河流域",
+        name: "左支沟中游",
+        point: "114.095082,22.636691",
+        details: {
+          化学需氧量: "/",
+          氨氮: "/",
+          总磷: "/",
+          氟化物: "/",
+          总氮: "/",
+          水质类别: "/"
+        }
+      },
+      {
+        basin: "深圳河流域",
+        name: "信达美食广场",
+        point: "114.107135,22.612011",
+        details: {
+          化学需氧量: "/",
+          氨氮: "/",
+          总磷: "/",
+          氟化物: "/",
+          总氮: "/",
+          水质类别: "/"
+        }
+      },
+      {
+        basin: "深圳河流域",
+        name: "三联幼儿园",
+        point: "114.11253,22.627356",
+        details: {
+          化学需氧量: "/",
+          氨氮: "/",
+          总磷: "/",
+          氟化物: "/",
+          总氮: "/",
+          水质类别: "/"
+        }
+      },
+      {
+        basin: "深圳河流域",
+        name: "木棉湾邮政所",
+        point: "114.124695,22.606795",
+        details: {
+          化学需氧量: "/",
+          氨氮: "/",
+          总磷: "/",
+          氟化物: "/",
+          总氮: "/",
+          水质类别: "/"
+        }
+      },
+      {
+        basin: "深圳河流域",
+        name: "粤宝花园幼儿园",
+        point: "114.107769,22.596602",
+        details: {
+          化学需氧量: "/",
+          氨氮: "/",
+          总磷: "/",
+          氟化物: "/",
+          总氮: "/",
+          水质类别: "/"
+        }
+      },
+      {
+        basin: "深圳河流域",
+        name: "综合环卫厂",
+        point: "114.09964,22.585992",
+        details: {
+          化学需氧量: "/",
+          氨氮: "/",
+          总磷: "/",
+          氟化物: "/",
+          总氮: "/",
+          水质类别: "/"
+        }
+      },
+      {
+        basin: "深圳河流域",
+        name: "河口",
+        point: "114.09852,22.586744",
+        details: {
+          化学需氧量: "/",
+          氨氮: "/",
+          总磷: "/",
+          氟化物: "/",
+          总氮: "/",
+          水质类别: "/"
+        }
+      },
+      {
+        basin: "深圳河流域",
+        name: "高涧河河口",
+        point: "114.119311,22.582348",
+        details: {
+          化学需氧量: "/",
+          氨氮: "/",
+          总磷: "/",
+          氟化物: "/",
+          总氮: "/",
+          水质类别: "/"
+        }
+      },
+      {
+        basin: "深圳河流域",
+        name: "燃气站",
+        point: "114.100856,22.57923",
+        details: {
+          化学需氧量: "/",
+          氨氮: "/",
+          总磷: "/",
+          氟化物: "/",
+          总氮: "/",
+          水质类别: "/"
+        }
+      },
+      {
+        basin: "深圳河流域",
+        name: "洪涛股份",
+        point: "114.091064,22.569431",
+        details: {
+          化学需氧量: "/",
+          氨氮: "/",
+          总磷: "/",
+          氟化物: "/",
+          总氮: "/",
+          水质类别: "/"
+        }
+      },
+      {
+        basin: "深圳河流域",
+        name: "笔架山河河口",
+        point: "114.107341,22.54171",
+        details: {
+          化学需氧量: "/",
+          氨氮: "/",
+          总磷: "/",
+          氟化物: "/",
+          总氮: "/",
+          水质类别: "/"
+        }
+      },
+      {
+        basin: "深圳河流域",
+        name: "和平桥",
+        point: "114.111139,22.537889",
+        details: {
+          化学需氧量: "/",
+          氨氮: "/",
+          总磷: "/",
+          氟化物: "/",
+          总氮: "/",
+          水质类别: "/"
+        }
+      },
+      {
+        basin: "深圳河流域",
+        name: "皇岗河河口",
+        point: "114.066064,22.517973",
+        details: {
+          化学需氧量: "/",
+          氨氮: "/",
+          总磷: "/",
+          氟化物: "/",
+          总氮: "/",
+          水质类别: "/"
+        }
+      },
+      {
+        basin: "观澜河流域",
+        name: "梅观高速",
+        point: "114.045049,22.717271",
+        details: {
+          化学需氧量: "/",
+          氨氮: "/",
+          总磷: "/",
+          氟化物: "/",
+          总氮: "/",
+          水质类别: "/"
+        }
+      },
+      {
+        basin: "观澜河流域",
+        name: "工业路口",
+        point: "114.035153,22.642685",
+        details: {
+          化学需氧量: "/",
+          氨氮: "/",
+          总磷: "/",
+          氟化物: "/",
+          总氮: "/",
+          水质类别: "/"
+        }
+      },
+      {
+        basin: "观澜河流域",
+        name: "油松科技大厦",
+        point: "114.035811,22.647683",
+        details: {
+          化学需氧量: "/",
+          氨氮: "/",
+          总磷: "/",
+          氟化物: "/",
+          总氮: "/",
+          水质类别: "/"
+        }
+      },
+      {
+        basin: "观澜河流域",
+        name: "沙元埔桥",
+        point: "114.034948,22.622629",
+        details: {
+          化学需氧量: "/",
+          氨氮: "/",
+          总磷: "/",
+          氟化物: "/",
+          总氮: "/",
+          水质类别: "/"
+        }
+      },
+      {
+        basin: "观澜河流域",
+        name: "海韵大厦",
+        point: "114.036432,22.626606",
+        details: {
+          化学需氧量: "/",
+          氨氮: "/",
+          总磷: "/",
+          氟化物: "/",
+          总氮: "/",
+          水质类别: "/"
+        }
+      },
+      {
+        basin: "观澜河流域",
+        name: "东环路口",
+        point: "114.032776,22.648708",
+        details: {
+          化学需氧量: "/",
+          氨氮: "/",
+          总磷: "/",
+          氟化物: "/",
+          总氮: "/",
+          水质类别: "/"
+        }
+      },
+      {
+        basin: "观澜河流域",
+        name: "上芬水河口",
+        point: "114.035629,22.651044",
+        details: {
+          化学需氧量: "/",
+          氨氮: "/",
+          总磷: "/",
+          氟化物: "/",
+          总氮: "/",
+          水质类别: "/"
+        }
+      },
+      {
+        basin: "观澜河流域",
+        name: "高峰花园",
+        point: "114.005827,22.658958",
+        details: {
+          化学需氧量: "/",
+          氨氮: "/",
+          总磷: "/",
+          氟化物: "/",
+          总氮: "/",
+          水质类别: "/"
+        }
+      },
+      {
+        basin: "观澜河流域",
+        name: "文体中心",
+        point: "114.008296,22.67641",
+        details: {
+          化学需氧量: "/",
+          氨氮: "/",
+          总磷: "/",
+          氟化物: "/",
+          总氮: "/",
+          水质类别: "/"
+        }
+      },
+      {
+        basin: "观澜河流域",
+        name: "三联村",
+        point: "114.017847,22.666778",
+        details: {
+          化学需氧量: "/",
+          氨氮: "/",
+          总磷: "/",
+          氟化物: "/",
+          总氮: "/",
+          水质类别: "/"
+        }
+      },
+      {
+        basin: "观澜河流域",
+        name: "高速路口",
+        point: "114.045231,22.630706",
+        details: {
+          化学需氧量: "/",
+          氨氮: "/",
+          总磷: "/",
+          氟化物: "/",
+          总氮: "/",
+          水质类别: "/"
+        }
+      },
+      {
+        basin: "观澜河流域",
+        name: "吉华路口",
+        point: "114.046704,22.638131",
+        details: {
+          化学需氧量: "/",
+          氨氮: "/",
+          总磷: "/",
+          氟化物: "/",
+          总氮: "/",
+          水质类别: "/"
+        }
+      },
+      {
+        basin: "观澜河流域",
+        name: "坂田河河口",
+        point: "114.036927,22.64959",
+        details: {
+          化学需氧量: "/",
+          氨氮: "/",
+          总磷: "/",
+          氟化物: "/",
+          总氮: "/",
+          水质类别: "/"
+        }
+      },
+      {
+        basin: "观澜河流域",
+        name: "河口",
+        point: "114.071336,22.61881",
+        details: {
+          化学需氧量: "/",
+          氨氮: "/",
+          总磷: "/",
+          氟化物: "/",
+          总氮: "/",
+          水质类别: "/"
+        }
+      },
+      {
+        basin: "观澜河流域",
+        name: "河口",
+        point: "114.062626,22.613774",
+        details: {
+          化学需氧量: "/",
+          氨氮: "/",
+          总磷: "/",
+          氟化物: "/",
+          总氮: "/",
+          水质类别: "/"
+        }
+      },
+      {
+        basin: "观澜河流域",
+        name: "河口",
+        point: "114.039371,22.666843",
+        details: {
+          化学需氧量: "/",
+          氨氮: "/",
+          总磷: "/",
+          氟化物: "/",
+          总氮: "/",
+          水质类别: "/"
+        }
+      },
+      {
+        basin: "观澜河流域",
+        name: "五和大道",
+        point: "114.053936,22.666149",
+        details: {
+          化学需氧量: "/",
+          氨氮: "/",
+          总磷: "/",
+          氟化物: "/",
+          总氮: "/",
+          水质类别: "/"
+        }
+      },
+      {
+        basin: "观澜河流域",
+        name: "金园水河口",
+        point: "114.06376,22.666827",
+        details: {
+          化学需氧量: "/",
+          氨氮: "/",
+          总磷: "/",
+          氟化物: "/",
+          总氮: "/",
+          水质类别: "/"
+        }
+      },
+      {
+        basin: "观澜河流域",
+        name: "清湖人工湿地",
+        point: "114.038978,22.684438",
+        details: {
+          化学需氧量: "/",
+          氨氮: "/",
+          总磷: "/",
+          氟化物: "/",
+          总氮: "/",
+          水质类别: "/"
+        }
+      },
+      {
+        basin: "观澜河流域",
+        name: "观澜人民公园",
+        point: "114.041879,22.716901",
+        details: {
+          化学需氧量: "/",
+          氨氮: "/",
+          总磷: "/",
+          氟化物: "/",
+          总氮: "/",
+          水质类别: "/"
+        }
+      },
+      {
+        basin: "观澜河流域",
+        name: "大布巷村",
+        point: "114.047575,22.723361",
+        details: {
+          化学需氧量: "/",
+          氨氮: "/",
+          总磷: "/",
+          氟化物: "/",
+          总氮: "/",
+          水质类别: "/"
+        }
+      },
+      {
+        basin: "观澜河流域",
+        name: "桂花农批市场",
+        point: "114.05623,22.727465",
+        details: {
+          化学需氧量: "/",
+          氨氮: "/",
+          总磷: "/",
+          氟化物: "/",
+          总氮: "/",
+          水质类别: "/"
+        }
+      },
+      {
+        basin: "观澜河流域",
+        name: "小水塘旁",
+        point: "114.00357,22.747898",
+        details: {
+          化学需氧量: "/",
+          氨氮: "/",
+          总磷: "/",
+          氟化物: "/",
+          总氮: "/",
+          水质类别: "/"
+        }
+      },
+      {
+        basin: "观澜河流域",
+        name: "众兴路桥",
+        point: "114.022947,22.752377",
+        details: {
+          化学需氧量: "/",
+          氨氮: "/",
+          总磷: "/",
+          氟化物: "/",
+          总氮: "/",
+          水质类别: "/"
+        }
+      },
+      {
+        basin: "观澜河流域",
+        name: "白花河河口",
+        point: "114.051794,22.747676",
+        details: {
+          化学需氧量: "/",
+          氨氮: "/",
+          总磷: "/",
+          氟化物: "/",
+          总氮: "/",
+          水质类别: "/"
+        }
+      },
+      {
+        basin: "观澜河流域",
+        name: "大富路",
+        point: "114.023943,22.744174",
+        details: {
+          化学需氧量: "/",
+          氨氮: "/",
+          总磷: "/",
+          氟化物: "/",
+          总氮: "/",
+          水质类别: "/"
+        }
+      },
+      {
+        basin: "观澜河流域",
+        name: "河口",
+        point: "114.028479,22.748788",
+        details: {
+          化学需氧量: "/",
+          氨氮: "/",
+          总磷: "/",
+          氟化物: "/",
+          总氮: "/",
+          水质类别: "/"
+        }
+      },
+      {
+        basin: "观澜河流域",
+        name: "牛岭水河口",
+        point: "114.024157,22.743827",
+        details: {
+          化学需氧量: "/",
+          氨氮: "/",
+          总磷: "/",
+          氟化物: "/",
+          总氮: "/",
+          水质类别: "/"
+        }
+      },
+      {
+        basin: "观澜河流域",
+        name: "库坑公园",
+        point: "114.03147,22.736408",
+        details: {
+          化学需氧量: "/",
+          氨氮: "/",
+          总磷: "/",
+          氟化物: "/",
+          总氮: "/",
+          水质类别: "/"
+        }
+      },
+      {
+        basin: "观澜河流域",
+        name: "惠华路口",
+        point: "114.097635,22.70541",
+        details: {
+          化学需氧量: "/",
+          氨氮: "/",
+          总磷: "/",
+          氟化物: "/",
+          总氮: "/",
+          水质类别: "/"
+        }
+      },
+      {
+        basin: "观澜河流域",
+        name: "惠华路桥",
+        point: "114.097533,22.704376",
+        details: {
+          化学需氧量: "/",
+          氨氮: "/",
+          总磷: "/",
+          氟化物: "/",
+          总氮: "/",
+          水质类别: "/"
+        }
+      },
+      {
+        basin: "观澜河流域",
+        name: "旱塘",
+        point: "114.130568,22.672501",
+        details: {
+          化学需氧量: "/",
+          氨氮: "/",
+          总磷: "/",
+          氟化物: "/",
+          总氮: "/",
+          水质类别: "/"
+        }
+      },
+      {
+        basin: "观澜河流域",
+        name: "良安田",
+        point: "114.145719,22.666948",
+        details: {
+          化学需氧量: "/",
+          氨氮: "/",
+          总磷: "/",
+          氟化物: "/",
+          总氮: "/",
+          水质类别: "/"
+        }
+      },
+      {
+        basin: "观澜河流域",
+        name: "入库口",
+        point: "114.178669,22.652304",
+        details: {
+          化学需氧量: "/",
+          氨氮: "/",
+          总磷: "/",
+          氟化物: "/",
+          总氮: "/",
+          水质类别: "/"
+        }
+      },
+      {
+        basin: "观澜河流域",
+        name: "白泥坑水入库口",
+        point: "114.161777,22.655918",
+        details: {
+          化学需氧量: "/",
+          氨氮: "/",
+          总磷: "/",
+          氟化物: "/",
+          总氮: "/",
+          水质类别: "/"
+        }
+      },
+      {
+        basin: "龙岗河流域",
+        name: "西坑",
+        point: "114.215385,22.609402",
+        details: {
+          化学需氧量: "/",
+          氨氮: "/",
+          总磷: "/",
+          氟化物: "/",
+          总氮: "/",
+          水质类别: "/"
+        }
+      },
+      {
+        basin: "龙岗河流域",
+        name: "葫芦围",
+        point: "114.232074,22.691769",
+        details: {
+          化学需氧量: "/",
+          氨氮: "/",
+          总磷: "/",
+          氟化物: "/",
+          总氮: "/",
+          水质类别: "/"
+        }
+      },
+      {
+        basin: "龙岗河流域",
+        name: "低山村",
+        point: "114.289197381,22.7405364814",
+        details: {
+          化学需氧量: "/",
+          氨氮: "/",
+          总磷: "/",
+          氟化物: "/",
+          总氮: "/",
+          水质类别: "/"
+        }
+      },
+      {
+        basin: "龙岗河流域",
+        name: "西湖村断面左岸排水口",
+        point: "114.418733,22.780747",
+        details: {
+          化学需氧量: "/",
+          氨氮: "/",
+          总磷: "/",
+          氟化物: "/",
+          总氮: "/",
+          水质类别: "/"
+        }
+      },
+      {
+        basin: "龙岗河流域",
+        name: "西湖村断面右岸排水口",
+        point: "114.418721,22.780143",
+        details: {
+          化学需氧量: "/",
+          氨氮: "/",
+          总磷: "/",
+          氟化物: "/",
+          总氮: "/",
+          水质类别: "/"
+        }
+      },
+      {
+        basin: "龙岗河流域",
+        name: "西湖村左岸排水口2",
+        point: "114.418733,22.780747",
+        details: {
+          化学需氧量: "/",
+          氨氮: "/",
+          总磷: "/",
+          氟化物: "/",
+          总氮: "/",
+          水质类别: "/"
+        }
+      },
+      {
+        basin: "龙岗河流域",
+        name: "西湖水河口",
+        point: "114.21698465,22.6233056658",
+        details: {
+          化学需氧量: "/",
+          氨氮: "/",
+          总磷: "/",
+          氟化物: "/",
+          总氮: "/",
+          水质类别: "/"
+        }
+      },
+      {
+        basin: "龙岗河流域",
+        name: "莘塘市场",
+        point: "114.220084,22.643397",
+        details: {
+          化学需氧量: "/",
+          氨氮: "/",
+          总磷: "/",
+          氟化物: "/",
+          总氮: "/",
+          水质类别: "/"
+        }
+      },
+      {
+        basin: "龙岗河流域",
+        name: "龙城街道",
+        point: "114.255532,22.739533",
+        details: {
+          化学需氧量: "/",
+          氨氮: "/",
+          总磷: "/",
+          氟化物: "/",
+          总氮: "/",
+          水质类别: "/"
+        }
+      },
+      {
+        basin: "龙岗河流域",
+        name: "兰著学校",
+        point: "114.235132,22.73964",
+        details: {
+          化学需氧量: "/",
+          氨氮: "/",
+          总磷: "/",
+          氟化物: "/",
+          总氮: "/",
+          水质类别: "/"
+        }
+      },
+      {
+        basin: "龙岗河流域",
+        name: "河口",
+        point: "114.271665,22.7402240002",
+        details: {
+          化学需氧量: "/",
+          氨氮: "/",
+          总磷: "/",
+          氟化物: "/",
+          总氮: "/",
+          水质类别: "/"
+        }
+      },
+      {
+        basin: "龙岗河流域",
+        name: "太源水河口",
+        point: "114.287720681,22.7332342243",
+        details: {
+          化学需氧量: "/",
+          氨氮: "/",
+          总磷: "/",
+          氟化物: "/",
+          总氮: "/",
+          水质类别: "/"
+        }
+      },
+      {
+        basin: "龙岗河流域",
+        name: "低山村排水渠河口",
+        point: "114.289067584,22.73983777",
+        details: {
+          化学需氧量: "/",
+          氨氮: "/",
+          总磷: "/",
+          氟化物: "/",
+          总氮: "/",
+          水质类别: "/"
+        }
+      },
+      {
+        basin: "龙岗河流域",
+        name: "丁山河人工湿地",
+        point: "114.28152,22.788154",
+        details: {
+          化学需氧量: "/",
+          氨氮: "/",
+          总磷: "/",
+          氟化物: "/",
+          总氮: "/",
+          水质类别: "/"
+        }
+      },
+      {
+        basin: "龙岗河流域",
+        name: "花园小区",
+        point: "114.287324,22.764573",
+        details: {
+          化学需氧量: "/",
+          氨氮: "/",
+          总磷: "/",
+          氟化物: "/",
+          总氮: "/",
+          水质类别: "/"
+        }
+      },
+      {
+        basin: "龙岗河流域",
+        name: "上輋水河口",
+        point: "114.301414496,22.7588372654",
+        details: {
+          化学需氧量: "/",
+          氨氮: "/",
+          总磷: "/",
+          氟化物: "/",
+          总氮: "/",
+          水质类别: "/"
+        }
+      },
+      {
+        basin: "龙岗河流域",
+        name: "电镀厂排水渠河口",
+        point: "114.320035,22.757074",
+        details: {
+          化学需氧量: "/",
+          氨氮: "/",
+          总磷: "/",
+          氟化物: "/",
+          总氮: "/",
+          水质类别: "/"
+        }
+      },
+      {
+        basin: "龙岗河流域",
+        name: "黄沙河左支（溢流口）",
+        point: "114.3274234,22.80725544",
+        details: {
+          化学需氧量: "/",
+          氨氮: "/",
+          总磷: "/",
+          氟化物: "/",
+          总氮: "/",
+          水质类别: "/"
+        }
+      },
+      {
+        basin: "龙岗河流域",
+        name: "深惠交界处（下游）",
+        point: "114.327275815,22.8065114942",
+        details: {
+          化学需氧量: "/",
+          氨氮: "/",
+          总磷: "/",
+          氟化物: "/",
+          总氮: "/",
+          水质类别: "/"
+        }
+      },
+      {
+        basin: "龙岗河流域",
+        name: "吓陂路",
+        point: "114.348744,22.767253",
+        details: {
+          化学需氧量: "/",
+          氨氮: "/",
+          总磷: "/",
+          氟化物: "/",
+          总氮: "/",
+          水质类别: "/"
+        }
+      },
+      {
+        basin: "龙岗河流域",
+        name: "吉祥路",
+        point: "114.364794,22.736279",
+        details: {
+          化学需氧量: "/",
+          氨氮: "/",
+          总磷: "/",
+          氟化物: "/",
+          总氮: "/",
+          水质类别: "/"
+        }
+      },
+      {
+        basin: "龙岗河流域",
+        name: "钓鱼场",
+        point: "114.351549,22.736725",
+        details: {
+          化学需氧量: "/",
+          氨氮: "/",
+          总磷: "/",
+          氟化物: "/",
+          总氮: "/",
+          水质类别: "/"
+        }
+      },
+      {
+        basin: "龙岗河流域",
+        name: "石陂头村公交站",
+        point: "114.362844,22.750326",
+        details: {
+          化学需氧量: "/",
+          氨氮: "/",
+          总磷: "/",
+          氟化物: "/",
+          总氮: "/",
+          水质类别: "/"
+        }
+      },
+      {
+        basin: "龙岗河流域",
+        name: "老鸦山水河口",
+        point: "114.358925,22.756869",
+        details: {
+          化学需氧量: "/",
+          氨氮: "/",
+          总磷: "/",
+          氟化物: "/",
+          总氮: "/",
+          水质类别: "/"
+        }
+      },
+      {
+        basin: "龙岗河流域",
+        name: "入库口",
+        point: "114.182766,22.657433",
+        details: {
+          化学需氧量: "/",
+          氨氮: "/",
+          总磷: "/",
+          氟化物: "/",
+          总氮: "/",
+          水质类别: "/"
+        }
+      },
+      {
+        basin: "坪山河流域",
+        name: "飞西水河口",
+        point: "114.340531,22.696728",
+        details: {
+          化学需氧量: "/",
+          氨氮: "/",
+          总磷: "/",
+          氟化物: "/",
+          总氮: "/",
+          水质类别: "/"
+        }
+      },
+      {
+        basin: "坪山河流域",
+        name: "新和水河口",
+        point: "114.342907,22.698526",
+        details: {
+          化学需氧量: "/",
+          氨氮: "/",
+          总磷: "/",
+          氟化物: "/",
+          总氮: "/",
+          水质类别: "/"
+        }
+      },
+      {
+        basin: "坪山河流域",
+        name: "新村排洪渠口",
+        point: "114.368085,22.695658",
+        details: {
+          化学需氧量: "/",
+          氨氮: "/",
+          总磷: "/",
+          氟化物: "/",
+          总氮: "/",
+          水质类别: "/"
+        }
+      },
+      {
+        basin: "坪山河流域",
+        name: "河口",
+        point: "114.39018902,22.70860188",
+        details: {
+          化学需氧量: "/",
+          氨氮: "/",
+          总磷: "/",
+          氟化物: "/",
+          总氮: "/",
+          水质类别: "/"
+        }
+      },
+      {
+        basin: "深圳湾流域",
+        name: "入库口",
+        point: "114.011845,22.622574",
+        details: {
+          化学需氧量: "/",
+          氨氮: "/",
+          总磷: "/",
+          氟化物: "/",
+          总氮: "/",
+          水质类别: "/"
+        }
+      },
+      {
+        basin: "深圳湾流域",
+        name: "老虎岩河口",
+        point: "114.003724,22.600068",
+        details: {
+          化学需氧量: "/",
+          氨氮: "/",
+          总磷: "/",
+          氟化物: "/",
+          总氮: "/",
+          水质类别: "/"
+        }
+      },
+      {
+        basin: "深圳湾流域",
+        name: "河口",
+        point: "113.994414,22.587958",
+        details: {
+          化学需氧量: "/",
+          氨氮: "/",
+          总磷: "/",
+          氟化物: "/",
+          总氮: "/",
+          水质类别: "/"
+        }
+      },
+      {
+        basin: "深圳湾流域",
+        name: "白芒河入库口",
+        point: "113.937591,22.621306",
+        details: {
+          化学需氧量: "/",
+          氨氮: "/",
+          总磷: "/",
+          氟化物: "/",
+          总氮: "/",
+          水质类别: "/"
+        }
+      },
+      {
+        basin: "深圳湾流域",
+        name: "麻磡河入库口",
+        point: "113.96201044,22.6227038",
+        details: {
+          化学需氧量: "/",
+          氨氮: "/",
+          总磷: "/",
+          氟化物: "/",
+          总氮: "/",
+          水质类别: "/"
+        }
+      },
+      {
+        basin: "深圳湾流域",
+        name: "麻磡河左支1河口",
+        point: "113.957651,22.626479",
+        details: {
+          化学需氧量: "/",
+          氨氮: "/",
+          总磷: "/",
+          氟化物: "/",
+          总氮: "/",
+          水质类别: "/"
+        }
+      },
+      {
+        basin: "深圳湾流域",
+        name: "大磡河入库口",
+        point: "113.964604,22.619971",
+        details: {
+          化学需氧量: "/",
+          氨氮: "/",
+          总磷: "/",
+          氟化物: "/",
+          总氮: "/",
+          水质类别: "/"
+        }
+      },
+      {
+        basin: "深圳湾流域",
+        name: "龙井河左支河口",
+        point: "113.986275,22.560188",
+        details: {
+          化学需氧量: "/",
+          氨氮: "/",
+          总磷: "/",
+          氟化物: "/",
+          总氮: "/",
+          水质类别: "/"
+        }
+      },
+      {
+        basin: "深圳湾流域",
+        name: "白石洲排洪渠河口",
+        point: "113.954451,22.554676",
+        details: {
+          化学需氧量: "/",
+          氨氮: "/",
+          总磷: "/",
+          氟化物: "/",
+          总氮: "/",
+          水质类别: "/"
+        }
+      },
+      {
+        basin: "深圳湾流域",
+        name: "东支入库口",
+        point: "114.03847616,22.57553215",
+        details: {
+          化学需氧量: "/",
+          氨氮: "/",
+          总磷: "/",
+          氟化物: "/",
+          总氮: "/",
+          水质类别: "/"
+        }
+      },
+      {
+        basin: "珠江口流域",
+        name: "入库口",
+        point: "113.908236,22.709457",
+        details: {
+          化学需氧量: "/",
+          氨氮: "/",
+          总磷: "/",
+          氟化物: "/",
+          总氮: "/",
+          水质类别: "/"
+        }
+      },
+      {
+        basin: "大鹏湾流域",
+        name: "沙头角河河口",
+        point: "114.230769,22.548071",
+        details: {
+          化学需氧量: "/",
+          氨氮: "/",
+          总磷: "/",
+          氟化物: "/",
+          总氮: "/",
+          水质类别: "/"
+        }
+      },
+      {
+        basin: "大鹏湾流域",
+        name: "河口",
+        point: "114.2421,22.5868",
+        details: {
+          化学需氧量: "/",
+          氨氮: "/",
+          总磷: "/",
+          氟化物: "/",
+          总氮: "/",
+          水质类别: "/"
+        }
+      },
+      {
+        basin: "大鹏湾流域",
+        name: "河口",
+        point: "114.24122716,22.6033609299",
+        details: {
+          化学需氧量: "/",
+          氨氮: "/",
+          总磷: "/",
+          氟化物: "/",
+          总氮: "/",
+          水质类别: "/"
+        }
+      },
+      {
+        basin: "大鹏湾流域",
+        name: "河口",
+        point: "114.241462064,22.6035655155",
+        details: {
+          化学需氧量: "/",
+          氨氮: "/",
+          总磷: "/",
+          氟化物: "/",
+          总氮: "/",
+          水质类别: "/"
+        }
+      },
+      {
+        basin: "大鹏湾流域",
+        name: "河口",
+        point: "114.2421,22.5868",
+        details: {
+          化学需氧量: "/",
+          氨氮: "/",
+          总磷: "/",
+          氟化物: "/",
+          总氮: "/",
+          水质类别: "/"
+        }
+      },
+      {
+        basin: "大鹏湾流域",
+        name: "小梅沙大酒店",
+        point: "114.323273705,22.6071366505",
+        details: {
+          化学需氧量: "/",
+          氨氮: "/",
+          总磷: "/",
+          氟化物: "/",
+          总氮: "/",
+          水质类别: "/"
+        }
+      },
+      {
+        basin: "大鹏湾流域",
+        name: "深坑水河口",
+        point: "114.327664,22.607183",
+        details: {
+          化学需氧量: "/",
+          氨氮: "/",
+          总磷: "/",
+          氟化物: "/",
+          总氮: "/",
+          水质类别: "/"
+        }
+      },
+      {
+        basin: "大鹏湾流域",
+        name: "东头坑水入海口",
+        point: "114.359529,22.611449",
+        details: {
+          化学需氧量: "/",
+          氨氮: "/",
+          总磷: "/",
+          氟化物: "/",
+          总氮: "/",
+          水质类别: "/"
+        }
+      },
+      {
+        basin: "大鹏湾流域",
+        name: "中石化",
+        point: "114.480166,22.555532",
+        details: {
+          化学需氧量: "/",
+          氨氮: "/",
+          总磷: "/",
+          氟化物: "/",
+          总氮: "/",
+          水质类别: "/"
+        }
+      },
+      {
+        basin: "大鹏湾流域",
+        name: "长毛湖坑水河口",
+        point: "114.483067,22.515647",
+        details: {
+          化学需氧量: "/",
+          氨氮: "/",
+          总磷: "/",
+          氟化物: "/",
+          总氮: "/",
+          水质类别: "/"
+        }
+      },
+      {
+        basin: "大鹏湾流域",
+        name: "河口",
+        point: "114.485993,22.512359",
+        details: {
+          化学需氧量: "/",
+          氨氮: "/",
+          总磷: "/",
+          氟化物: "/",
+          总氮: "/",
+          水质类别: "/"
+        }
+      },
+      {
+        basin: "大鹏湾流域",
+        name: "大坑水河口",
+        point: "114.48513332,22.4750874064",
+        details: {
+          化学需氧量: "/",
+          氨氮: "/",
+          总磷: "/",
+          氟化物: "/",
+          总氮: "/",
+          水质类别: "/"
+        }
+      },
+      {
+        basin: "大鹏湾流域",
+        name: "河口",
+        point: "114.511387105,22.4527398719",
+        details: {
+          化学需氧量: "/",
+          氨氮: "/",
+          总磷: "/",
+          氟化物: "/",
+          总氮: "/",
+          水质类别: "/"
+        }
+      },
+      {
+        basin: "大亚湾流域",
+        name: "河口",
+        point: "114.61707782,22.50893855",
+        details: {
+          化学需氧量: "/",
+          氨氮: "/",
+          总磷: "/",
+          氟化物: "/",
+          总氮: "/",
+          水质类别: "/"
+        }
+      },
+      {
+        basin: "大亚湾流域",
+        name: "双坑水河口",
+        point: "114.545942,22.649898",
+        details: {
+          化学需氧量: "/",
+          氨氮: "/",
+          总磷: "/",
+          氟化物: "/",
+          总氮: "/",
+          水质类别: "/"
+        }
+      },
+      {
+        basin: "大亚湾流域",
+        name: "坳田水河口",
+        point: "114.534795,22.648926",
+        details: {
+          化学需氧量: "/",
+          氨氮: "/",
+          总磷: "/",
+          氟化物: "/",
+          总氮: "/",
+          水质类别: "/"
+        }
+      },
+      {
+        basin: "大亚湾流域",
+        name: "河背坑水河口",
+        point: "114.529754,22.651922",
+        details: {
+          化学需氧量: "/",
+          氨氮: "/",
+          总磷: "/",
+          氟化物: "/",
+          总氮: "/",
+          水质类别: "/"
+        }
+      },
+      {
+        basin: "大亚湾流域",
+        name: "盐灶水河口",
+        point: "114.515152,22.648347",
+        details: {
+          化学需氧量: "/",
+          氨氮: "/",
+          总磷: "/",
+          氟化物: "/",
+          总氮: "/",
+          水质类别: "/"
+        }
+      },
+      {
+        basin: "大亚湾流域",
+        name: "大坑槽水河口",
+        point: "114.494323,22.649651",
+        details: {
+          化学需氧量: "/",
+          氨氮: "/",
+          总磷: "/",
+          氟化物: "/",
+          总氮: "/",
+          水质类别: "/"
+        }
+      },
+      {
+        basin: "大亚湾流域",
+        name: "上新屋水河口",
+        point: "114.49507,22.65348",
+        details: {
+          化学需氧量: "/",
+          氨氮: "/",
+          总磷: "/",
+          氟化物: "/",
+          总氮: "/",
+          水质类别: "/"
+        }
+      },
+      {
+        basin: "大亚湾流域",
+        name: "nan",
+        point: "nan,nan",
+        details: {
+          化学需氧量: "nan",
+          氨氮: "nan",
+          总磷: "nan",
+          氟化物: "nan",
+          总氮: "nan",
+          水质类别: "/"
+        }
+      },
+
+    ];
+    var markerArr1 = [
+      {
+        basin: "深圳河流域",
+        name: "梧桐山沟河口",
+        point: "114.1977586,22.55698602",
+        details: {
+          化学需氧量: "4L",
+          氨氮: "0.025L",
+          总磷: "0.02",
+          氟化物: "0.042",
+          总氮: "/",
+          水质类别: "Ⅰ"
+        }
+      },
+      {
+        basin: "龙岗河流域",
+        name: "奔康路",
+        point: "114.240116,22.652603",
+        details: {
+          化学需氧量: "13",
+          氨氮: "0.074",
+          总磷: "0.01",
+          氟化物: "0.296",
+          总氮: "/",
+          水质类别: "Ⅰ"
+        }
+      },
+      {
+        basin: "大亚湾流域",
+        name: "鹿咀河河口",
+        point: "114.595846,22.538687",
+        details: {
+          化学需氧量: "6",
+          氨氮: "0.025L",
+          总磷: "0.01",
+          氟化物: "0.112",
+          总氮: "/",
+          水质类别: "Ⅰ"
+        }
+      },
+      {
+        basin: "大亚湾流域",
+        name: "大坑河河口",
+        point: "114.538319,22.594447",
+        details: {
+          化学需氧量: "5",
+          氨氮: "0.025L",
+          总磷: "0.01",
+          氟化物: "0.112",
+          总氮: "/",
+          水质类别: "Ⅰ"
+        }
+      },
+      {
+        basin: "大亚湾流域",
+        name: "岭澳西排洪渠河口",
+        point: "114.5482579,22.6011518",
+        details: {
+          化学需氧量: "4L",
+          氨氮: "0.025L",
+          总磷: "0.01L",
+          氟化物: "0.138",
+          总氮: "/",
+          水质类别: "Ⅰ"
+        }
+      },
+      {
+        basin: "大亚湾流域",
+        name: "河口",
+        point: "114.5586676,22.60698632",
+        details: {
+          化学需氧量: "8",
+          氨氮: "0.025L",
+          总磷: "0.01",
+          氟化物: "0.148",
+          总氮: "/",
+          水质类别: "Ⅰ"
+        }
+      },
+      {
+        basin: "大亚湾流域",
+        name: "岭澳河口",
+        point: "114.57055,22.624499",
+        details: {
+          化学需氧量: "4L",
+          氨氮: "0.025L",
+          总磷: "0.01",
+          氟化物: "0.094",
+          总氮: "/",
+          水质类别: "Ⅰ"
+        }
+      }
+    ];
+    var markerArr2 = [
+      {
+        basin: "茅洲河流域",
+        name: "吉祥路桥",
+        point: "113.93654,22.67976",
+        details: {
+          化学需氧量: "10",
+          氨氮: "0.302",
+          总磷: "0.07",
+          氟化物: "0.17",
+          总氮: "/",
+          水质类别: "Ⅱ",
+        }
+      },
+      {
+        basin: "深圳河流域",
+        name: "径肚",
+        point: "114.191951,22.556065",
+        details: {
+          化学需氧量: "6",
+          氨氮: "0.082",
+          总磷: "0.03",
+          氟化物: "0.056",
+          总氮: "/",
+          水质类别: "Ⅱ",
+        }
+      },
+      {
+        basin: "深圳河流域",
+        name: "延芳路",
+        point: "114.151992,22.554539",
+        details: {
+          化学需氧量: "6",
+          氨氮: "0.142",
+          总磷: "0.05",
+          氟化物: "0.076",
+          总氮: "/",
+          水质类别: "Ⅱ",
+        }
+      },
+      {
+        basin: "深圳河流域",
+        name: "径肚沟河口",
+        point: "114.189593,22.554402",
+        details: {
+          化学需氧量: "8",
+          氨氮: "0.025L",
+          总磷: "0.04",
+          氟化物: "0.053",
+          总氮: "/",
+          水质类别: "Ⅱ",
+        }
+      },
+      {
+        basin: "深圳河流域",
+        name: "丹竹村桥",
+        point: "114.156452,22.618648",
+        details: {
+          化学需氧量: "8",
+          氨氮: "0.062",
+          总磷: "0.1",
+          氟化物: "0.401",
+          总氮: "/",
+          水质类别: "Ⅱ",
+        }
+      },
+      {
+        basin: "深圳河流域",
+        name: "沙湾截排闸前",
+        point: "114.15731,22.609902",
+        details: {
+          化学需氧量: "11",
+          氨氮: "0.267",
+          总磷: "0.1",
+          氟化物: "0.378",
+          总氮: "/",
+          水质类别: "Ⅱ",
+        }
+      },
+      {
+        basin: "深圳河流域",
+        name: "河口",
+        point: "114.142301,22.641247",
+        details: {
+          化学需氧量: "9",
+          氨氮: "0.202",
+          总磷: "0.07",
+          氟化物: "0.34",
+          总氮: "/",
+          水质类别: "Ⅱ",
+        }
+      },
+      {
+        basin: "深圳河流域",
+        name: "白泥塘村大门",
+        point: "114.145527,22.650418",
+        details: {
+          化学需氧量: "10",
+          氨氮: "0.254",
+          总磷: "0.1",
+          氟化物: "0.384",
+          总氮: "/",
+          水质类别: "Ⅱ",
+        }
+      },
+      {
+        basin: "深圳河流域",
+        name: "丹竹头村",
+        point: "114.151637,22.621176",
+        details: {
+          化学需氧量: "7",
+          氨氮: "0.099",
+          总磷: "0.1",
+          氟化物: "0.282",
+          总氮: "/",
+          水质类别: "Ⅱ",
+        }
+      },
+      {
+        basin: "深圳河流域",
+        name: "梧桐山河入库口",
+        point: "114.170192,22.603884",
+        details: {
+          化学需氧量: "6",
+          氨氮: "0.114",
+          总磷: "0.03",
+          氟化物: "0.046",
+          总氮: "/",
+          水质类别: "Ⅱ",
+        }
+      },
+      {
+        basin: "深圳河流域",
+        name: "横排岭水河口",
+        point: "114.194634,22.596016",
+        details: {
+          化学需氧量: "6",
+          氨氮: "0.028",
+          总磷: "0.02",
+          氟化物: "0.038",
+          总氮: "/",
+          水质类别: "Ⅱ",
+        }
+      },
+      {
+        basin: "深圳河流域",
+        name: "粤宝路桥",
+        point: "114.112031,22.600122",
+        details: {
+          化学需氧量: "12",
+          氨氮: "0.299",
+          总磷: "0.06",
+          氟化物: "0.309",
+          总氮: "/",
+          水质类别: "Ⅱ",
+        }
+      },
+      {
+        basin: "深圳河流域",
+        name: "草埔",
+        point: "114.108191,22.592875",
+        details: {
+          化学需氧量: "9",
+          氨氮: "0.142",
+          总磷: "0.08",
+          氟化物: "0.252",
+          总氮: "/",
+          水质类别: "Ⅱ",
+        }
+      },
+      {
+        basin: "深圳河流域",
+        name: "洪湖公园",
+        point: "114.114754,22.575805",
+        details: {
+          化学需氧量: "10",
+          氨氮: "0.213",
+          总磷: "0.08",
+          氟化物: "0.278",
+          总氮: "/",
+          水质类别: "Ⅱ",
+        }
+      },
+      {
+        basin: "深圳河流域",
+        name: "深圳国际文化大厦",
+        point: "114.110495,22.557614",
+        details: {
+          化学需氧量: "12",
+          氨氮: "0.396",
+          总磷: "0.07",
+          氟化物: "0.306",
+          总氮: "/",
+          水质类别: "Ⅱ",
+        }
+      },
+      {
+        basin: "深圳河流域",
+        name: "人民桥",
+        point: "114.10854,22.547339",
+        details: {
+          化学需氧量: "12",
+          氨氮: "0.299",
+          总磷: "0.08",
+          氟化物: "0.238",
+          总氮: "/",
+          水质类别: "Ⅱ",
+        }
+      },
+      {
+        basin: "深圳河流域",
+        name: "嘉宾路桥",
+        point: "114.107529,22.540712",
+        details: {
+          化学需氧量: "10",
+          氨氮: "0.358",
+          总磷: "0.08",
+          氟化物: "0.276",
+          总氮: "/",
+          水质类别: "Ⅱ",
+        }
+      },
+      {
+        basin: "深圳河流域",
+        name: "鸭麻窝排洪沟河口",
+        point: "114.096385,22.632583",
+        details: {
+          化学需氧量: "6",
+          氨氮: "0.173",
+          总磷: "0.03",
+          氟化物: "0.386",
+          总氮: "/",
+          水质类别: "Ⅱ",
+        }
+      },
+      {
+        basin: "深圳河流域",
+        name: "沿河箱涵溢流口",
+        point: "114.161832,22.607573",
+        details: {
+          化学需氧量: "10",
+          氨氮: "0.264",
+          总磷: "0.06",
+          氟化物: "0.26",
+          总氮: "/",
+          水质类别: "Ⅱ",
+        }
+      },
+      {
+        basin: "深圳河流域",
+        name: "河口（大小坑泵站溢流口）",
+        point: "114.110498,22.589831",
+        details: {
+          化学需氧量: "9",
+          氨氮: "0.487",
+          总磷: "0.05",
+          氟化物: "0.18",
+          总氮: "/",
+          水质类别: "Ⅱ",
+        }
+      },
+      {
+        basin: "深圳河流域",
+        name: "北环立交",
+        point: "114.06854,22.568512",
+        details: {
+          化学需氧量: "10",
+          氨氮: "0.037",
+          总磷: "0.1",
+          氟化物: "0.736",
+          总氮: "/",
+          水质类别: "Ⅱ",
+        }
+      },
+      {
+        basin: "深圳河流域",
+        name: "田面村",
+        point: "114.072972,22.546346",
+        details: {
+          化学需氧量: "11",
+          氨氮: "0.247",
+          总磷: "0.09",
+          氟化物: "0.221",
+          总氮: "/",
+          水质类别: "Ⅱ",
+        }
+      },
+      {
+        basin: "深圳河流域",
+        name: "中心公园",
+        point: "114.071536,22.543587",
+        details: {
+          化学需氧量: "14",
+          氨氮: "0.273",
+          总磷: "0.07",
+          氟化物: "0.204",
+          总氮: "/",
+          水质类别: "Ⅱ",
+        }
+      },
+      {
+        basin: "观澜河流域",
+        name: "花半里",
+        point: "114.043215,22.679041",
+        details: {
+          化学需氧量: "10",
+          氨氮: "0.156",
+          总磷: "0.03",
+          氟化物: "0.357",
+          总氮: "/",
+          水质类别: "Ⅱ",
+        }
+      },
+      {
+        basin: "观澜河流域",
+        name: "陶都懿峰",
+        point: "114.041249,22.691726",
+        details: {
+          化学需氧量: "10",
+          氨氮: "0.196",
+          总磷: "0.03",
+          氟化物: "0.429",
+          总氮: "/",
+          水质类别: "Ⅱ",
+        }
+      },
+      {
+        basin: "观澜河流域",
+        name: "甘坑水入库口",
+        point: "114.100007,22.67068",
+        details: {
+          化学需氧量: "8",
+          氨氮: "0.293",
+          总磷: "0.09",
+          氟化物: "0.292",
+          总氮: "/",
+          水质类别: "Ⅱ",
+        }
+      },
+      {
+        basin: "观澜河流域",
+        name: "白花社区",
+        point: "113.992419,22.747257",
+        details: {
+          化学需氧量: "7",
+          氨氮: "0.099",
+          总磷: "0.09",
+          氟化物: "0.229",
+          总氮: "/",
+          水质类别: "Ⅱ",
+        }
+      },
+      {
+        basin: "观澜河流域",
+        name: "顺平达酒店",
+        point: "114.109138,22.696752",
+        details: {
+          化学需氧量: "8",
+          氨氮: "0.074",
+          总磷: "0.03",
+          氟化物: "0.228",
+          总氮: "/",
+          水质类别: "Ⅱ",
+        }
+      },
+      {
+        basin: "观澜河流域",
+        name: "科园西路",
+        point: "114.112489,22.696786",
+        details: {
+          化学需氧量: "10",
+          氨氮: "0.293",
+          总磷: "0.05",
+          氟化物: "0.181",
+          总氮: "/",
+          水质类别: "Ⅱ",
+        }
+      },
+      {
+        basin: "观澜河流域",
+        name: "深莞交界",
+        point: "114.137554,22.715964",
+        details: {
+          化学需氧量: "13",
+          氨氮: "0.31",
+          总磷: "0.07",
+          氟化物: "0.374",
+          总氮: "/",
+          水质类别: "Ⅱ",
+        }
+      },
+      {
+        basin: "龙岗河流域",
+        name: "盐田坳支流河口",
+        point: "114.221094,22.618999",
+        details: {
+          化学需氧量: "10",
+          氨氮: "0.215",
+          总磷: "0.05",
+          氟化物: "0.486",
+          总氮: "/",
+          水质类别: "Ⅱ",
+        }
+      },
+      {
+        basin: "龙岗河流域",
+        name: "简龙河入库口",
+        point: "114.249642077,22.6681527453",
+        details: {
+          化学需氧量: "10",
+          氨氮: "0.227",
+          总磷: "0.03",
+          氟化物: "0.419",
+          总氮: "/",
+          水质类别: "Ⅱ",
+        }
+      },
+      {
+        basin: "龙岗河流域",
+        name: "龙西河河口",
+        point: "114.25621,22.740943",
+        details: {
+          化学需氧量: "8",
+          氨氮: "0.184",
+          总磷: "0.09",
+          氟化物: "0.562",
+          总氮: "/",
+          水质类别: "Ⅱ",
+        }
+      },
+      {
+        basin: "龙岗河流域",
+        name: "入库口",
+        point: "114.252622,22.662181",
+        details: {
+          化学需氧量: "13",
+          氨氮: "0.11",
+          总磷: "0.02",
+          氟化物: "0.135",
+          总氮: "/",
+          水质类别: "Ⅱ",
+        }
+      },
+      {
+        basin: "坪山河流域",
+        name: "河口",
+        point: "114.314541,22.6598",
+        details: {
+          化学需氧量: "11",
+          氨氮: "0.141",
+          总磷: "0.05",
+          氟化物: "0.256",
+          总氮: "/",
+          水质类别: "Ⅱ",
+        }
+      },
+      {
+        basin: "坪山河流域",
+        name: "金龟村",
+        point: "114.387451,22.660499",
+        details: {
+          化学需氧量: "13",
+          氨氮: "0.027",
+          总磷: "0.04",
+          氟化物: "0.105",
+          总氮: "/",
+          水质类别: "Ⅱ",
+        }
+      },
+      {
+        basin: "坪山河流域",
+        name: "麻雀坑河口",
+        point: "114.388339,22.706348",
+        details: {
+          化学需氧量: "12",
+          氨氮: "0.037",
+          总磷: "0.04",
+          氟化物: "0.326",
+          总氮: "/",
+          水质类别: "Ⅱ",
+        }
+      },
+      {
+        basin: "深圳湾流域",
+        name: "红荔路西",
+        point: "114.043889,22.551389",
+        details: {
+          化学需氧量: "12",
+          氨氮: "0.318",
+          总磷: "0.09",
+          氟化物: "0.401",
+          总氮: "/",
+          水质类别: "Ⅱ",
+        }
+      },
+      {
+        basin: "深圳湾流域",
+        name: "小沙河河口",
+        point: "113.989378,22.523574",
+        details: {
+          化学需氧量: "10",
+          氨氮: "0.153",
+          总磷: "0.04",
+          氟化物: "0.249",
+          总氮: "/",
+          水质类别: "Ⅱ",
+        }
+      },
+      {
+        basin: "深圳湾流域",
+        name: "大学城",
+        point: "113.977269,22.593458",
+        details: {
+          化学需氧量: "10",
+          氨氮: "0.2",
+          总磷: "0.08",
+          氟化物: "0.322",
+          总氮: "1.79",
+          水质类别: "Ⅱ",
+        }
+      },
+      {
+        basin: "深圳湾流域",
+        name: "珠光桥",
+        point: "113.951208,22.570975",
+        details: {
+          化学需氧量: "9",
+          氨氮: "0.179",
+          总磷: "0.05",
+          氟化物: "0.242",
+          总氮: "7.24",
+          水质类别: "Ⅱ",
+        }
+      },
+      {
+        basin: "深圳湾流域",
+        name: "北环大道",
+        point: "113.953422,22.555871",
+        details: {
+          化学需氧量: "8",
+          氨氮: "0.151",
+          总磷: "0.06",
+          氟化物: "0.231",
+          总氮: "5.9",
+          水质类别: "Ⅱ",
+        }
+      },
+      {
+        basin: "深圳湾流域",
+        name: "大冲桥",
+        point: "113.9548,22.54262",
+        details: {
+          化学需氧量: "8",
+          氨氮: "0.168",
+          总磷: "0.05",
+          氟化物: "0.244",
+          总氮: "4",
+          水质类别: "Ⅱ",
+        }
+      },
+      {
+        basin: "深圳湾流域",
+        name: "大沙河河口",
+        point: "113.950203,22.524757",
+        details: {
+          化学需氧量: "9",
+          氨氮: "0.179",
+          总磷: "0.04",
+          氟化物: "0.22",
+          总氮: "2.88",
+          水质类别: "Ⅱ",
+        }
+      },
+      {
+        basin: "深圳湾流域",
+        name: "西丽水库下",
+        point: "113.956056257,22.5892373855",
+        details: {
+          化学需氧量: "12",
+          氨氮: "0.264",
+          总磷: "0.09",
+          氟化物: "0.193",
+          总氮: "/",
+          水质类别: "Ⅱ",
+        }
+      },
+      {
+        basin: "深圳湾流域",
+        name: "人工快渗前",
+        point: "113.962477,22.630783",
+        details: {
+          化学需氧量: "10",
+          氨氮: "0.054",
+          总磷: "0.07",
+          氟化物: "0.194",
+          总氮: "/",
+          水质类别: "Ⅱ",
+        }
+      },
+      {
+        basin: "深圳湾流域",
+        name: "大沙河公园",
+        point: "113.954346,22.562998",
+        details: {
+          化学需氧量: "6",
+          氨氮: "0.132",
+          总磷: "0.05",
+          氟化物: "0.381",
+          总氮: "/",
+          水质类别: "Ⅱ",
+        }
+      },
+      {
+        basin: "深圳湾流域",
+        name: "河口",
+        point: "113.96582194,22.59861738",
+        details: {
+          化学需氧量: "11",
+          氨氮: "0.153",
+          总磷: "0.1",
+          氟化物: "0.167",
+          总氮: "/",
+          水质类别: "Ⅱ",
+        }
+      },
+      {
+        basin: "深圳湾流域",
+        name: "西支入库口",
+        point: "114.01589654,22.5744185",
+        details: {
+          化学需氧量: "6",
+          氨氮: "0.098",
+          总磷: "0.04",
+          氟化物: "0.122",
+          总氮: "/",
+          水质类别: "Ⅱ",
+        }
+      },
+      {
+        basin: "珠江口流域",
+        name: "河口",
+        point: "113.903007,22.515245",
+        details: {
+          化学需氧量: "6",
+          氨氮: "0.031",
+          总磷: "0.04",
+          氟化物: "0.136",
+          总氮: "/",
+          水质类别: "Ⅱ",
+        }
+      },
+      {
+        basin: "大鹏湾流域",
+        name: "河口",
+        point: "114.2199,22.5565",
+        details: {
+          化学需氧量: "5",
+          氨氮: "0.025L",
+          总磷: "0.05",
+          氟化物: "0.032",
+          总氮: "/",
+          水质类别: "Ⅱ",
+        }
+      },
+      {
+        basin: "大鹏湾流域",
+        name: "河口",
+        point: "114.5181,22.5129",
+        details: {
+          化学需氧量: "/",
+          氨氮: "0.047",
+          总磷: "0.07",
+          氟化物: "0.74",
+          总氮: "/",
+          水质类别: "Ⅱ",
+        }
+      },
+      {
+        basin: "大鹏湾流域",
+        name: "河口",
+        point: "114.5037,22.5303",
+        details: {
+          化学需氧量: "/",
+          氨氮: "0.103",
+          总磷: "0.05",
+          氟化物: "0.48",
+          总氮: "/",
+          水质类别: "Ⅱ",
+        }
+      },
+      {
+        basin: "大鹏湾流域",
+        name: "河口",
+        point: "114.4772,22.6338",
+        details: {
+          化学需氧量: "/",
+          氨氮: "0.197",
+          总磷: "0.03",
+          氟化物: "0.85",
+          总氮: "/",
+          水质类别: "Ⅱ",
+        }
+      },
+      {
+        basin: "大鹏湾流域",
+        name: "双拥公园",
+        point: "114.4988,22.6433",
+        details: {
+          化学需氧量: "7",
+          氨氮: "0.025L",
+          总磷: "0.03",
+          氟化物: "0.175",
+          总氮: "/",
+          水质类别: "Ⅱ",
+        }
+      },
+      {
+        basin: "大鹏湾流域",
+        name: "盐港中学",
+        point: "114.537797,22.505308",
+        details: {
+          化学需氧量: "7",
+          氨氮: "0.073",
+          总磷: "0.08",
+          氟化物: "0.161",
+          总氮: "/",
+          水质类别: "Ⅱ",
+        }
+      },
+      {
+        basin: "大鹏湾流域",
+        name: "河口",
+        point: "114.245348,22.599587",
+        details: {
+          化学需氧量: "8",
+          氨氮: "0.025L",
+          总磷: "0.04",
+          氟化物: "0.146",
+          总氮: "/",
+          水质类别: "Ⅱ",
+        }
+      },
+      {
+        basin: "大鹏湾流域",
+        name: "河口",
+        point: "114.247757,22.597581",
+        details: {
+          化学需氧量: "7",
+          氨氮: "0.025L",
+          总磷: "0.03",
+          氟化物: "0.198",
+          总氮: "/",
+          水质类别: "Ⅱ",
+        }
+      },
+      {
+        basin: "大鹏湾流域",
+        name: "河口",
+        point: "114.253907,22.594281",
+        details: {
+          化学需氧量: "9",
+          氨氮: "0.025L",
+          总磷: "0.04",
+          氟化物: "0.116",
+          总氮: "/",
+          水质类别: "Ⅱ",
+        }
+      },
+      {
+        basin: "大鹏湾流域",
+        name: "大三洲塘水河口",
+        point: "114.260944,22.589896",
+        details: {
+          化学需氧量: "9",
+          氨氮: "0.226",
+          总磷: "0.06",
+          氟化物: "0.16",
+          总氮: "/",
+          水质类别: "Ⅱ",
+        }
+      },
+      {
+        basin: "大鹏湾流域",
+        name: "河口",
+        point: "114.308131,22.599342",
+        details: {
+          化学需氧量: "/",
+          氨氮: "0.404",
+          总磷: "0.06",
+          氟化物: "0.51",
+          总氮: "/",
+          水质类别: "Ⅱ",
+        }
+      },
+      {
+        basin: "大鹏湾流域",
+        name: "溪涌小桥",
+        point: "114.354909,22.609607",
+        details: {
+          化学需氧量: "9",
+          氨氮: "0.23",
+          总磷: "0.05",
+          氟化物: "0.262",
+          总氮: "/",
+          水质类别: "Ⅱ",
+        }
+      },
+      {
+        basin: "大鹏湾流域",
+        name: "径心泵站",
+        point: "114.432576,22.628515",
+        details: {
+          化学需氧量: "5",
+          氨氮: "0.034",
+          总磷: "0.03",
+          氟化物: "0.118",
+          总氮: "/",
+          水质类别: "Ⅱ",
+        }
+      },
+      {
+        basin: "大鹏湾流域",
+        name: "金葵中路",
+        point: "114.421368,22.629285",
+        details: {
+          化学需氧量: "8",
+          氨氮: "0.025L",
+          总磷: "0.04",
+          氟化物: "0.069",
+          总氮: "/",
+          水质类别: "Ⅱ",
+        }
+      },
+      {
+        basin: "大鹏湾流域",
+        name: "猪头山支流河口",
+        point: "114.421144,22.639458",
+        details: {
+          化学需氧量: "4L",
+          氨氮: "0.046",
+          总磷: "0.03",
+          氟化物: "0.042",
+          总氮: "/",
+          水质类别: "Ⅱ",
+        }
+      },
+      {
+        basin: "大鹏湾流域",
+        name: "上禾塘支流河口",
+        point: "114.420691,22.639304",
+        details: {
+          化学需氧量: "4L",
+          氨氮: "0.025L",
+          总磷: "0.04",
+          氟化物: "0.129",
+          总氮: "/",
+          水质类别: "Ⅱ",
+        }
+      },
+      {
+        basin: "大鹏湾流域",
+        name: "葵新南路",
+        point: "114.417077,22.622749",
+        details: {
+          化学需氧量: "5",
+          氨氮: "0.246",
+          总磷: "0.08",
+          氟化物: "0.215",
+          总氮: "/",
+          水质类别: "Ⅱ",
+        }
+      },
+      {
+        basin: "大鹏湾流域",
+        name: "乌泥河河口",
+        point: "114.426414,22.60492",
+        details: {
+          化学需氧量: "7",
+          氨氮: "0.025L",
+          总磷: "0.04",
+          氟化物: "0.14",
+          总氮: "/",
+          水质类别: "Ⅱ",
+        }
+      },
+      {
+        basin: "大鹏湾流域",
+        name: "迭福河河口",
+        point: "114.439922,22.587914",
+        details: {
+          化学需氧量: "9",
+          氨氮: "0.081",
+          总磷: "0.04",
+          氟化物: "0.41",
+          总氮: "/",
+          水质类别: "Ⅱ",
+        }
+      },
+      {
+        basin: "大鹏湾流域",
+        name: "水头沙河河口",
+        point: "114.478372,22.552704",
+        details: {
+          化学需氧量: "7",
+          氨氮: "0.03",
+          总磷: "0.06",
+          氟化物: "0.1",
+          总氮: "/",
+          水质类别: "Ⅱ",
+        }
+      },
+      {
+        basin: "大鹏湾流域",
+        name: "天后宫",
+        point: "114.485513,22.533337",
+        details: {
+          化学需氧量: "/",
+          氨氮: "0.126",
+          总磷: "0.04",
+          氟化物: "0.84",
+          总氮: "/",
+          水质类别: "Ⅱ",
+        }
+      },
+      {
+        basin: "大鹏湾流域",
+        name: "入库口",
+        point: "114.5181,22.5129",
+        details: {
+          化学需氧量: "9",
+          氨氮: "0.097",
+          总磷: "0.05",
+          氟化物: "0.153",
+          总氮: "/",
+          水质类别: "Ⅱ",
+        }
+      },
+      {
+        basin: "大鹏湾流域",
+        name: "入库口",
+        point: "114.5037,22.5303",
+        details: {
+          化学需氧量: "14",
+          氨氮: "0.025L",
+          总磷: "0.03",
+          氟化物: "0.092",
+          总氮: "/",
+          水质类别: "Ⅱ",
+        }
+      },
+      {
+        basin: "大鹏湾流域",
+        name: "天龙坑水河口",
+        point: "114.486945,22.490819",
+        details: {
+          化学需氧量: "8",
+          氨氮: "0.025L",
+          总磷: "0.03",
+          氟化物: "0.099",
+          总氮: "/",
+          水质类别: "Ⅱ",
+        }
+      },
+      {
+        basin: "大鹏湾流域",
+        name: "鹅公水河口",
+        point: "114.487251,22.489751",
+        details: {
+          化学需氧量: "5",
+          氨氮: "0.034",
+          总磷: "0.07",
+          氟化物: "0.099",
+          总氮: "/",
+          水质类别: "Ⅱ",
+        }
+      },
+      {
+        basin: "大鹏湾流域",
+        name: "径心水入库口",
+        point: "114.4772,22.6338",
+        details: {
+          化学需氧量: "4L",
+          氨氮: "0.048",
+          总磷: "0.02",
+          氟化物: "0.054",
+          总氮: "/",
+          水质类别: "Ⅱ",
+        }
+      },
+      {
+        basin: "大亚湾流域",
+        name: "西涌村",
+        point: "114.522627,22.476623",
+        details: {
+          化学需氧量: "9",
+          氨氮: "0.257",
+          总磷: "0.06",
+          氟化物: "0.163",
+          总氮: "/",
+          水质类别: "Ⅱ",
+        }
+      },
+      {
+        basin: "大亚湾流域",
+        name: "西贡河河口",
+        point: "114.520699,22.473307",
+        details: {
+          化学需氧量: "7",
+          氨氮: "0.047",
+          总磷: "0.03",
+          氟化物: "0.134",
+          总氮: "/",
+          水质类别: "Ⅱ",
+        }
+      },
+      {
+        basin: "大亚湾流域",
+        name: "淡水涌河口",
+        point: "114.533149,22.479128",
+        details: {
+          化学需氧量: "13",
+          氨氮: "0.251",
+          总磷: "0.05",
+          氟化物: "0.134",
+          总氮: "/",
+          水质类别: "Ⅱ",
+        }
+      },
+      {
+        basin: "大亚湾流域",
+        name: "南门头河河口",
+        point: "114.546587,22.485208",
+        details: {
+          化学需氧量: "5",
+          氨氮: "0.025L",
+          总磷: "0.04",
+          氟化物: "0.045",
+          总氮: "/",
+          水质类别: "Ⅱ",
+        }
+      },
+      {
+        basin: "大亚湾流域",
+        name: "东涌河左支河口",
+        point: "114.570712,22.497392",
+        details: {
+          化学需氧量: "4L",
+          氨氮: "0.025L",
+          总磷: "0.04",
+          氟化物: "0.018",
+          总氮: "/",
+          水质类别: "Ⅱ",
+        }
+      },
+      {
+        basin: "大亚湾流域",
+        name: "响水坑水河口",
+        point: "114.566026,22.544964",
+        details: {
+          化学需氧量: "6",
+          氨氮: "0.076",
+          总磷: "0.02",
+          氟化物: "0.013",
+          总氮: "/",
+          水质类别: "Ⅱ",
+        }
+      },
+      {
+        basin: "大亚湾流域",
+        name: "桔钓沙涌河口",
+        point: "114.548389,22.562175",
+        details: {
+          化学需氧量: "9",
+          氨氮: "0.261",
+          总磷: "0.05",
+          氟化物: "0.071",
+          总氮: "/",
+          水质类别: "Ⅱ",
+        }
+      },
+      {
+        basin: "大亚湾流域",
+        name: "深圳栖屋客栈",
+        point: "114.515811,22.53263",
+        details: {
+          化学需氧量: "14",
+          氨氮: "0.058",
+          总磷: "0.06",
+          氟化物: "0.099",
+          总氮: "/",
+          水质类别: "Ⅱ",
+        }
+      },
+      {
+        basin: "大亚湾流域",
+        name: "河口",
+        point: "114.519339,22.53021",
+        details: {
+          化学需氧量: "7",
+          氨氮: "0.025L",
+          总磷: "0.02",
+          氟化物: "0.036",
+          总氮: "/",
+          水质类别: "Ⅱ",
+        }
+      },
+      {
+        basin: "大亚湾流域",
+        name: "龙仔陂涌河口",
+        point: "114.498857,22.555313",
+        details: {
+          化学需氧量: "/",
+          氨氮: "0.326",
+          总磷: "0.06",
+          氟化物: "0.69",
+          总氮: "/",
+          水质类别: "Ⅱ",
+        }
+      },
+      {
+        basin: "大亚湾流域",
+        name: "福华德电力排水渠河口",
+        point: "114.498994213,22.5594386331",
+        details: {
+          化学需氧量: "/",
+          氨氮: "0.201",
+          总磷: "0.04",
+          氟化物: "0.67",
+          总氮: "/",
+          水质类别: "Ⅱ",
+        }
+      },
+      {
+        basin: "大亚湾流域",
+        name: "河口",
+        point: "114.473148,22.602393",
+        details: {
+          化学需氧量: "4L",
+          氨氮: "0.025L",
+          总磷: "0.04",
+          氟化物: "0.089",
+          总氮: "/",
+          水质类别: "Ⅱ",
+        }
+      },
+      {
+        basin: "大亚湾流域",
+        name: "河口",
+        point: "114.47721,22.604737",
+        details: {
+          化学需氧量: "4L",
+          氨氮: "0.081",
+          总磷: "0.06",
+          氟化物: "0.06",
+          总氮: "/",
+          水质类别: "Ⅱ",
+        }
+      },
+      {
+        basin: "大亚湾流域",
+        name: "细坑仔河河口",
+        point: "114.505788,22.598637",
+        details: {
+          化学需氧量: "10",
+          氨氮: "0.025L",
+          总磷: "0.07",
+          氟化物: "0.139",
+          总氮: "/",
+          水质类别: "Ⅱ",
+        }
+      },
+      {
+        basin: "大亚湾流域",
+        name: "鹏城河右支河口",
+        point: "114.506155,22.593235",
+        details: {
+          化学需氧量: "7",
+          氨氮: "0.025L",
+          总磷: "0.08",
+          氟化物: "0.194",
+          总氮: "/",
+          水质类别: "Ⅱ",
+        }
+      },
+      {
+        basin: "大亚湾流域",
+        name: "水磨坑河河口",
+        point: "114.520388,22.591588",
+        details: {
+          化学需氧量: "7",
+          氨氮: "0.025L",
+          总磷: "0.06",
+          氟化物: "0.223",
+          总氮: "/",
+          水质类别: "Ⅱ",
+        }
+      },
+      {
+        basin: "大亚湾流域",
+        name: "江屋山水河口",
+        point: "114.505624,22.644497",
+        details: {
+          化学需氧量: "8",
+          氨氮: "0.057",
+          总磷: "0.02",
+          氟化物: "0.21",
+          总氮: "/",
+          水质类别: "Ⅱ",
+        }
+      },
+      {
+        basin: "大亚湾流域",
+        name: "坝光水河口",
+        point: "114.494264,22.646775",
+        details: {
+          化学需氧量: "7",
+          氨氮: "0.025L",
+          总磷: "0.04",
+          氟化物: "0.13",
+          总氮: "/",
+          水质类别: "Ⅱ",
+        }
+      },
+      {
+        basin: "大亚湾流域",
+        name: "河口",
+        point: "114.4988,22.6433",
+        details: {
+          化学需氧量: "5",
+          氨氮: "0.025L",
+          总磷: "0.03",
+          氟化物: "0.149",
+          总氮: "/",
+          水质类别: "Ⅱ",
+        }
+      },
+      {
+        basin: "大亚湾流域",
+        name: "新坝水河口",
+        point: "114.496850402,22.6555393293",
+        details: {
+          化学需氧量: "6",
+          氨氮: "0.025L",
+          总磷: "0.02",
+          氟化物: "0.055",
+          总氮: "/",
+          水质类别: "Ⅱ",
+        }
+      },
+
+    ];
+    var markerArr3 = [
+      {
+        basin: "茅洲河流域",
+        name: "楼村",
+        point: "113.911352,22.78217",
+        details: {
+          化学需氧量: "16",
+          氨氮: "0.645",
+          总磷: "0.11",
+          氟化物: "0.504",
+          总氮: "/",
+          水质类别: "Ⅲ",
+        }
+      },
+      {
+        basin: "茅洲河流域",
+        name: "石岩河水闸前",
+        point: "113.919652,22.683781",
+        details: {
+          化学需氧量: "16",
+          氨氮: "0.768",
+          总磷: "0.17",
+          氟化物: "0.155",
+          总氮: "/",
+          水质类别: "Ⅲ",
+        }
+      },
+      {
+        basin: "茅洲河流域",
+        name: "石龙仔河河口",
+        point: "113.959492,22.687947",
+        details: {
+          化学需氧量: "18",
+          氨氮: "0.644",
+          总磷: "0.11",
+          氟化物: "0.433",
+          总氮: "/",
+          水质类别: "Ⅲ",
+        }
+      },
+      {
+        basin: "茅洲河流域",
+        name: "水田支流河口",
+        point: "113.959361,22.688012",
+        details: {
+          化学需氧量: "18",
+          氨氮: "0.704",
+          总磷: "0.11",
+          氟化物: "0.084",
+          总氮: "/",
+          水质类别: "Ⅲ",
+        }
+      },
+      {
+        basin: "茅洲河流域",
+        name: "宝石东路",
+        point: "113.965219,22.683529",
+        details: {
+          化学需氧量: "11",
+          氨氮: "0.305",
+          总磷: "0.11",
+          氟化物: "0.201",
+          总氮: "/",
+          水质类别: "Ⅲ",
+        }
+      },
+      {
+        basin: "茅洲河流域",
+        name: "沙芋沥河口",
+        point: "113.958854,22.68664",
+        details: {
+          化学需氧量: "20",
+          氨氮: "0.318",
+          总磷: "0.07",
+          氟化物: "0.199",
+          总氮: "/",
+          水质类别: "Ⅲ",
+        }
+      },
+      {
+        basin: "茅洲河流域",
+        name: "河口",
+        point: "113.944742,22.682097",
+        details: {
+          化学需氧量: "18",
+          氨氮: "0.136",
+          总磷: "0.04",
+          氟化物: "0.165",
+          总氮: "/",
+          水质类别: "Ⅲ",
+        }
+      },
+      {
+        basin: "茅洲河流域",
+        name: "麻布水入库口",
+        point: "113.908236,22.709457",
+        details: {
+          化学需氧量: "20",
+          氨氮: "0.129",
+          总磷: "0.05",
+          氟化物: "0.115",
+          总氮: "/",
+          水质类别: "Ⅲ",
+        }
+      },
+      {
+        basin: "茅洲河流域",
+        name: "平板显示园",
+        point: "113.926676,22.749202",
+        details: {
+          化学需氧量: "19",
+          氨氮: "0.116",
+          总磷: "0.15",
+          氟化物: "0.677",
+          总氮: "/",
+          水质类别: "Ⅲ",
+        }
+      },
+      {
+        basin: "茅洲河流域",
+        name: "东坑水河口",
+        point: "113.911061,22.752614",
+        details: {
+          化学需氧量: "14",
+          氨氮: "0.315",
+          总磷: "0.04",
+          氟化物: "0.862",
+          总氮: "/",
+          水质类别: "Ⅲ",
+        }
+      },
+      {
+        basin: "茅洲河流域",
+        name: "木墩路8号",
+        point: "113.918273,22.77198",
+        details: {
+          化学需氧量: "13",
+          氨氮: "0.252",
+          总磷: "0.18",
+          氟化物: "0.539",
+          总氮: "/",
+          水质类别: "Ⅲ",
+        }
+      },
+      {
+        basin: "茅洲河流域",
+        name: "木墩河河口",
+        point: "113.911127,22.774367",
+        details: {
+          化学需氧量: "15",
+          氨氮: "0.438",
+          总磷: "0.04",
+          氟化物: "0.886",
+          总氮: "/",
+          水质类别: "Ⅲ",
+        }
+      },
+      {
+        basin: "茅洲河流域",
+        name: "西田",
+        point: "113.895253,22.799324",
+        details: {
+          化学需氧量: "14",
+          氨氮: "0.281",
+          总磷: "0.12",
+          氟化物: "0.024",
+          总氮: "/",
+          水质类别: "Ⅲ",
+        }
+      },
+      {
+        basin: "茅洲河流域",
+        name: "河口",
+        point: "113.902622088,22.8043473652",
+        details: {
+          化学需氧量: "16",
+          氨氮: "0.265",
+          总磷: "0.11",
+          氟化物: "0.032",
+          总氮: "/",
+          水质类别: "Ⅲ",
+        }
+      },
+      {
+        basin: "茅洲河流域",
+        name: "塘下涌河口",
+        point: "113.822671,22.797244",
+        details: {
+          化学需氧量: "19",
+          氨氮: "0.486",
+          总磷: "0.13",
+          氟化物: "0.25",
+          总氮: "/",
+          水质类别: "Ⅲ",
+        }
+      },
+      {
+        basin: "茅洲河流域",
+        name: "潭头渠水闸前",
+        point: "113.824387,22.754259",
+        details: {
+          化学需氧量: "14",
+          氨氮: "0.108",
+          总磷: "0.17",
+          氟化物: "0.671",
+          总氮: "/",
+          水质类别: "Ⅲ",
+        }
+      },
+      {
+        basin: "茅洲河流域",
+        name: "田园路",
+        point: "113.863227,22.768366",
+        details: {
+          化学需氧量: "19",
+          氨氮: "0.111",
+          总磷: "0.06",
+          氟化物: "0.173",
+          总氮: "/",
+          水质类别: "Ⅲ",
+        }
+      },
+      {
+        basin: "茅洲河流域",
+        name: "松河南路",
+        point: "113.839447,22.772032",
+        details: {
+          化学需氧量: "14",
+          氨氮: "0.33",
+          总磷: "0.05",
+          氟化物: "0.262",
+          总氮: "/",
+          水质类别: "Ⅲ",
+        }
+      },
+      {
+        basin: "茅洲河流域",
+        name: "松岗河宝安大道",
+        point: "113.826402,22.770983",
+        details: {
+          化学需氧量: "16",
+          氨氮: "0.244",
+          总磷: "0.18",
+          氟化物: "0.149",
+          总氮: "/",
+          水质类别: "Ⅲ",
+        }
+      },
+      {
+        basin: "深圳河流域",
+        name: "采石场",
+        point: "114.140798,22.542894",
+        details: {
+          化学需氧量: "10",
+          氨氮: "0.529",
+          总磷: "0.13",
+          氟化物: "0.326",
+          总氮: "/",
+          水质类别: "Ⅲ",
+        }
+      },
+      {
+        basin: "深圳河流域",
+        name: "砖码头",
+        point: "114.086872,22.535384",
+        details: {
+          化学需氧量: "18",
+          氨氮: "0.934",
+          总磷: "0.15",
+          氟化物: "0.215",
+          总氮: "/",
+          水质类别: "Ⅲ",
+        }
+      },
+      {
+        basin: "深圳河流域",
+        name: "截排闸溢流口",
+        point: "114.15674,22.551793",
+        details: {
+          化学需氧量: "10",
+          氨氮: "0.42",
+          总磷: "0.12",
+          氟化物: "0.382",
+          总氮: "/",
+          水质类别: "Ⅲ",
+        }
+      },
+      {
+        basin: "深圳河流域",
+        name: "下李朗公园",
+        point: "114.138699,22.639776",
+        details: {
+          化学需氧量: "6",
+          氨氮: "0.505",
+          总磷: "0.06",
+          氟化物: "0.423",
+          总氮: "/",
+          水质类别: "Ⅲ",
+        }
+      },
+      {
+        basin: "深圳河流域",
+        name: "深圳水库排洪河河口",
+        point: "114.137237,22.544731",
+        details: {
+          化学需氧量: "13",
+          氨氮: "0.384",
+          总磷: "0.16",
+          氟化物: "0.315",
+          总氮: "/",
+          水质类别: "Ⅲ",
+        }
+      },
+      {
+        basin: "深圳河流域",
+        name: "茂仔水河口",
+        point: "114.190261332,22.592764758",
+        details: {
+          化学需氧量: "4L",
+          氨氮: "0.025L",
+          总磷: "0.01",
+          氟化物: "0.031",
+          总氮: "/",
+          水质类别: "Ⅲ",
+        }
+      },
+      {
+        basin: "深圳河流域",
+        name: "仙湖水河口",
+        point: "114.164428597,22.5828741131",
+        details: {
+          化学需氧量: "8",
+          氨氮: "0.042",
+          总磷: "0.02",
+          氟化物: "0.079",
+          总氮: "/",
+          水质类别: "Ⅲ",
+        }
+      },
+      {
+        basin: "深圳河流域",
+        name: "布吉河河口",
+        point: "114.104438,22.53623",
+        details: {
+          化学需氧量: "16",
+          氨氮: "0.857",
+          总磷: "0.11",
+          氟化物: "0.237",
+          总氮: "/",
+          水质类别: "Ⅲ",
+        }
+      },
+      {
+        basin: "深圳河流域",
+        name: "华润物流",
+        point: "114.115761,22.614551",
+        details: {
+          化学需氧量: "16",
+          氨氮: "0.333",
+          总磷: "0.05",
+          氟化物: "0.29",
+          总氮: "/",
+          水质类别: "Ⅲ",
+        }
+      },
+      {
+        basin: "观澜河流域",
+        name: "清湖桥",
+        point: "114.041477,22.675136",
+        details: {
+          化学需氧量: "14",
+          氨氮: "0.956",
+          总磷: "0.14",
+          氟化物: "0.213",
+          总氮: "/",
+          水质类别: "Ⅲ",
+        }
+      },
+      {
+        basin: "观澜河流域",
+        name: "放马埔",
+        point: "114.057303,22.734258",
+        details: {
+          化学需氧量: "11",
+          氨氮: "0.791",
+          总磷: "0.15",
+          氟化物: "0.192",
+          总氮: "/",
+          水质类别: "Ⅲ",
+        }
+      },
+      {
+        basin: "观澜河流域",
+        name: "企坪",
+        point: "114.059287,22.757977",
+        details: {
+          化学需氧量: "10",
+          氨氮: "0.531",
+          总磷: "0.1",
+          氟化物: "0.229",
+          总氮: "/",
+          水质类别: "Ⅲ",
+        }
+      },
+      {
+        basin: "观澜河流域",
+        name: "水果市场",
+        point: "114.008132,22.659829",
+        details: {
+          化学需氧量: "9",
+          氨氮: "0.29",
+          总磷: "0.1",
+          氟化物: "0.163",
+          总氮: "/",
+          水质类别: "Ⅲ",
+        }
+      },
+      {
+        basin: "观澜河流域",
+        name: "上早新村",
+        point: "114.006437,22.659604",
+        details: {
+          化学需氧量: "7",
+          氨氮: "0.179",
+          总磷: "0.05",
+          氟化物: "0.194",
+          总氮: "/",
+          水质类别: "Ⅲ",
+        }
+      },
+      {
+        basin: "观澜河流域",
+        name: "高速桥下",
+        point: "114.049347,22.66861",
+        details: {
+          化学需氧量: "12",
+          氨氮: "0.594",
+          总磷: "0.12",
+          氟化物: "0.268",
+          总氮: "/",
+          水质类别: "Ⅲ",
+        }
+      },
+      {
+        basin: "观澜河流域",
+        name: "岗头河河口",
+        point: "114.040939,22.671098",
+        details: {
+          化学需氧量: "14",
+          氨氮: "0.603",
+          总磷: "0.11",
+          氟化物: "0.268",
+          总氮: "/",
+          水质类别: "Ⅲ",
+        }
+      },
+      {
+        basin: "观澜河流域",
+        name: "格兰云天酒店",
+        point: "114.038427,22.693729",
+        details: {
+          化学需氧量: "11",
+          氨氮: "0.845",
+          总磷: "0.08",
+          氟化物: "0.365",
+          总氮: "/",
+          水质类别: "Ⅲ",
+        }
+      },
+      {
+        basin: "观澜河流域",
+        name: "辅城坳小学",
+        point: "114.106901,22.696724",
+        details: {
+          化学需氧量: "20",
+          氨氮: "0.347",
+          总磷: "0.07",
+          氟化物: "0.398",
+          总氮: "/",
+          水质类别: "Ⅲ",
+        }
+      },
+      {
+        basin: "观澜河流域",
+        name: "深莞交界",
+        point: "114.160229,22.680536",
+        details: {
+          化学需氧量: "12",
+          氨氮: "0.27",
+          总磷: "0.12",
+          氟化物: "0.273",
+          总氮: "/",
+          水质类别: "Ⅲ",
+        }
+      },
+      {
+        basin: "观澜河流域",
+        name: "雁田水库入库口",
+        point: "114.148578,22.666808",
+        details: {
+          化学需氧量: "10",
+          氨氮: "0.292",
+          总磷: "0.14",
+          氟化物: "0.26",
+          总氮: "/",
+          水质类别: "Ⅲ",
+        }
+      },
+      {
+        basin: "龙岗河流域",
+        name: "张河沥河口下游干流约100米处",
+        point: "114.39035641,22.7784589556",
+        details: {
+          化学需氧量: "20",
+          氨氮: "0.474",
+          总磷: "0.07",
+          氟化物: "0.177",
+          总氮: "/",
+          水质类别: "Ⅲ",
+        }
+      },
+      {
+        basin: "龙岗河流域",
+        name: "敬老院桥",
+        point: "114.206915,22.641781",
+        details: {
+          化学需氧量: "19",
+          氨氮: "0.538",
+          总磷: "0.08",
+          氟化物: "0.176",
+          总氮: "/",
+          水质类别: "Ⅲ",
+        }
+      },
+      {
+        basin: "龙岗河流域",
+        name: "大康河河口",
+        point: "114.232773,22.679884",
+        details: {
+          化学需氧量: "10",
+          氨氮: "0.178",
+          总磷: "0.05",
+          氟化物: "0.304",
+          总氮: "/",
+          水质类别: "Ⅲ",
+        }
+      },
+      {
+        basin: "龙岗河流域",
+        name: "爱联河河口",
+        point: "114.247824,22.72345",
+        details: {
+          化学需氧量: "14",
+          氨氮: "0.384",
+          总磷: "0.1",
+          氟化物: "0.159",
+          总氮: "/",
+          水质类别: "Ⅲ",
+        }
+      },
+      {
+        basin: "龙岗河流域",
+        name: "河口",
+        point: "114.269965,22.740239",
+        details: {
+          化学需氧量: "20",
+          氨氮: "0.154",
+          总磷: "0.11",
+          氟化物: "0.29",
+          总氮: "/",
+          水质类别: "Ⅲ",
+        }
+      },
+      {
+        basin: "龙岗河流域",
+        name: "河口",
+        point: "114.27313,22.730203",
+        details: {
+          化学需氧量: "11",
+          氨氮: "0.295",
+          总磷: "0.07",
+          氟化物: "0.161",
+          总氮: "/",
+          水质类别: "Ⅲ",
+        }
+      },
+      {
+        basin: "龙岗河流域",
+        name: "同乐主力学校旁",
+        point: "114.307060776,22.7218742984",
+        details: {
+          化学需氧量: "17",
+          氨氮: "0.258",
+          总磷: "0.16",
+          氟化物: "0.223",
+          总氮: "/",
+          水质类别: "Ⅲ",
+        }
+      },
+      {
+        basin: "龙岗河流域",
+        name: "池屋新村",
+        point: "114.304845,22.730189",
+        details: {
+          化学需氧量: "12",
+          氨氮: "0.16",
+          总磷: "0.06",
+          氟化物: "0.11",
+          总氮: "/",
+          水质类别: "Ⅲ",
+        }
+      },
+      {
+        basin: "龙岗河流域",
+        name: "沙背沥二路桥",
+        point: "114.28998,22.737648",
+        details: {
+          化学需氧量: "11",
+          氨氮: "0.424",
+          总磷: "0.19",
+          氟化物: "0.383",
+          总氮: "/",
+          水质类别: "Ⅲ",
+        }
+      },
+      {
+        basin: "龙岗河流域",
+        name: "南坑东径桥",
+        point: "114.272634407,22.8002655142",
+        details: {
+          化学需氧量: "14",
+          氨氮: "0.719",
+          总磷: "0.18",
+          氟化物: "0.398",
+          总氮: "/",
+          水质类别: "Ⅲ",
+        }
+      },
+      {
+        basin: "龙岗河流域",
+        name: "小区废品回收站",
+        point: "114.36613,22.752008",
+        details: {
+          化学需氧量: "14",
+          氨氮: "0.633",
+          总磷: "0.06",
+          氟化物: "0.104",
+          总氮: "/",
+          水质类别: "Ⅲ",
+        }
+      },
+      {
+        basin: "龙岗河流域",
+        name: "田坑水河口",
+        point: "114.358212,22.762313",
+        details: {
+          化学需氧量: "13",
+          氨氮: "0.621",
+          总磷: "0.05",
+          氟化物: "0.061",
+          总氮: "/",
+          水质类别: "Ⅲ",
+        }
+      },
+      {
+        basin: "龙岗河流域",
+        name: "深惠交界",
+        point: "114.387781,22.76141",
+        details: {
+          化学需氧量: "13",
+          氨氮: "0.394",
+          总磷: "0.12",
+          氟化物: "0.442",
+          总氮: "/",
+          水质类别: "Ⅲ",
+        }
+      },
+      {
+        basin: "龙岗河流域",
+        name: "张河沥河口",
+        point: "114.389357,22.777519",
+        details: {
+          化学需氧量: "11",
+          氨氮: "0.467",
+          总磷: "0.06",
+          氟化物: "0.232",
+          总氮: "/",
+          水质类别: "Ⅲ",
+        }
+      },
+      {
+        basin: "龙岗河流域",
+        name: "深惠交界",
+        point: "114.378718,22.761061",
+        details: {
+          化学需氧量: "20",
+          氨氮: "0.086",
+          总磷: "0.06",
+          氟化物: "0.33",
+          总氮: "/",
+          水质类别: "Ⅲ",
+        }
+      },
+      {
+        basin: "龙岗河流域",
+        name: "田脚水河口",
+        point: "114°24′30.51″,22°46′23.21″",
+        details: {
+          化学需氧量: "20",
+          氨氮: "0.32",
+          总磷: "0.14",
+          氟化物: "0.154",
+          总氮: "/",
+          水质类别: "Ⅲ",
+        }
+      },
+      {
+        basin: "龙岗河流域",
+        name: "河口",
+        point: "114.403662885,22.7519895379",
+        details: {
+          化学需氧量: "19",
+          氨氮: "0.154",
+          总磷: "0.08",
+          氟化物: "0.186",
+          总氮: "/",
+          水质类别: "Ⅲ",
+        }
+      },
+      {
+        basin: "坪山河流域",
+        name: "碧岭",
+        point: "114.27437,22.662308",
+        details: {
+          化学需氧量: "11",
+          氨氮: "0.086",
+          总磷: "0.08",
+          氟化物: "0.211",
+          总氮: "/",
+          水质类别: "Ⅲ",
+        }
+      },
+      {
+        basin: "坪山河流域",
+        name: "倚湖居",
+        point: "114.321151,22.684173",
+        details: {
+          化学需氧量: "15",
+          氨氮: "0.154",
+          总磷: "0.07",
+          氟化物: "0.337",
+          总氮: "/",
+          水质类别: "Ⅲ",
+        }
+      },
+      {
+        basin: "坪山河流域",
+        name: "红花潭",
+        point: "114.357388,22.698863",
+        details: {
+          化学需氧量: "16",
+          氨氮: "0.898",
+          总磷: "0.11",
+          氟化物: "0.301",
+          总氮: "/",
+          水质类别: "Ⅲ",
+        }
+      },
+      {
+        basin: "坪山河流域",
+        name: "上垟",
+        point: "114.414202,22.71486",
+        details: {
+          化学需氧量: "10",
+          氨氮: "0.354",
+          总磷: "0.14",
+          氟化物: "0.236",
+          总氮: "/",
+          水质类别: "Ⅲ",
+        }
+      },
+      {
+        basin: "坪山河流域",
+        name: "秀明北路桥",
+        point: "114.29286069,22.67551916",
+        details: {
+          化学需氧量: "11",
+          氨氮: "0.129",
+          总磷: "0.03",
+          氟化物: "0.264",
+          总氮: "/",
+          水质类别: "Ⅲ",
+        }
+      },
+      {
+        basin: "坪山河流域",
+        name: "碧岭水河口",
+        point: "114.29272821,22.66936076",
+        details: {
+          化学需氧量: "17",
+          氨氮: "0.172",
+          总磷: "0.04",
+          氟化物: "0.243",
+          总氮: "/",
+          水质类别: "Ⅲ",
+        }
+      },
+      {
+        basin: "坪山河流域",
+        name: "河口",
+        point: "114.293168,22.668024",
+        details: {
+          化学需氧量: "19",
+          氨氮: "0.092",
+          总磷: "0.06",
+          氟化物: "0.33",
+          总氮: "/",
+          水质类别: "Ⅲ",
+        }
+      },
+      {
+        basin: "坪山河流域",
+        name: "锦龙大道中桥",
+        point: "114.325533,22.675625",
+        details: {
+          化学需氧量: "12",
+          氨氮: "0.129",
+          总磷: "0.03",
+          氟化物: "0.362",
+          总氮: "/",
+          水质类别: "Ⅲ",
+        }
+      },
+      {
+        basin: "坪山河流域",
+        name: "汤坑水河口",
+        point: "114.337403,22.690092",
+        details: {
+          化学需氧量: "6",
+          氨氮: "0.978",
+          总磷: "0.11",
+          氟化物: "0.331",
+          总氮: "/",
+          水质类别: "Ⅲ",
+        }
+      },
+      {
+        basin: "坪山河流域",
+        name: "坪山汽车站",
+        point: "114.337261,22.689296",
+        details: {
+          化学需氧量: "12",
+          氨氮: "0.608",
+          总磷: "0.08",
+          氟化物: "0.345",
+          总氮: "/",
+          水质类别: "Ⅲ",
+        }
+      },
+      {
+        basin: "坪山河流域",
+        name: "赤坳水河口",
+        point: "114.353449,22.695303",
+        details: {
+          化学需氧量: "14",
+          氨氮: "0.661",
+          总磷: "0.06",
+          氟化物: "0.211",
+          总氮: "/",
+          水质类别: "Ⅲ",
+        }
+      },
+      {
+        basin: "坪山河流域",
+        name: "大山陂水库排洪渠河口",
+        point: "114°21.22584′,22°40.33812′",
+        details: {
+          化学需氧量: "19",
+          氨氮: "0.135",
+          总磷: "0.03",
+          氟化物: "0.365",
+          总氮: "/",
+          水质类别: "Ⅲ",
+        }
+      },
+      {
+        basin: "坪山河流域",
+        name: "坪山河湿地",
+        point: "114.37012,22.695176",
+        details: {
+          化学需氧量: "10",
+          氨氮: "0.35",
+          总磷: "0.06",
+          氟化物: "0.241",
+          总氮: "/",
+          水质类别: "Ⅲ",
+        }
+      },
+      {
+        basin: "坪山河流域",
+        name: "河口",
+        point: "114.370749379,22.6945883453",
+        details: {
+          化学需氧量: "11",
+          氨氮: "0.664",
+          总磷: "0.08",
+          氟化物: "0.334",
+          总氮: "/",
+          水质类别: "Ⅲ",
+        }
+      },
+      {
+        basin: "坪山河流域",
+        name: "横坪大桥",
+        point: "114.381954,22.703819",
+        details: {
+          化学需氧量: "18",
+          氨氮: "0.098",
+          总磷: "0.07",
+          氟化物: "0.37",
+          总氮: "/",
+          水质类别: "Ⅲ",
+        }
+      },
+      {
+        basin: "坪山河流域",
+        name: "田头河河口",
+        point: "114.402261,22.708851",
+        details: {
+          化学需氧量: "8",
+          氨氮: "0.037",
+          总磷: "0.02",
+          氟化物: "0.15",
+          总氮: "/",
+          水质类别: "Ⅲ",
+        }
+      },
+      {
+        basin: "坪山河流域",
+        name: "河口",
+        point: "114.400171,22.710132",
+        details: {
+          化学需氧量: "18",
+          氨氮: "0.141",
+          总磷: "0.1",
+          氟化物: "0.344",
+          总氮: "/",
+          水质类别: "Ⅲ",
+        }
+      },
+      {
+        basin: "坪山河流域",
+        name: "石溪河河口",
+        point: "114°24′14.30″,22°42′33.94″",
+        details: {
+          化学需氧量: "9",
+          氨氮: "0.178",
+          总磷: "0.14",
+          氟化物: "0.106",
+          总氮: "/",
+          水质类别: "Ⅲ",
+        }
+      },
+      {
+        basin: "坪山河流域",
+        name: "河口",
+        point: "114.422588,22.701069",
+        details: {
+          化学需氧量: "9",
+          氨氮: "0.129",
+          总磷: "0.11",
+          氟化物: "0.134",
+          总氮: "/",
+          水质类别: "Ⅲ",
+        }
+      },
+      {
+        basin: "坪山河流域",
+        name: "河口",
+        point: "114.427479,22.701193",
+        details: {
+          化学需氧量: "13",
+          氨氮: "0.154",
+          总磷: "0.06",
+          氟化物: "0.118",
+          总氮: "/",
+          水质类别: "Ⅲ",
+        }
+      },
+      {
+        basin: "坪山河流域",
+        name: "黄草林",
+        point: "114.425481088,22.7053912223",
+        details: {
+          化学需氧量: "20",
+          氨氮: "0.129",
+          总磷: "0.11",
+          氟化物: "0.069",
+          总氮: "/",
+          水质类别: "Ⅲ",
+        }
+      },
+      {
+        basin: "深圳湾流域",
+        name: "景鹏大厦",
+        point: "114.041581,22.560061",
+        details: {
+          化学需氧量: "16",
+          氨氮: "0.284",
+          总磷: "0.11",
+          氟化物: "0.404",
+          总氮: "/",
+          水质类别: "Ⅲ",
+        }
+      },
+      {
+        basin: "深圳湾流域",
+        name: "国际商务大厦",
+        point: "114.044091,22.539127",
+        details: {
+          化学需氧量: "16",
+          氨氮: "0.358",
+          总磷: "0.1",
+          氟化物: "0.341",
+          总氮: "/",
+          水质类别: "Ⅲ",
+        }
+      },
+      {
+        basin: "深圳湾流域",
+        name: "凤塘河河口",
+        point: "114.013382,22.528645",
+        details: {
+          化学需氧量: "16",
+          氨氮: "0.996",
+          总磷: "0.14",
+          氟化物: "0.409",
+          总氮: "4.22",
+          水质类别: "Ⅲ",
+        }
+      },
+      {
+        basin: "深圳湾流域",
+        name: "凤塘河河口闸后",
+        point: "114.013452,22.529204",
+        details: {
+          化学需氧量: "14",
+          氨氮: "0.891",
+          总磷: "0.13",
+          氟化物: "0.35",
+          总氮: "4.24",
+          水质类别: "Ⅲ",
+        }
+      },
+      {
+        basin: "深圳湾流域",
+        name: "欢乐海滩",
+        point: "113.989131,22.525547",
+        details: {
+          化学需氧量: "11",
+          氨氮: "0.358",
+          总磷: "0.06",
+          氟化物: "0.211",
+          总氮: "4.49",
+          水质类别: "Ⅲ",
+        }
+      },
+      {
+        basin: "深圳湾流域",
+        name: "寄山沟河口",
+        point: "114.006754715,22.6027788893",
+        details: {
+          化学需氧量: "7",
+          氨氮: "0.128",
+          总磷: "0.05",
+          氟化物: "0.347",
+          总氮: "/",
+          水质类别: "Ⅲ",
+        }
+      },
+      {
+        basin: "深圳湾流域",
+        name: "高速立交",
+        point: "114.0139663,22.60241351",
+        details: {
+          化学需氧量: "8",
+          氨氮: "0.042",
+          总磷: "0.03",
+          氟化物: "0.405",
+          总氮: "/",
+          水质类别: "Ⅲ",
+        }
+      },
+      {
+        basin: "深圳湾流域",
+        name: "河口",
+        point: "113.96072589,22.58625656",
+        details: {
+          化学需氧量: "9",
+          氨氮: "0.718",
+          总磷: "0.11",
+          氟化物: "0.214",
+          总氮: "/",
+          水质类别: "Ⅲ",
+        }
+      },
+      {
+        basin: "深圳湾流域",
+        name: "河口",
+        point: "113.937149,22.510636",
+        details: {
+          化学需氧量: "/",
+          氨氮: "0.733",
+          总磷: "0.09",
+          氟化物: "0.587",
+          总氮: "/",
+          水质类别: "Ⅲ",
+        }
+      },
+      {
+        basin: "深圳湾流域",
+        name: "河口",
+        point: "113.938792,22.489438",
+        details: {
+          化学需氧量: "/",
+          氨氮: "0.452",
+          总磷: "0.16",
+          氟化物: "0.568",
+          总氮: "2.81",
+          水质类别: "Ⅲ",
+        }
+      },
+      {
+        basin: "珠江口流域",
+        name: "永和路桥（左）",
+        point: "113.786725,22.674612",
+        details: {
+          化学需氧量: "18",
+          氨氮: "0.98",
+          总磷: "0.14",
+          氟化物: "0.107",
+          总氮: "3.48",
+          水质类别: "Ⅲ",
+        }
+      },
+      {
+        basin: "珠江口流域",
+        name: "排涝泵站",
+        point: "113.807044504,22.6663290096",
+        details: {
+          化学需氧量: "15",
+          氨氮: "0.988",
+          总磷: "0.16",
+          氟化物: "0.152",
+          总氮: "/",
+          水质类别: "Ⅲ",
+        }
+      },
+      {
+        basin: "珠江口流域",
+        name: "钟屋驾校",
+        point: "113.835936,22.621669",
+        details: {
+          化学需氧量: "18",
+          氨氮: "0.634",
+          总磷: "0.14",
+          氟化物: "0.175",
+          总氮: "/",
+          水质类别: "Ⅲ",
+        }
+      },
+      {
+        basin: "珠江口流域",
+        name: "固新路",
+        point: "113.846557,22.609241",
+        details: {
+          化学需氧量: "14",
+          氨氮: "0.494",
+          总磷: "0.14",
+          氟化物: "0.11",
+          总氮: "/",
+          水质类别: "Ⅲ",
+        }
+      },
+      {
+        basin: "珠江口流域",
+        name: "铁岗水库排洪渠宝源路",
+        point: "113.826293,22.600983",
+        details: {
+          化学需氧量: "15",
+          氨氮: "0.637",
+          总磷: "0.14",
+          氟化物: "0.224",
+          总氮: "5.88",
+          水质类别: "Ⅲ",
+        }
+      },
+      {
+        basin: "珠江口流域",
+        name: "入库口",
+        point: "113.898507,22.653437",
+        details: {
+          化学需氧量: "17",
+          氨氮: "0.151",
+          总磷: "0.1",
+          氟化物: "0.418",
+          总氮: "/",
+          水质类别: "Ⅲ",
+        }
+      },
+      {
+        basin: "珠江口流域",
+        name: "河口",
+        point: "113.876604,22.671235",
+        details: {
+          化学需氧量: "20",
+          氨氮: "0.472",
+          总磷: "0.17",
+          氟化物: "0.103",
+          总氮: "/",
+          水质类别: "Ⅲ",
+        }
+      },
+      {
+        basin: "珠江口流域",
+        name: "南昌涌水闸前",
+        point: "113.827137,22.598687",
+        details: {
+          化学需氧量: "16",
+          氨氮: "0.587",
+          总磷: "0.12",
+          氟化物: "0.24",
+          总氮: "5.97",
+          水质类别: "Ⅲ",
+        }
+      },
+      {
+        basin: "珠江口流域",
+        name: "固戍涌水闸前",
+        point: "113.835087,22.585404",
+        details: {
+          化学需氧量: "16",
+          氨氮: "0.192",
+          总磷: "0.05",
+          氟化物: "0.326",
+          总氮: "5.96",
+          水质类别: "Ⅲ",
+        }
+      },
+      {
+        basin: "珠江口流域",
+        name: "新圳路桥",
+        point: "113.906654,22.568098",
+        details: {
+          化学需氧量: "15",
+          氨氮: "0.108",
+          总磷: "0.16",
+          氟化物: "0.35",
+          总氮: "/",
+          水质类别: "Ⅲ",
+        }
+      },
+      {
+        basin: "珠江口流域",
+        name: "宝安大道桥",
+        point: "113.899388,22.550921",
+        details: {
+          化学需氧量: "17",
+          氨氮: "0.065",
+          总磷: "0.19",
+          氟化物: "0.47",
+          总氮: "/",
+          水质类别: "Ⅲ",
+        }
+      },
+      {
+        basin: "珠江口流域",
+        name: "河口",
+        point: "113.887251,22.531186",
+        details: {
+          化学需氧量: "/",
+          氨氮: "0.302",
+          总磷: "0.12",
+          氟化物: "0.23",
+          总氮: "2.13",
+          水质类别: "Ⅲ",
+        }
+      },
+      {
+        basin: "珠江口流域",
+        name: "河口",
+        point: "113.874948,22.521979",
+        details: {
+          化学需氧量: "/",
+          氨氮: "0.31",
+          总磷: "0.11",
+          氟化物: "0.19",
+          总氮: "2.8",
+          水质类别: "Ⅲ",
+        }
+      },
+      {
+        basin: "珠江口流域",
+        name: "河口",
+        point: "113.89185,22.520208",
+        details: {
+          化学需氧量: "19",
+          氨氮: "0.495",
+          总磷: "0.13",
+          氟化物: "0.199",
+          总氮: "/",
+          水质类别: "Ⅲ",
+        }
+      },
+      {
+        basin: "大鹏湾流域",
+        name: "大水坑河口",
+        point: "114.27994,22.589423",
+        details: {
+          化学需氧量: "5",
+          氨氮: "0.025L",
+          总磷: "0.02",
+          氟化物: "0.539",
+          总氮: "/",
+          水质类别: "Ⅲ",
+        }
+      },
+      {
+        basin: "大鹏湾流域",
+        name: "大梅沙河口",
+        point: "114.302133,22.60332",
+        details: {
+          化学需氧量: "7",
+          氨氮: "0.025L",
+          总磷: "0.04",
+          氟化物: "0.223",
+          总氮: "/",
+          水质类别: "Ⅲ",
+        }
+      },
+      {
+        basin: "大鹏湾流域",
+        name: "溪涌河入海口",
+        point: "114.355688,22.609244",
+        details: {
+          化学需氧量: "17",
+          氨氮: "0.326",
+          总磷: "0.05",
+          氟化物: "0.266",
+          总氮: "/",
+          水质类别: "Ⅲ",
+        }
+      },
+      {
+        basin: "大鹏湾流域",
+        name: "上洞河河口",
+        point: "114.373579,22.613114",
+        details: {
+          化学需氧量: "5",
+          氨氮: "0.025L",
+          总磷: "0.03",
+          氟化物: "0.141",
+          总氮: "/",
+          水质类别: "Ⅲ",
+        }
+      },
+      {
+        basin: "大鹏湾流域",
+        name: "下洞河河口",
+        point: "114.384133,22.615861",
+        details: {
+          化学需氧量: "5",
+          氨氮: "0.025L",
+          总磷: "0.02",
+          氟化物: "0.122",
+          总氮: "/",
+          水质类别: "Ⅲ",
+        }
+      },
+      {
+        basin: "大鹏湾流域",
+        name: "土洋河河口",
+        point: "114.400264,22.615681",
+        details: {
+          化学需氧量: "5",
+          氨氮: "0.198",
+          总磷: "0.04",
+          氟化物: "0.132",
+          总氮: "/",
+          水质类别: "Ⅲ",
+        }
+      },
+      {
+        basin: "大鹏湾流域",
+        name: "虎地排桥",
+        point: "114.412067,22.614485",
+        details: {
+          化学需氧量: "15",
+          氨氮: "0.534",
+          总磷: "0.11",
+          氟化物: "0.191",
+          总氮: "/",
+          水质类别: "Ⅲ",
+        }
+      },
+      {
+        basin: "大鹏湾流域",
+        name: "河口",
+        point: "114.440305,22.588601",
+        details: {
+          化学需氧量: "18",
+          氨氮: "0.252",
+          总磷: "0.05",
+          氟化物: "0.35",
+          总氮: "/",
+          水质类别: "Ⅲ",
+        }
+      },
+      {
+        basin: "大亚湾流域",
+        name: "东涌村",
+        point: "114.572913,22.494866",
+        details: {
+          化学需氧量: "13",
+          氨氮: "0.038",
+          总磷: "0.12",
+          氟化物: "0.15",
+          总氮: "/",
+          水质类别: "Ⅲ",
+        }
+      },
+      {
+        basin: "大亚湾流域",
+        name: "杨梅坑河河口",
+        point: "114.567818,22.547137",
+        details: {
+          化学需氧量: "16",
+          氨氮: "0.025L",
+          总磷: "0.02",
+          氟化物: "0.039",
+          总氮: "/",
+          水质类别: "Ⅲ",
+        }
+      },
+      {
+        basin: "大亚湾流域",
+        name: "河南涌桥",
+        point: "114.519642,22.547045",
+        details: {
+          化学需氧量: "/",
+          氨氮: "0.17",
+          总磷: "0.05",
+          氟化物: "0.61",
+          总氮: "/",
+          水质类别: "Ⅲ",
+        }
+      },
+      {
+        basin: "大亚湾流域",
+        name: "王母河河口",
+        point: "114.492612,22.569141",
+        details: {
+          化学需氧量: "16",
+          氨氮: "0.62",
+          总磷: "0.17",
+          氟化物: "0.28",
+          总氮: "/",
+          水质类别: "Ⅲ",
+        }
+      },
+      {
+        basin: "大亚湾流域",
+        name: "鹏城河河口",
+        point: "114.504279,22.597025",
+        details: {
+          化学需氧量: "5",
+          氨氮: "0.025L",
+          总磷: "0.11",
+          氟化物: "0.176",
+          总氮: "/",
+          水质类别: "Ⅲ",
+        }
+      },
+      {
+        basin: "大亚湾流域",
+        name: "松山河河口",
+        point: "114.500673,22.598827",
+        details: {
+          化学需氧量: "4L",
+          氨氮: "0.036",
+          总磷: "0.16",
+          氟化物: "0.166",
+          总氮: "/",
+          水质类别: "Ⅲ",
+        }
+      },
+      {
+        basin: "大亚湾流域",
+        name: "入库口",
+        point: "114.537797,22.505308",
+        details: {
+          化学需氧量: "4L",
+          氨氮: "0.548",
+          总磷: "0.05",
+          氟化物: "0.072",
+          总氮: "/",
+          水质类别: "Ⅲ",
+        }
+      },
+
+    ];
+    var markerArr4 = [
+      {
+        basin: "茅洲河流域",
+        name: "共和村（左）",
+        point: "113.78112,22.75281",
+        details: {
+          化学需氧量: "15",
+          氨氮: "1.46",
+          总磷: "0.18",
+          氟化物: "0.29",
+          总氮: "4.1",
+          水质类别: "Ⅳ",
+        }
+      },
+      {
+        basin: "茅洲河流域",
+        name: "共和村",
+        point: "113.78112,22.75281",
+        details: {
+          化学需氧量: "16",
+          氨氮: "1.5",
+          总磷: "0.18",
+          氟化物: "0.28",
+          总氮: "4.03",
+          水质类别: "Ⅳ",
+        }
+      },
+      {
+        basin: "茅洲河流域",
+        name: "上屋河水闸前",
+        point: "113.919191,22.68586",
+        details: {
+          化学需氧量: "22",
+          氨氮: "0.119",
+          总磷: "0.05",
+          氟化物: "0.131",
+          总氮: "/",
+          水质类别: "Ⅳ",
+        }
+      },
+      {
+        basin: "茅洲河流域",
+        name: "龙眼山水河口",
+        point: "113.936209,22.679855",
+        details: {
+          化学需氧量: "22",
+          氨氮: "0.534",
+          总磷: "0.14",
+          氟化物: "0.18",
+          总氮: "/",
+          水质类别: "Ⅳ",
+        }
+      },
+      {
+        basin: "茅洲河流域",
+        name: "运牛坑水入库口",
+        point: "113.908236,22.709457",
+        details: {
+          化学需氧量: "21",
+          氨氮: "0.111",
+          总磷: "0.1",
+          氟化物: "0.238",
+          总氮: "/",
+          水质类别: "Ⅳ",
+        }
+      },
+      {
+        basin: "茅洲河流域",
+        name: "玉田河河口",
+        point: "113.904617,22.732639",
+        details: {
+          化学需氧量: "22",
+          氨氮: "0.602",
+          总磷: "0.12",
+          氟化物: "0.33",
+          总氮: "/",
+          水质类别: "Ⅳ",
+        }
+      },
+      {
+        basin: "茅洲河流域",
+        name: "河口",
+        point: "113.910144,22.745591",
+        details: {
+          化学需氧量: "23",
+          氨氮: "0.291",
+          总磷: "0.05",
+          氟化物: "0.423",
+          总氮: "/",
+          水质类别: "Ⅳ",
+        }
+      },
+      {
+        basin: "茅洲河流域",
+        name: "华润水泥",
+        point: "113.932711,22.728205",
+        details: {
+          化学需氧量: "22",
+          氨氮: "0.217",
+          总磷: "0.1",
+          氟化物: "0.121",
+          总氮: "/",
+          水质类别: "Ⅳ",
+        }
+      },
+      {
+        basin: "茅洲河流域",
+        name: "河口",
+        point: "113.912517984,22.7378473234",
+        details: {
+          化学需氧量: "21",
+          氨氮: "0.43",
+          总磷: "0.12",
+          氟化物: "0.5",
+          总氮: "/",
+          水质类别: "Ⅳ",
+        }
+      },
+      {
+        basin: "茅洲河流域",
+        name: "大凼水河口",
+        point: "113.907444,22.747915",
+        details: {
+          化学需氧量: "22",
+          氨氮: "0.353",
+          总磷: "0.1",
+          氟化物: "0.261",
+          总氮: "/",
+          水质类别: "Ⅳ",
+        }
+      },
+      {
+        basin: "茅洲河流域",
+        name: "荔园路2桥",
+        point: "113.940522,22.771394",
+        details: {
+          化学需氧量: "21",
+          氨氮: "0.209",
+          总磷: "0.11",
+          氟化物: "0.354",
+          总氮: "/",
+          水质类别: "Ⅳ",
+        }
+      },
+      {
+        basin: "茅洲河流域",
+        name: "楼村水河口",
+        point: "113.912109,22.782504",
+        details: {
+          化学需氧量: "24",
+          氨氮: "0.326",
+          总磷: "0.23",
+          氟化物: "0.547",
+          总氮: "/",
+          水质类别: "Ⅳ",
+        }
+      },
+      {
+        basin: "茅洲河流域",
+        name: "光侨路",
+        point: "113.945365,22.787709",
+        details: {
+          化学需氧量: "21",
+          氨氮: "0.156",
+          总磷: "0.24",
+          氟化物: "0.122",
+          总氮: "/",
+          水质类别: "Ⅳ",
+        }
+      },
+      {
+        basin: "茅洲河流域",
+        name: "新陂头水河口",
+        point: "113.909307,22.788301",
+        details: {
+          化学需氧量: "16",
+          氨氮: "0.698",
+          总磷: "0.23",
+          氟化物: "0.224",
+          总氮: "/",
+          水质类别: "Ⅳ",
+        }
+      },
+      {
+        basin: "茅洲河流域",
+        name: "河口",
+        point: "113.934175,22.803288",
+        details: {
+          化学需氧量: "24",
+          氨氮: "0.119",
+          总磷: "0.14",
+          氟化物: "0.191",
+          总氮: "/",
+          水质类别: "Ⅳ",
+        }
+      },
+      {
+        basin: "茅洲河流域",
+        name: "河口",
+        point: "113.949041158,22.7866421676",
+        details: {
+          化学需氧量: "20",
+          氨氮: "0.196",
+          总磷: "0.23",
+          氟化物: "0.12",
+          总氮: "/",
+          水质类别: "Ⅳ",
+        }
+      },
+      {
+        basin: "茅洲河流域",
+        name: "深莞交界1#",
+        point: "113.949541,22.818249",
+        details: {
+          化学需氧量: "26",
+          氨氮: "0.105",
+          总磷: "0.08",
+          氟化物: "0.147",
+          总氮: "/",
+          水质类别: "Ⅳ",
+        }
+      },
+      {
+        basin: "茅洲河流域",
+        name: "广深铁路桥",
+        point: "113.864445,22.802185",
+        details: {
+          化学需氧量: "28",
+          氨氮: "0.471",
+          总磷: "0.18",
+          氟化物: "0.4",
+          总氮: "/",
+          水质类别: "Ⅳ",
+        }
+      },
+      {
+        basin: "茅洲河流域",
+        name: "罗田水河口",
+        point: "113.86366,22.795146",
+        details: {
+          化学需氧量: "22",
+          氨氮: "0.371",
+          总磷: "0.1",
+          氟化物: "0.29",
+          总氮: "/",
+          水质类别: "Ⅳ",
+        }
+      },
+      {
+        basin: "茅洲河流域",
+        name: "河口",
+        point: "113.875243,22.776125",
+        details: {
+          化学需氧量: "18",
+          氨氮: "0.102",
+          总磷: "0.04",
+          氟化物: "1.09",
+          总氮: "/",
+          水质类别: "Ⅳ",
+        }
+      },
+      {
+        basin: "茅洲河流域",
+        name: "茅洲河引水渠闸前",
+        point: "113.855014,22.792166",
+        details: {
+          化学需氧量: "14",
+          氨氮: "1.1",
+          总磷: "0.1",
+          氟化物: "0.192",
+          总氮: "/",
+          水质类别: "Ⅳ",
+        }
+      },
+      {
+        basin: "茅洲河流域",
+        name: "燕山小学2桥",
+        point: "113.848712,22.799379",
+        details: {
+          化学需氧量: "24",
+          氨氮: "0.528",
+          总磷: "0.14",
+          氟化物: "0.24",
+          总氮: "/",
+          水质类别: "Ⅳ",
+        }
+      },
+      {
+        basin: "茅洲河流域",
+        name: "沙井机动车检测站",
+        point: "113.824312,22.753122",
+        details: {
+          化学需氧量: "19",
+          氨氮: "0.055",
+          总磷: "0.08",
+          氟化物: "0.22",
+          总氮: "/",
+          水质类别: "Ⅳ",
+        }
+      },
+      {
+        basin: "茅洲河流域",
+        name: "东方七支渠水闸前",
+        point: "113.82543,22.7598",
+        details: {
+          化学需氧量: "13",
+          氨氮: "0.049",
+          总磷: "0.17",
+          氟化物: "0.632",
+          总氮: "/",
+          水质类别: "Ⅳ",
+        }
+      },
+      {
+        basin: "茅洲河流域",
+        name: "步涌大洋田泵站",
+        point: "113.816578,22.763994",
+        details: {
+          化学需氧量: "21",
+          氨氮: "0.169",
+          总磷: "0.23",
+          氟化物: "0.531",
+          总氮: "/",
+          水质类别: "Ⅳ",
+        }
+      },
+      {
+        basin: "茅洲河流域",
+        name: "佳领域工贸大厦",
+        point: "113.82441,22.761679",
+        details: {
+          化学需氧量: "19",
+          氨氮: "0.095",
+          总磷: "0.21",
+          氟化物: "0.983",
+          总氮: "/",
+          水质类别: "Ⅳ",
+        }
+      },
+      {
+        basin: "茅洲河流域",
+        name: "排涝闸",
+        point: "113.791421,22.759178",
+        details: {
+          化学需氧量: "19",
+          氨氮: "1.18",
+          总磷: "0.21",
+          氟化物: "0.292",
+          总氮: "/",
+          水质类别: "Ⅳ",
+        }
+      },
+      {
+        basin: "茅洲河流域",
+        name: "新桥河新桥公园",
+        point: "113.819677,22.748021",
+        details: {
+          化学需氧量: "22",
+          氨氮: "0.1",
+          总磷: "0.22",
+          氟化物: "0.201",
+          总氮: "/",
+          水质类别: "Ⅳ",
+        }
+      },
+      {
+        basin: "茅洲河流域",
+        name: "新沙路",
+        point: "113.827884,22.731758",
+        details: {
+          化学需氧量: "16",
+          氨氮: "0.852",
+          总磷: "0.28",
+          氟化物: "0.388",
+          总氮: "/",
+          水质类别: "Ⅳ",
+        }
+      },
+      {
+        basin: "茅洲河流域",
+        name: "北环二桥",
+        point: "113.817327,22.748049",
+        details: {
+          化学需氧量: "16",
+          氨氮: "0.185",
+          总磷: "0.14",
+          氟化物: "0.211",
+          总氮: "/",
+          水质类别: "Ⅳ",
+        }
+      },
+      {
+        basin: "茅洲河流域",
+        name: "河口",
+        point: "113.825116,22.729307",
+        details: {
+          化学需氧量: "18",
+          氨氮: "0.432",
+          总磷: "0.25",
+          氟化物: "0.25",
+          总氮: "/",
+          水质类别: "Ⅳ",
+        }
+      },
+      {
+        basin: "茅洲河流域",
+        name: "沙井中学",
+        point: "113.813048,22.752665",
+        details: {
+          化学需氧量: "13",
+          氨氮: "0.079",
+          总磷: "0.22",
+          氟化物: "0.974",
+          总氮: "/",
+          水质类别: "Ⅳ",
+        }
+      },
+      {
+        basin: "茅洲河流域",
+        name: "衙边涌水闸前",
+        point: "113.783153,22.752768",
+        details: {
+          化学需氧量: "19",
+          氨氮: "1.37",
+          总磷: "0.24",
+          氟化物: "0.273",
+          总氮: "/",
+          水质类别: "Ⅳ",
+        }
+      },
+      {
+        basin: "深圳河流域",
+        name: "鹏兴天桥",
+        point: "114.161392,22.561977",
+        details: {
+          化学需氧量: "11",
+          氨氮: "0.122",
+          总磷: "0.24",
+          氟化物: "0.078",
+          总氮: "/",
+          水质类别: "Ⅳ",
+        }
+      },
+      {
+        basin: "深圳河流域",
+        name: "罗湖桥",
+        point: "114.112683,22.529728",
+        details: {
+          化学需氧量: "16",
+          氨氮: "0.99",
+          总磷: "0.28",
+          氟化物: "0.181",
+          总氮: "/",
+          水质类别: "Ⅳ",
+        }
+      },
+      {
+        basin: "深圳河流域",
+        name: "渔民村",
+        point: "114.102468,22.535357",
+        details: {
+          化学需氧量: "16",
+          氨氮: "1.32",
+          总磷: "0.25",
+          氟化物: "0.164",
+          总氮: "/",
+          水质类别: "Ⅳ",
+        }
+      },
+      {
+        basin: "深圳河流域",
+        name: "福田口岸",
+        point: "114.076668,22.526786",
+        details: {
+          化学需氧量: "12",
+          氨氮: "0.972",
+          总磷: "0.15",
+          氟化物: "0.203",
+          总氮: "/",
+          水质类别: "Ⅳ",
+        }
+      },
+      {
+        basin: "深圳河流域",
+        name: "桃花路",
+        point: "114.062516,22.515694",
+        details: {
+          化学需氧量: "13",
+          氨氮: "1.16",
+          总磷: "0.17",
+          氟化物: "0.218",
+          总氮: "/",
+          水质类别: "Ⅳ",
+        }
+      },
+      {
+        basin: "深圳河流域",
+        name: "福田河河口",
+        point: "114.076175,22.529978",
+        details: {
+          化学需氧量: "13",
+          氨氮: "1.22",
+          总磷: "0.11",
+          氟化物: "0.356",
+          总氮: "/",
+          水质类别: "Ⅳ",
+        }
+      },
+      {
+        basin: "深圳河流域",
+        name: "红岭箱涵口",
+        point: "114.105273,22.532428",
+        details: {
+          化学需氧量: "19",
+          氨氮: "1.02",
+          总磷: "0.17",
+          氟化物: "0.181",
+          总氮: "/",
+          水质类别: "Ⅳ",
+        }
+      },
+      {
+        basin: "观澜河流域",
+        name: "松元下小桥",
+        point: "114.058067,22.723886",
+        details: {
+          化学需氧量: "11",
+          氨氮: "1.2",
+          总磷: "0.11",
+          氟化物: "0.294",
+          总氮: "/",
+          水质类别: "Ⅳ",
+        }
+      },
+      {
+        basin: "观澜河流域",
+        name: "高尔夫球场水闸前",
+        point: "114.081102,22.750472",
+        details: {
+          化学需氧量: "15",
+          氨氮: "0.566",
+          总磷: "0.25",
+          氟化物: "0.145",
+          总氮: "/",
+          水质类别: "Ⅳ",
+        }
+      },
+      {
+        basin: "观澜河流域",
+        name: "养鸡场",
+        point: "114.081088,22.751859",
+        details: {
+          化学需氧量: "15",
+          氨氮: "0.637",
+          总磷: "0.28",
+          氟化物: "0.165",
+          总氮: "/",
+          水质类别: "Ⅳ",
+        }
+      },
+      {
+        basin: "观澜河流域",
+        name: "深莞交界",
+        point: "114.100136,22.732227",
+        details: {
+          化学需氧量: "17",
+          氨氮: "1.18",
+          总磷: "0.19",
+          氟化物: "0.297",
+          总氮: "/",
+          水质类别: "Ⅳ",
+        }
+      },
+      {
+        basin: "龙岗河流域",
+        name: "鲤鱼坝",
+        point: "114.293863,22.755187",
+        details: {
+          化学需氧量: "8",
+          氨氮: "0.929",
+          总磷: "0.16",
+          氟化物: "0.336",
+          总氮: "/",
+          水质类别: "Ⅳ",
+        }
+      },
+      {
+        basin: "龙岗河流域",
+        name: "丁山河汇入口上游",
+        point: "114.298843659,22.7579132974",
+        details: {
+          化学需氧量: "8",
+          氨氮: "1.4",
+          总磷: "0.16",
+          氟化物: "0.356",
+          总氮: "/",
+          水质类别: "Ⅳ",
+        }
+      },
+      {
+        basin: "龙岗河流域",
+        name: "水背",
+        point: "114.335853,22.766801",
+        details: {
+          化学需氧量: "13",
+          氨氮: "1.08",
+          总磷: "0.16",
+          氟化物: "0.352",
+          总氮: "/",
+          水质类别: "Ⅳ",
+        }
+      },
+      {
+        basin: "龙岗河流域",
+        name: "吓陂（右河道）",
+        point: "114.349678,22.767369",
+        details: {
+          化学需氧量: "27",
+          氨氮: "1.08",
+          总磷: "0.21",
+          氟化物: "0.475",
+          总氮: "/",
+          水质类别: "Ⅳ",
+        }
+      },
+      {
+        basin: "龙岗河流域",
+        name: "吓陂",
+        point: "115.349678,23.767369",
+        details: {
+          化学需氧量: "28",
+          氨氮: "1.34",
+          总磷: "0.24",
+          氟化物: "0.256",
+          总氮: "/",
+          水质类别: "Ⅳ",
+        }
+      },
+      {
+        basin: "龙岗河流域",
+        name: "恒利工业大厦",
+        point: "114.215575,22.66897",
+        details: {
+          化学需氧量: "24",
+          氨氮: "0.221",
+          总磷: "0.15",
+          氟化物: "0.541",
+          总氮: "/",
+          水质类别: "Ⅳ",
+        }
+      },
+      {
+        basin: "龙岗河流域",
+        name: "河口",
+        point: "114.236656,22.741295",
+        details: {
+          化学需氧量: "22",
+          氨氮: "1.37",
+          总磷: "0.13",
+          氟化物: "0.194",
+          总氮: "/",
+          水质类别: "Ⅳ",
+        }
+      },
+      {
+        basin: "龙岗河流域",
+        name: "同乐菜场",
+        point: "114°17′37.01″,22°43′47.51″",
+        details: {
+          化学需氧量: "23",
+          氨氮: "1.05",
+          总磷: "0.19",
+          氟化物: "0.355",
+          总氮: "/",
+          水质类别: "Ⅳ",
+        }
+      },
+      {
+        basin: "龙岗河流域",
+        name: "浪背街道",
+        point: "114.317632,22.731687",
+        details: {
+          化学需氧量: "6",
+          氨氮: "0.486",
+          总磷: "0.29",
+          氟化物: "0.487",
+          总氮: "/",
+          水质类别: "Ⅳ",
+        }
+      },
+      {
+        basin: "龙岗河流域",
+        name: "丁山河河口",
+        point: "114.297381,22.75963",
+        details: {
+          化学需氧量: "4",
+          氨氮: "0.719",
+          总磷: "0.18",
+          氟化物: "0.378",
+          总氮: "/",
+          水质类别: "Ⅳ",
+        }
+      },
+      {
+        basin: "龙岗河流域",
+        name: "白石塘水河口",
+        point: "114.287678788,22.7858324009",
+        details: {
+          化学需氧量: "8",
+          氨氮: "0.707",
+          总磷: "0.07",
+          氟化物: "0.202",
+          总氮: "/",
+          水质类别: "Ⅳ",
+        }
+      },
+      {
+        basin: "龙岗河流域",
+        name: "黄沙河河口",
+        point: "114.326662,22.764611",
+        details: {
+          化学需氧量: "21",
+          氨氮: "1.2",
+          总磷: "0.13",
+          氟化物: "0.462",
+          总氮: "/",
+          水质类别: "Ⅳ",
+        }
+      },
+      {
+        basin: "坪山河流域",
+        name: "红花岭",
+        point: "114.357944,22.661283",
+        details: {
+          化学需氧量: "29",
+          氨氮: "1.02",
+          总磷: "0.11",
+          氟化物: "0.158",
+          总氮: "/",
+          水质类别: "Ⅳ",
+        }
+      },
+      {
+        basin: "坪山河流域",
+        name: "河口",
+        point: "114.36219,22.644545",
+        details: {
+          化学需氧量: "22",
+          氨氮: "1.03",
+          总磷: "0.12",
+          氟化物: "0.131",
+          总氮: "/",
+          水质类别: "Ⅳ",
+        }
+      },
+      {
+        basin: "深圳湾流域",
+        name: "凤塘河河口闸前",
+        point: "114.018597,22.526449",
+        details: {
+          化学需氧量: "14",
+          氨氮: "0.876",
+          总磷: "0.08",
+          氟化物: "0.363",
+          总氮: "/",
+          水质类别: "Ⅳ",
+        }
+      },
+      {
+        basin: "珠江口流域",
+        name: "石围涌泵站",
+        point: "113.77113,22.734089",
+        details: {
+          化学需氧量: "19",
+          氨氮: "1.17",
+          总磷: "0.19",
+          氟化物: "0.775",
+          总氮: "/",
+          水质类别: "Ⅳ",
+        }
+      },
+      {
+        basin: "珠江口流域",
+        name: "锦程路桥西侧",
+        point: "113.779773,22.729433",
+        details: {
+          化学需氧量: "29",
+          氨氮: "0.906",
+          总磷: "0.25",
+          氟化物: "0.347",
+          总氮: "/",
+          水质类别: "Ⅳ",
+        }
+      },
+      {
+        basin: "珠江口流域",
+        name: "入海口水闸",
+        point: "113.767904,22.720475",
+        details: {
+          化学需氧量: "23",
+          氨氮: "0.613",
+          总磷: "0.08",
+          氟化物: "0.24",
+          总氮: "/",
+          水质类别: "Ⅳ",
+        }
+      },
+      {
+        basin: "珠江口流域",
+        name: "排涝闸门",
+        point: "113.776686,22.720556",
+        details: {
+          化学需氧量: "21",
+          氨氮: "1.13",
+          总磷: "0.17",
+          氟化物: "0.156",
+          总氮: "/",
+          水质类别: "Ⅳ",
+        }
+      },
+      {
+        basin: "珠江口流域",
+        name: "展城桥",
+        point: "113.774149,22.692759",
+        details: {
+          化学需氧量: "17",
+          氨氮: "1.2",
+          总磷: "0.14",
+          氟化物: "0.153",
+          总氮: "2.28",
+          水质类别: "Ⅳ",
+        }
+      },
+      {
+        basin: "珠江口流域",
+        name: "沙福路",
+        point: "113.778618,22.710065",
+        details: {
+          化学需氧量: "30",
+          氨氮: "1.03",
+          总磷: "0.28",
+          氟化物: "0.164",
+          总氮: "/",
+          水质类别: "Ⅳ",
+        }
+      },
+      {
+        basin: "珠江口流域",
+        name: "蚝二佳仕台科技园",
+        point: "113.778297,22.704595",
+        details: {
+          化学需氧量: "15",
+          氨氮: "1.07",
+          总磷: "0.12",
+          氟化物: "0.939",
+          总氮: "/",
+          水质类别: "Ⅳ",
+        }
+      },
+      {
+        basin: "珠江口流域",
+        name: "和秀西路与福园二路交汇处",
+        point: "113.777451,22.696117",
+        details: {
+          化学需氧量: "21",
+          氨氮: "1.1",
+          总磷: "0.15",
+          氟化物: "0.158",
+          总氮: "/",
+          水质类别: "Ⅳ",
+        }
+      },
+      {
+        basin: "珠江口流域",
+        name: "坳颈涌入海口水闸前",
+        point: "113.772721,22.682484",
+        details: {
+          化学需氧量: "19",
+          氨氮: "0.983",
+          总磷: "0.21",
+          氟化物: "0.115",
+          总氮: "3.08",
+          水质类别: "Ⅳ",
+        }
+      },
+      {
+        basin: "珠江口流域",
+        name: "灶下涌水闸前",
+        point: "113.77641,22.676626",
+        details: {
+          化学需氧量: "14",
+          氨氮: "1.04",
+          总磷: "0.16",
+          氟化物: "0.222",
+          总氮: "2.42",
+          水质类别: "Ⅳ",
+        }
+      },
+      {
+        basin: "珠江口流域",
+        name: "虾山涌水闸前",
+        point: "113.785857,22.675256",
+        details: {
+          化学需氧量: "17",
+          氨氮: "1.15",
+          总磷: "0.13",
+          氟化物: "0.215",
+          总氮: "/",
+          水质类别: "Ⅳ",
+        }
+      },
+      {
+        basin: "珠江口流域",
+        name: "孖庙涌水闸前",
+        point: "113.792943,22.668237",
+        details: {
+          化学需氧量: "19",
+          氨氮: "1.16",
+          总磷: "0.17",
+          氟化物: "0.16",
+          总氮: "/",
+          水质类别: "Ⅳ",
+        }
+      },
+      {
+        basin: "珠江口流域",
+        name: "永和路桥（右）",
+        point: "113.786725,22.674612",
+        details: {
+          化学需氧量: "13",
+          氨氮: "1.15",
+          总磷: "0.14",
+          氟化物: "0.117",
+          总氮: "3.44",
+          水质类别: "Ⅳ",
+        }
+      },
+      {
+        basin: "珠江口流域",
+        name: "永和路桥",
+        point: "113.786725,22.674612",
+        details: {
+          化学需氧量: "16",
+          氨氮: "1.06",
+          总磷: "0.14",
+          氟化物: "0.112",
+          总氮: "3.46",
+          水质类别: "Ⅳ",
+        }
+      },
+      {
+        basin: "珠江口流域",
+        name: "宝源路桥",
+        point: "113.825297,22.612261",
+        details: {
+          化学需氧量: "19",
+          氨氮: "1.27",
+          总磷: "0.19",
+          氟化物: "0.23",
+          总氮: "5.8",
+          水质类别: "Ⅳ",
+        }
+      },
+      {
+        basin: "珠江口流域",
+        name: "金达花园",
+        point: "113.830308,22.638866",
+        details: {
+          化学需氧量: "20",
+          氨氮: "1.17",
+          总磷: "0.2",
+          氟化物: "0.156",
+          总氮: "/",
+          水质类别: "Ⅳ",
+        }
+      },
+      {
+        basin: "珠江口流域",
+        name: "新涌水闸前",
+        point: "113.827035,22.608105",
+        details: {
+          化学需氧量: "24",
+          氨氮: "0.794",
+          总磷: "0.15",
+          氟化物: "0.21",
+          总氮: "3.53",
+          水质类别: "Ⅳ",
+        }
+      },
+      {
+        basin: "珠江口流域",
+        name: "九围河水闸前",
+        point: "113.861092,22.647051",
+        details: {
+          化学需氧量: "16",
+          氨氮: "0.991",
+          总磷: "0.24",
+          氟化物: "0.198",
+          总氮: "/",
+          水质类别: "Ⅳ",
+        }
+      },
+      {
+        basin: "珠江口流域",
+        name: "黄麻布河入库口",
+        point: "113.871058,22.66823",
+        details: {
+          化学需氧量: "21",
+          氨氮: "0.448",
+          总磷: "0.2",
+          氟化物: "0.246",
+          总氮: "/",
+          水质类别: "Ⅳ",
+        }
+      },
+      {
+        basin: "珠江口流域",
+        name: "水闸前",
+        point: "113.912841,22.650753",
+        details: {
+          化学需氧量: "8",
+          氨氮: "0.424",
+          总磷: "0.22",
+          氟化物: "0.205",
+          总氮: "/",
+          水质类别: "Ⅳ",
+        }
+      },
+      {
+        basin: "珠江口流域",
+        name: "入库口",
+        point: "113.89318,22.656198",
+        details: {
+          化学需氧量: "24",
+          氨氮: "0.571",
+          总磷: "0.17",
+          氟化物: "0.111",
+          总氮: "/",
+          水质类别: "Ⅳ",
+        }
+      },
+      {
+        basin: "珠江口流域",
+        name: "入库口",
+        point: "113.923827,22.612471",
+        details: {
+          化学需氧量: "14",
+          氨氮: "1.04",
+          总磷: "0.02",
+          氟化物: "0.138",
+          总氮: "/",
+          水质类别: "Ⅳ",
+        }
+      },
+      {
+        basin: "珠江口流域",
+        name: "牛成村水暗涵出口",
+        point: "113.908236,22.709457",
+        details: {
+          化学需氧量: "21",
+          氨氮: "0.371",
+          总磷: "0.09",
+          氟化物: "0.06",
+          总氮: "/",
+          水质类别: "Ⅳ",
+        }
+      },
+      {
+        basin: "珠江口流域",
+        name: "河口",
+        point: "113.881031,22.681078",
+        details: {
+          化学需氧量: "22",
+          氨氮: "0.919",
+          总磷: "0.25",
+          氟化物: "0.154",
+          总氮: "/",
+          水质类别: "Ⅳ",
+        }
+      },
+      {
+        basin: "珠江口流域",
+        name: "共乐涌水闸前",
+        point: "113.844409,22.569315",
+        details: {
+          化学需氧量: "27",
+          氨氮: "0.523",
+          总磷: "0.18",
+          氟化物: "0.21",
+          总氮: "3.38",
+          水质类别: "Ⅳ",
+        }
+      },
+      {
+        basin: "珠江口流域",
+        name: "水闸处",
+        point: "113.844162,22.560793",
+        details: {
+          化学需氧量: "/",
+          氨氮: "0.54",
+          总磷: "0.25",
+          氟化物: "0.17",
+          总氮: "2.42",
+          水质类别: "Ⅳ",
+        }
+      },
+      {
+        basin: "珠江口流域",
+        name: "南城桥",
+        point: "113.8719,22.574771",
+        details: {
+          化学需氧量: "17",
+          氨氮: "0.571",
+          总磷: "0.22",
+          氟化物: "0.226",
+          总氮: "/",
+          水质类别: "Ⅳ",
+        }
+      },
+      {
+        basin: "珠江口流域",
+        name: "新水闸",
+        point: "113.864356,22.563028",
+        details: {
+          化学需氧量: "10",
+          氨氮: "1.39",
+          总磷: "0.27",
+          氟化物: "0.239",
+          总氮: "6.33",
+          水质类别: "Ⅳ",
+        }
+      },
+      {
+        basin: "珠江口流域",
+        name: "西乡公园",
+        point: "113.876411,22.579011",
+        details: {
+          化学需氧量: "13",
+          氨氮: "0.347",
+          总磷: "0.27",
+          氟化物: "0.24",
+          总氮: "/",
+          水质类别: "Ⅳ",
+        }
+      },
+      {
+        basin: "珠江口流域",
+        name: "长丰工业园",
+        point: "113.923997,22.583486",
+        details: {
+          化学需氧量: "20",
+          氨氮: "0.781",
+          总磷: "0.28",
+          氟化物: "0.12",
+          总氮: "/",
+          水质类别: "Ⅳ",
+        }
+      },
+      {
+        basin: "珠江口流域",
+        name: "新圳河河口",
+        point: "113.8883,22.5477",
+        details: {
+          化学需氧量: "21",
+          氨氮: "0.044",
+          总磷: "0.21",
+          氟化物: "0.23",
+          总氮: "5.92",
+          水质类别: "Ⅳ",
+        }
+      },
+      {
+        basin: "珠江口流域",
+        name: "梦海大道桥",
+        point: "113.89628,22.52572",
+        details: {
+          化学需氧量: "/",
+          氨氮: "1.09",
+          总磷: "0.15",
+          氟化物: "0.23",
+          总氮: "/",
+          水质类别: "Ⅳ",
+        }
+      },
+      {
+        basin: "大亚湾流域",
+        name: "大碓涌河口",
+        point: "114.535899,22.565673",
+        details: {
+          化学需氧量: "24",
+          氨氮: "0.036",
+          总磷: "0.05",
+          氟化物: "0.25",
+          总氮: "/",
+          水质类别: "Ⅳ",
+        }
+      },
+
+    ];
+    var markerArr5 = [
+      {
+        basin: "茅洲河流域",
+        name: "李松蓢",
+        point: "113.885436,22.801144",
+        details: {
+          化学需氧量: "16",
+          氨氮: "0.677",
+          总磷: "0.38",
+          氟化物: "0.102",
+          总氮: "/",
+          水质类别: "Ⅴ",
+        }
+      },
+      {
+        basin: "茅洲河流域",
+        name: "燕川（左）",
+        point: "113.849599,22.79618",
+        details: {
+          化学需氧量: "18",
+          氨氮: "1.28",
+          总磷: "0.35",
+          氟化物: "0.3",
+          总氮: "/",
+          水质类别: "Ⅴ",
+        }
+      },
+      {
+        basin: "茅洲河流域",
+        name: "燕川（右）",
+        point: "113.849599,22.79618",
+        details: {
+          化学需氧量: "13",
+          氨氮: "1.41",
+          总磷: "0.37",
+          氟化物: "0.34",
+          总氮: "/",
+          水质类别: "Ⅴ",
+        }
+      },
+      {
+        basin: "茅洲河流域",
+        name: "燕川",
+        point: "113.849599,22.79618",
+        details: {
+          化学需氧量: "16",
+          氨氮: "1.34",
+          总磷: "0.36",
+          氟化物: "0.32",
+          总氮: "/",
+          水质类别: "Ⅴ",
+        }
+      },
+      {
+        basin: "茅洲河流域",
+        name: "洋涌大桥（左）",
+        point: "113.830395,22.795242",
+        details: {
+          化学需氧量: "18",
+          氨氮: "1.87",
+          总磷: "0.38",
+          氟化物: "0.179",
+          总氮: "/",
+          水质类别: "Ⅴ",
+        }
+      },
+      {
+        basin: "茅洲河流域",
+        name: "洋涌大桥（右）",
+        point: "113.830395,22.795242",
+        details: {
+          化学需氧量: "18",
+          氨氮: "1.83",
+          总磷: "0.39",
+          氟化物: "0.163",
+          总氮: "/",
+          水质类别: "Ⅴ",
+        }
+      },
+      {
+        basin: "茅洲河流域",
+        name: "洋涌大桥",
+        point: "113.830395,nan",
+        details: {
+          化学需氧量: "18",
+          氨氮: "1.85",
+          总磷: "0.38",
+          氟化物: "0.171",
+          总氮: "/",
+          水质类别: "Ⅴ",
+        }
+      },
+      {
+        basin: "茅洲河流域",
+        name: "新和大道（左）",
+        point: "113.788773,22.767517",
+        details: {
+          化学需氧量: "17",
+          氨氮: "1.89",
+          总磷: "0.23",
+          氟化物: "0.47",
+          总氮: "/",
+          水质类别: "Ⅴ",
+        }
+      },
+      {
+        basin: "茅洲河流域",
+        name: "新和大道（右）",
+        point: "113.788773,22.767517",
+        details: {
+          化学需氧量: "14",
+          氨氮: "1.68",
+          总磷: "0.21",
+          氟化物: "0.44",
+          总氮: "/",
+          水质类别: "Ⅴ",
+        }
+      },
+      {
+        basin: "茅洲河流域",
+        name: "新和大道",
+        point: "113.788773,22.767517",
+        details: {
+          化学需氧量: "16",
+          氨氮: "1.78",
+          总磷: "0.22",
+          氟化物: "0.46",
+          总氮: "/",
+          水质类别: "Ⅴ",
+        }
+      },
+      {
+        basin: "茅洲河流域",
+        name: "共和村（右）",
+        point: "113.78112,22.75281",
+        details: {
+          化学需氧量: "17",
+          氨氮: "1.54",
+          总磷: "0.19",
+          氟化物: "0.28",
+          总氮: "3.96",
+          水质类别: "Ⅴ",
+        }
+      },
+      {
+        basin: "茅洲河流域",
+        name: "石岩河Y38排口",
+        point: "113.908236,22.709457",
+        details: {
+          化学需氧量: "21",
+          氨氮: "1.76",
+          总磷: "0.28",
+          氟化物: "0.126",
+          总氮: "/",
+          水质类别: "Ⅴ",
+        }
+      },
+      {
+        basin: "茅洲河流域",
+        name: "国林光学",
+        point: "113.93772,22.72893",
+        details: {
+          化学需氧量: "22",
+          氨氮: "0.196",
+          总磷: "0.32",
+          氟化物: "0.225",
+          总氮: "/",
+          水质类别: "Ⅴ",
+        }
+      },
+      {
+        basin: "茅洲河流域",
+        name: "白沙坑水河口",
+        point: "113.876996,22.801084",
+        details: {
+          化学需氧量: "34",
+          氨氮: "0.98",
+          总磷: "0.28",
+          氟化物: "0.414",
+          总氮: "/",
+          水质类别: "Ⅴ",
+        }
+      },
+      {
+        basin: "茅洲河流域",
+        name: "排涝泵站",
+        point: "113.869577,22.79501",
+        details: {
+          化学需氧量: "16",
+          氨氮: "0.861",
+          总磷: "0.38",
+          氟化物: "0.152",
+          总氮: "/",
+          水质类别: "Ⅴ",
+        }
+      },
+      {
+        basin: "茅洲河流域",
+        name: "水闸上游",
+        point: "113.865053,22.792389",
+        details: {
+          化学需氧量: "19",
+          氨氮: "1.3",
+          总磷: "0.35",
+          氟化物: "0.124",
+          总氮: "/",
+          水质类别: "Ⅴ",
+        }
+      },
+      {
+        basin: "茅洲河流域",
+        name: "马田排洪渠闸前",
+        point: "113.863596,22.789559",
+        details: {
+          化学需氧量: "32",
+          氨氮: "0.893",
+          总磷: "0.2",
+          氟化物: "0.11",
+          总氮: "/",
+          水质类别: "Ⅴ",
+        }
+      },
+      {
+        basin: "茅洲河流域",
+        name: "水闸前",
+        point: "113.811181,22.789206",
+        details: {
+          化学需氧量: "20",
+          氨氮: "1.98",
+          总磷: "0.14",
+          氟化物: "0.41",
+          总氮: "/",
+          水质类别: "Ⅴ",
+        }
+      },
+      {
+        basin: "茅洲河流域",
+        name: "沙井河水闸前（左）",
+        point: "113.79002,22.770248",
+        details: {
+          化学需氧量: "18",
+          氨氮: "1.79",
+          总磷: "0.18",
+          氟化物: "0.183",
+          总氮: "/",
+          水质类别: "Ⅴ",
+        }
+      },
+      {
+        basin: "茅洲河流域",
+        name: "沙井河水闸前（右）",
+        point: "113.79002,22.770248",
+        details: {
+          化学需氧量: "18",
+          氨氮: "1.6",
+          总磷: "0.19",
+          氟化物: "0.184",
+          总氮: "/",
+          水质类别: "Ⅴ",
+        }
+      },
+      {
+        basin: "茅洲河流域",
+        name: "沙井河水闸前",
+        point: "113.79002,22.770248",
+        details: {
+          化学需氧量: "18",
+          氨氮: "1.7",
+          总磷: "0.18",
+          氟化物: "0.184",
+          总氮: "/",
+          水质类别: "Ⅴ",
+        }
+      },
+      {
+        basin: "茅洲河流域",
+        name: "水闸前",
+        point: "113.789601,22.766731",
+        details: {
+          化学需氧量: "15",
+          氨氮: "1.76",
+          总磷: "0.2",
+          氟化物: "0.434",
+          总氮: "/",
+          水质类别: "Ⅴ",
+        }
+      },
+      {
+        basin: "茅洲河流域",
+        name: "排涝河水闸前",
+        point: "113.786973,22.753846",
+        details: {
+          化学需氧量: "15",
+          氨氮: "1.51",
+          总磷: "0.21",
+          氟化物: "0.143",
+          总氮: "/",
+          水质类别: "Ⅴ",
+        }
+      },
+      {
+        basin: "深圳河流域",
+        name: "深圳河河口（右）",
+        point: "114.036546,22.506403",
+        details: {
+          化学需氧量: "16",
+          氨氮: "1.99",
+          总磷: "0.24",
+          氟化物: "0.281",
+          总氮: "3.7",
+          水质类别: "Ⅴ",
+        }
+      },
+      {
+        basin: "观澜河流域",
+        name: "龙华环保所",
+        point: "114.029753,22.660107",
+        details: {
+          化学需氧量: "12",
+          氨氮: "1.71",
+          总磷: "0.18",
+          氟化物: "0.232",
+          总氮: "/",
+          水质类别: "Ⅴ",
+        }
+      },
+      {
+        basin: "观澜河流域",
+        name: "樟坑径河口",
+        point: "114.056588,22.732253",
+        details: {
+          化学需氧量: "10",
+          氨氮: "1.73",
+          总磷: "0.12",
+          氟化物: "0.287",
+          总氮: "/",
+          水质类别: "Ⅴ",
+        }
+      },
+      {
+        basin: "观澜河流域",
+        name: "岭南大道",
+        point: "114.079145,22.75585",
+        details: {
+          化学需氧量: "16",
+          氨氮: "0.67",
+          总磷: "0.34",
+          氟化物: "0.174",
+          总氮: "/",
+          水质类别: "Ⅴ",
+        }
+      },
+      {
+        basin: "龙岗河流域",
+        name: "龙园公园",
+        point: "114.259193,22.736575",
+        details: {
+          化学需氧量: "27",
+          氨氮: "1.61",
+          总磷: "0.16",
+          氟化物: "0.351",
+          总氮: "/",
+          水质类别: "Ⅴ",
+        }
+      },
+      {
+        basin: "龙岗河流域",
+        name: "吓陂（左河道）",
+        point: "114.348943,22.768295",
+        details: {
+          化学需氧量: "28",
+          氨氮: "1.61",
+          总磷: "0.27",
+          氟化物: "0.037",
+          总氮: "/",
+          水质类别: "Ⅴ",
+        }
+      },
+      {
+        basin: "龙岗河流域",
+        name: "惠龙交界处左岸",
+        point: "114.363783,22.776263",
+        details: {
+          化学需氧量: "28",
+          氨氮: "1.6",
+          总磷: "0.2",
+          氟化物: "0.309",
+          总氮: "/",
+          水质类别: "Ⅴ",
+        }
+      },
+      {
+        basin: "龙岗河流域",
+        name: "惠龙交界处右岸",
+        point: "114.363641,22.775908",
+        details: {
+          化学需氧量: "30",
+          氨氮: "1.54",
+          总磷: "0.2",
+          氟化物: "0.322",
+          总氮: "/",
+          水质类别: "Ⅴ",
+        }
+      },
+      {
+        basin: "龙岗河流域",
+        name: "惠龙交界处",
+        point: "114.363641,22.775908",
+        details: {
+          化学需氧量: "29",
+          氨氮: "1.57",
+          总磷: "0.2",
+          氟化物: "0.316",
+          总氮: "/",
+          水质类别: "Ⅴ",
+        }
+      },
+      {
+        basin: "龙岗河流域",
+        name: "西湖村（右岸）",
+        point: "114.417749,22.780161",
+        details: {
+          化学需氧量: "38",
+          氨氮: "1.8",
+          总磷: "0.26",
+          氟化物: "0.444",
+          总氮: "/",
+          水质类别: "Ⅴ",
+        }
+      },
+      {
+        basin: "龙岗河流域",
+        name: "西湖村",
+        point: "114.417749,22.780161",
+        details: {
+          化学需氧量: "34",
+          氨氮: "1.96",
+          总磷: "0.26",
+          氟化物: "0.442",
+          总氮: "/",
+          水质类别: "Ⅴ",
+        }
+      },
+      {
+        basin: "龙岗河流域",
+        name: "吓坑一路",
+        point: "114.315309,22.729123",
+        details: {
+          化学需氧量: "8",
+          氨氮: "0.781",
+          总磷: "0.39",
+          氟化物: "0.132",
+          总氮: "/",
+          水质类别: "Ⅴ",
+        }
+      },
+      {
+        basin: "龙岗河流域",
+        name: "优胜美地",
+        point: "114.3137,22.727902",
+        details: {
+          化学需氧量: "18",
+          氨氮: "0.289",
+          总磷: "0.37",
+          氟化物: "0.149",
+          总氮: "/",
+          水质类别: "Ⅴ",
+        }
+      },
+      {
+        basin: "龙岗河流域",
+        name: "黄竹坑水河口",
+        point: "114.287711,22.775341",
+        details: {
+          化学需氧量: "17",
+          氨氮: "1.88",
+          总磷: "0.07",
+          氟化物: "0.255",
+          总氮: "/",
+          水质类别: "Ⅴ",
+        }
+      },
+      {
+        basin: "龙岗河流域",
+        name: "黄沙河（杶梓河）深惠交界处",
+        point: "114.308063995,22.8050098279",
+        details: {
+          化学需氧量: "26",
+          氨氮: "1.67",
+          总磷: "0.13",
+          氟化物: "0.336",
+          总氮: "/",
+          水质类别: "Ⅴ",
+        }
+      },
+      {
+        basin: "深圳湾流域",
+        name: "新洲河河口",
+        point: "114.036398,22.510976",
+        details: {
+          化学需氧量: "20",
+          氨氮: "1.78",
+          总磷: "0.24",
+          氟化物: "0.082",
+          总氮: "3",
+          水质类别: "Ⅴ",
+        }
+      },
+      {
+        basin: "珠江口流域",
+        name: "沙涌排涝闸门",
+        point: "113.77724,22.720129",
+        details: {
+          化学需氧量: "36",
+          氨氮: "0.483",
+          总磷: "0.24",
+          氟化物: "0.359",
+          总氮: "/",
+          水质类别: "Ⅴ",
+        }
+      },
+      {
+        basin: "珠江口流域",
+        name: "和二涌水闸前",
+        point: "113.774193,22.714266",
+        details: {
+          化学需氧量: "36",
+          氨氮: "1.05",
+          总磷: "0.38",
+          氟化物: "0.366",
+          总氮: "/",
+          水质类别: "Ⅴ",
+        }
+      },
+      {
+        basin: "珠江口流域",
+        name: "水闸前",
+        point: "113.829761,22.619251",
+        details: {
+          化学需氧量: "14",
+          氨氮: "1.56",
+          总磷: "0.16",
+          氟化物: "0.231",
+          总氮: "/",
+          水质类别: "Ⅴ",
+        }
+      },
+      {
+        basin: "珠江口流域",
+        name: "入库口",
+        point: "113.904325,22.648818",
+        details: {
+          化学需氧量: "16",
+          氨氮: "1.54",
+          总磷: "0.11",
+          氟化物: "0.146",
+          总氮: "/",
+          水质类别: "Ⅴ",
+        }
+      },
+      {
+        basin: "珠江口流域",
+        name: "依购美",
+        point: "113.925384,22.655119",
+        details: {
+          化学需氧量: "22",
+          氨氮: "0.254",
+          总磷: "0.31",
+          氟化物: "0.14",
+          总氮: "/",
+          水质类别: "Ⅴ",
+        }
+      },
+      {
+        basin: "珠江口流域",
+        name: "入库口",
+        point: "113.908236,22.709457",
+        details: {
+          化学需氧量: "12",
+          氨氮: "0.845",
+          总磷: "0.35",
+          氟化物: "0.153",
+          总氮: "/",
+          水质类别: "Ⅴ",
+        }
+      },
+      {
+        basin: "珠江口流域",
+        name: "咸水涌兴业路",
+        point: "113.865474,22.562098",
+        details: {
+          化学需氧量: "10",
+          氨氮: "1.69",
+          总磷: "0.32",
+          氟化物: "0.248",
+          总氮: "/",
+          水质类别: "Ⅴ",
+        }
+      },
+      {
+        basin: "珠江口流域",
+        name: "河口",
+        point: "113.889002,22.542325",
+        details: {
+          化学需氧量: "14",
+          氨氮: "1.83",
+          总磷: "0.25",
+          氟化物: "0.177",
+          总氮: "4.5",
+          水质类别: "Ⅴ",
+        }
+      },
+      {
+        basin: "珠江口流域",
+        name: "临海大道路口",
+        point: "113.88476,22.51342",
+        details: {
+          化学需氧量: "31",
+          氨氮: "0.284",
+          总磷: "0.11",
+          氟化物: "0.23",
+          总氮: "/",
+          水质类别: "Ⅴ",
+        }
+      },
+
+    ];
+    var markerArr6 = [
+      {
+        basin: "茅洲河流域",
+        name: "荔园路1桥",
+        point: "113.939971436,22.7736620436",
+        details: {
+          化学需氧量: "27",
+          氨氮: "0.177",
+          总磷: "0.46",
+          氟化物: "0.218",
+          总氮: "/",
+          水质类别: "劣V-1",
+        }
+      },
+      {
+        basin: "茅洲河流域",
+        name: "河口",
+        point: "113.934561,22.804593",
+        details: {
+          化学需氧量: "18",
+          氨氮: "0.206",
+          总磷: "0.76",
+          氟化物: "0.146",
+          总氮: "/",
+          水质类别: "劣V-1",
+        }
+      },
+      {
+        basin: "茅洲河流域",
+        name: "喜德盛",
+        point: "113.931117,22.801303",
+        details: {
+          化学需氧量: "15",
+          氨氮: "0.228",
+          总磷: "0.48",
+          氟化物: "0.338",
+          总氮: "/",
+          水质类别: "劣V-1",
+        }
+      },
+      {
+        basin: "茅洲河流域",
+        name: "新陂头水北支河口",
+        point: "113.926708,22.793675",
+        details: {
+          化学需氧量: "18",
+          氨氮: "0.214",
+          总磷: "0.51",
+          氟化物: "0.22",
+          总氮: "/",
+          水质类别: "劣V-1",
+        }
+      },
+      {
+        basin: "茅洲河流域",
+        name: "深莞交界（大冚渠）",
+        point: "113.961408,22.813194",
+        details: {
+          化学需氧量: "13",
+          氨氮: "1.97",
+          总磷: "0.88",
+          氟化物: "0.598",
+          总氮: "/",
+          水质类别: "劣V-1",
+        }
+      },
+      {
+        basin: "茅洲河流域",
+        name: "水闸上游",
+        point: "113.868174,22.791305",
+        details: {
+          化学需氧量: "16",
+          氨氮: "3.58",
+          总磷: "0.76",
+          氟化物: "0.175",
+          总氮: "/",
+          水质类别: "劣V-1",
+        }
+      },
+      {
+        basin: "茅洲河流域",
+        name: "燕山小学1桥",
+        point: "113.850664,22.799114",
+        details: {
+          化学需氧量: "13",
+          氨氮: "2.73",
+          总磷: "0.1",
+          氟化物: "0.22",
+          总氮: "/",
+          水质类别: "劣V-1",
+        }
+      },
+      {
+        basin: "深圳河流域",
+        name: "鹿丹村",
+        point: "114.099579,22.534515",
+        details: {
+          化学需氧量: "23",
+          氨氮: "2.04",
+          总磷: "0.3",
+          氟化物: "0.15",
+          总氮: "6.13",
+          水质类别: "劣V-1",
+        }
+      },
+      {
+        basin: "深圳河流域",
+        name: "深圳河河口（左）",
+        point: "114.036576,22.505808",
+        details: {
+          化学需氧量: "20",
+          氨氮: "2.16",
+          总磷: "0.22",
+          氟化物: "0.274",
+          总氮: "3.83",
+          水质类别: "劣V-1",
+        }
+      },
+      {
+        basin: "深圳河流域",
+        name: "深圳河河口（中）",
+        point: "114.036546,22.506403",
+        details: {
+          化学需氧量: "20",
+          氨氮: "2.14",
+          总磷: "0.22",
+          氟化物: "0.357",
+          总氮: "3.72",
+          水质类别: "劣V-1",
+        }
+      },
+      {
+        basin: "深圳河流域",
+        name: "深圳河河口",
+        point: "114.036531,22.506048",
+        details: {
+          化学需氧量: "19",
+          氨氮: "2.1",
+          总磷: "0.23",
+          氟化物: "0.304",
+          总氮: "3.75",
+          水质类别: "劣V-1",
+        }
+      },
+      {
+        basin: "观澜河流域",
+        name: "溢流口",
+        point: "114.09039,22.742277",
+        details: {
+          化学需氧量: "24",
+          氨氮: "2.11",
+          总磷: "0.29",
+          氟化物: "0.217",
+          总氮: "/",
+          水质类别: "劣V-1",
+        }
+      },
+      {
+        basin: "龙岗河流域",
+        name: "田脚水河口下游干流约180米处",
+        point: "114.410956,22.777136",
+        details: {
+          化学需氧量: "23",
+          氨氮: "2.09",
+          总磷: "0.26",
+          氟化物: "0.446",
+          总氮: "/",
+          水质类别: "劣V-1",
+        }
+      },
+      {
+        basin: "龙岗河流域",
+        name: "西湖村（左岸）",
+        point: "114.417749,22.780161",
+        details: {
+          化学需氧量: "29",
+          氨氮: "2.11",
+          总磷: "0.26",
+          氟化物: "0.44",
+          总氮: "/",
+          水质类别: "劣V-1",
+        }
+      },
+      {
+        basin: "龙岗河流域",
+        name: "深惠交界处",
+        point: "114.32841246,22.8113633611",
+        details: {
+          化学需氧量: "33",
+          氨氮: "2.98",
+          总磷: "0.3",
+          氟化物: "0.756",
+          总氮: "/",
+          水质类别: "劣V-1",
+        }
+      },
+      {
+        basin: "珠江口流域",
+        name: "德丰围涌水闸前",
+        point: "113.769665,22.742097",
+        details: {
+          化学需氧量: "24",
+          氨氮: "2.79",
+          总磷: "0.25",
+          氟化物: "0.198",
+          总氮: "/",
+          水质类别: "劣V-1",
+        }
+      },
+
+    ];
+    var markerArr7 = [
+      {
+        basin: "龙岗河流域",
+        name: "马蹄沥河口",
+        point: "114.376969,22.77922",
+        details: {
+          化学需氧量: "42",
+          氨氮: "8.3",
+          总磷: "1.06",
+          氟化物: "0.274",
+          总氮: "/",
+          水质类别: "劣V-2",
+        }
+      },
+    ];
+    var markerArr8 = [
+      {
+        basin: "龙岗河流域",
+        name: "吓陂-溢流口",
+        point: "114.204996,22.46727",
+        details: {
+          化学需氧量: "46",
+          氨氮: "11.9",
+          总磷: "0.91",
+          氟化物: "0.422",
+          总氮: "/",
+          水质类别: "劣V-3",
+        }
+      },
+    ];
+
+    var map = new BMap.Map('container')
+    // 创建地图实例
+    var point = new BMap.Point(114.14, 22.68)
+    // 创建点坐标
+    map.centerAndZoom(point, 11)
+    // 初始化地图，设置中心点坐标和地图级别
+    map.enableScrollWheelZoom(true)
+    var ctrlSca = new window.BMap.ScaleControl({
+      anchor: BMAP_ANCHOR_BOTTOM_RIGHT
+    });
+    map.addControl(ctrlSca);
+    for (var i = 0; i < markerArr.length; i++) {
+      var p0 = markerArr[i].point.split(",")[0];
+      var p1 = markerArr[i].point.split(",")[1];
+      var maker = addMarker(new window.BMap.Point(p0, p1), i);
+
+    }
+
+    for (var i = 0; i < markerArr1.length; i++) {
+      var p0 = markerArr1[i].point.split(",")[0];
+      var p1 = markerArr1[i].point.split(",")[1];
+      var maker = addMarker1(new window.BMap.Point(p0, p1), i);
+
+    }
+    for (var i = 0; i < markerArr2.length; i++) {
+      var p0 = markerArr2[i].point.split(",")[0];
+      var p1 = markerArr2[i].point.split(",")[1];
+      var maker = addMarker2(new window.BMap.Point(p0, p1), i);
+
+    }
+    for (var i = 0; i < markerArr3.length; i++) {
+      var p0 = markerArr3[i].point.split(",")[0];
+      var p1 = markerArr3[i].point.split(",")[1];
+      var maker = addMarker3(new window.BMap.Point(p0, p1), i);
+
+    }
+    for (var i = 0; i < markerArr4.length; i++) {
+      var p0 = markerArr4[i].point.split(",")[0];
+      var p1 = markerArr4[i].point.split(",")[1];
+      var maker = addMarker4(new window.BMap.Point(p0, p1), i);
+
+    }
+    for (var i = 0; i < markerArr5.length; i++) {
+      var p0 = markerArr5[i].point.split(",")[0];
+      var p1 = markerArr5[i].point.split(",")[1];
+      var maker = addMarker5(new window.BMap.Point(p0, p1), i);
+
+    }
+    for (var i = 0; i < markerArr6.length; i++) {
+      var p0 = markerArr6[i].point.split(",")[0];
+      var p1 = markerArr6[i].point.split(",")[1];
+      var maker = addMarker6(new window.BMap.Point(p0, p1), i);
+
+    }
+    for (var i = 0; i < markerArr7.length; i++) {
+      var p0 = markerArr7[i].point.split(",")[0];
+      var p1 = markerArr7[i].point.split(",")[1];
+      var maker = addMarker7(new window.BMap.Point(p0, p1), i);
+
+    }
+    for (var i = 0; i < markerArr8.length; i++) {
+      var p0 = markerArr2[i].point.split(",")[0];
+      var p1 = markerArr2[i].point.split(",")[1];
+      var maker = addMarker8(new window.BMap.Point(p0, p1), i);
+
+    }
+
+
+    // 添加标注
+    function addMarker(point, index) {
+      var myIcon = new BMap.Icon("img/red5.png",
+        new BMap.Size(23, 25), {
+        // offset: new BMap.Size(10, 25),
+        //  imageOffset: new BMap.Size(0, 0 - index * 25)
+      });
+      var marker = new BMap.Marker(point, {
+        icon: myIcon
+      });
+      map.addOverlay(marker);
+      return marker;
+    }
+    function addMarker1(point, index) {
+      var myIcon = new BMap.Icon("img/green5.png",
+        new BMap.Size(23, 25), {
+        // offset: new BMap.Size(10, 25),
+        //  imageOffset: new BMap.Size(0, 0 - index * 25)
+      });
+      var marker = new BMap.Marker(point, {
+        icon: myIcon
+      });
+      map.addOverlay(marker);
+      return marker;
+    }
+    function addMarker2(point, index) {
+      var myIcon = new BMap.Icon("img/yellow5.png",
+        new BMap.Size(23, 25), {
+        // offset: new BMap.Size(10, 25),
+        //  imageOffset: new BMap.Size(0, 0 - index * 25)
+      });
+      var marker = new BMap.Marker(point, {
+        icon: myIcon
+      });
+      map.addOverlay(marker);
+      return marker;
+    }
+    function addMarker3(point, index) {
+      var myIcon = new BMap.Icon("img/red3.png",
+        new BMap.Size(23, 25), {
+        // offset: new BMap.Size(10, 25),
+        //  imageOffset: new BMap.Size(0, 0 - index * 25)
+      });
+      var marker = new BMap.Marker(point, {
+        icon: myIcon
+      });
+      map.addOverlay(marker);
+      return marker;
+    }
+    function addMarker4(point, index) {
+      var myIcon = new BMap.Icon("img/green3.png",
+        new BMap.Size(23, 25), {
+        // offset: new BMap.Size(10, 25),
+        //  imageOffset: new BMap.Size(0, 0 - index * 25)
+      });
+      var marker = new BMap.Marker(point, {
+        icon: myIcon
+      });
+      map.addOverlay(marker);
+      return marker;
+    }
+    function addMarker5(point, index) {
+      var myIcon = new BMap.Icon("img/yellow3.png",
+        new BMap.Size(23, 25), {
+        // offset: new BMap.Size(10, 25),
+        //  imageOffset: new BMap.Size(0, 0 - index * 25)
+      });
+      var marker = new BMap.Marker(point, {
+        icon: myIcon
+      });
+      map.addOverlay(marker);
+      return marker;
+    }
+    function addMarker6(point, index) {
+      var myIcon = new BMap.Icon("img/redsm.png",
+        new BMap.Size(23, 25), {
+        // offset: new BMap.Size(10, 25),
+        //  imageOffset: new BMap.Size(0, 0 - index * 25)
+      });
+      var marker = new BMap.Marker(point, {
+        icon: myIcon
+      });
+      map.addOverlay(marker);
+      return marker;
+    }
+    function addMarker7(point, index) {
+      var myIcon = new BMap.Icon("img/greensm.png",
+        new BMap.Size(23, 25), {
+        // offset: new BMap.Size(10, 25),
+        //  imageOffset: new BMap.Size(0, 0 - index * 25)
+      });
+      var marker = new BMap.Marker(point, {
+        icon: myIcon
+      });
+      map.addOverlay(marker);
+      return marker;
+    }
+    function addMarker8(point, index) {
+      var myIcon = new BMap.Icon("img/yellowsm.png",
+        new BMap.Size(23, 25), {
+        // offset: new BMap.Size(10, 25),
+        //  imageOffset: new BMap.Size(0, 0 - index * 25)
+      });
+      var marker = new BMap.Marker(point, {
+        icon: myIcon
+      });
+      map.addOverlay(marker);
+      return marker;
+    }
+
+    [markerArr, markerArr1, markerArr2, markerArr3, markerArr4, markerArr5, markerArr6, markerArr7, markerArr8].forEach(function (arr) {
+      for (var i = 0; i < arr.length; i++) {
+        var point = new BMap.Point(arr[i].point.split(",")[0], arr[i].point.split(",")[1]);
+
+        // 创建透明标记
+        var transparentIcon = new BMap.Icon("data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7", new BMap.Size(20, 20)); // 透明图片
+        var marker = new BMap.Marker(point, { icon: transparentIcon }); // 设置透明标记图标
+
+        map.addOverlay(marker); // 将标记添加到地图
+
+        // 绑定点击事件
+        (function (info) {
+          marker.addEventListener("click", function () {
+            updateTongjiBox(info); // 点击后更新 tongjibox 的内容
+          });
+        })(arr[i]); // 使用闭包传递当前点的信息
+      }
+    });
+
+
+
+    map.setMapStyleV2({
+      styleId: '7681a28f4762bc28164abe0d690f8cd6'
+    });
+  </script>
+
+</body>
+
+</html>
